@@ -571,15 +571,14 @@ h6 {
 }
 
 /* Banner */
-.banner {
+.banner-cari-sekolah {
   height: 250px;
-  background: url("/img/bg-banner.png");
+  background: url("/img/bg-cari-sekolah-overlay.png");
   background-size: cover !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
   left: 0;
   right: 0;
-  top: 2.25em;
 }
 
 /* Z index */
@@ -1894,6 +1893,10 @@ input[type="number"] {
   z-index: 899 !important;
 }
 
+.height-100vh {
+  min-height: 100vh;
+}
+
 /* ============== Utility End ==============  */
 
 main.main-ppdb {
@@ -2795,13 +2798,10 @@ main.main-ppdb {
 
 // Search Box
 .form-search-perpustakaan.form-control {
-  background: url("/img/search-icon.svg") 0% center no-repeat;
-  background-size: 1.25em;
+  // background: url("/img/search-icon.svg") 97% center no-repeat;
+  // background-size: 1.25em;
   border-width: 0px;
   box-shadow: none;
-  padding-top: 1.5em !important;
-  padding-bottom: 1.5em !important;
-  padding-left: 2.75em !important;
   ::placeholder {
     color: var(--dark-gray) !important;
   }
@@ -2809,6 +2809,10 @@ main.main-ppdb {
     box-shadow: none !important;
   }
 }
+
+// .form-search-perpustakaan.form-control.searching {
+//   background: white;
+// }
 
 .form-search-filter-perpus {
   background: url("/img/search-icon.svg") 95% center no-repeat;
@@ -3032,21 +3036,17 @@ main.main-ppdb {
   .search-form {
     width: 95% !important;
     left: 3.5%;
-    bottom: -2.5em;
+    // bottom: -2.5em;
     z-index: 2;
     transition: bottom 0.5s;
 
     .card-search-form {
-      height: 90px;
+      min-height: 83px;
       transition: 0.5s;
     }
 
     .card-search-form.show {
-      height: 368px;
-    }
-
-    .form-search-perpustakaan {
-      width: 90%;
+      min-height: 368px;
     }
 
     .pencarian-detail {
@@ -3065,41 +3065,11 @@ main.main-ppdb {
 
   .search-form.show {
     z-index: 105;
-    bottom: -19.85em;
+    // bottom: -19.85em;
   }
 
   .search-form.up {
     z-index: 60;
-  }
-
-  .search-form-button {
-    .btn-primary {
-      border-radius: 100px;
-      padding: 8px 24px;
-      background: var(--blue-gradient);
-      font-weight: bold;
-      font-size: 1em !important;
-      box-shadow: 0 5px 15px var(--shadow-primary) !important;
-
-      &:hover {
-        box-shadow: none !important;
-      }
-    }
-
-    .btn-secondary {
-      border-radius: 100px;
-      padding: 8px 32px;
-      background: white;
-      border-color: var(--gray);
-      color: var(--dark);
-      font-weight: 700;
-      font-size: 1em !important;
-
-      &:hover {
-        background: var(--dark-gray);
-        color: white;
-      }
-    }
   }
 }
 
@@ -3578,10 +3548,17 @@ main.main-ppdb {
 /* ======================= Cari Sekolah Page Start ======================= */
 .cari-sekolah {
   min-height: 100vh;
-  background: url("/img/bg-cari-sekolah.png");
+  background: url("/img/bg-cari-sekolah.svg");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.search-cari-sekolah-items {
+  transition: 0.3s;
+  &:hover {
+    background-color: var(--soft-blue);
+  }
 }
 
 /* ======================= Cari Sekolah Page End ======================= */
@@ -3760,11 +3737,17 @@ main.main-ppdb {
 
   .search-form {
     left: 5% !important;
+    .card-search-form {
+      border-radius: 10px 10px 0 0 !important;
+    }
+    .card-search-form.show {
+      border-radius: 10px !important;
+    }
   }
 
-  .search-form.show {
-    bottom: -29.75em !important;
-  }
+  // .search-form.show {
+  //   bottom: -29.75em !important;
+  // }
 
   .navbar-ppdb {
     .navbar-brand {
@@ -3968,9 +3951,9 @@ main.main-ppdb {
     left: 6% !important;
   }
 
-  .search-form.show {
-    bottom: -38.75em !important;
-  }
+  // .search-form.show {
+  //   bottom: -34.75em !important;
+  // }
 
   .search-rpp-content {
     margin-top: 6.5em !important;

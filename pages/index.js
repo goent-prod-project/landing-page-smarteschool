@@ -3,8 +3,9 @@ import Head from "next/head";
 import { useState } from "react";
 import Link from "next/link";
 import SelectShared from "./components/Shared/SelectShared/SelectShared";
+import SearchCariSekolah from "./components/SearchCariSekolah/SearchCariSekolah";
 
-export default function Home({ nav }) {
+export default function Home({ nav, search }) {
   const router = useRouter();
   const [collapseOpen, setcollapseOpen] = useState(false);
   const [dropdownOpen, setdropdownOpen] = useState(false);
@@ -17,272 +18,64 @@ export default function Home({ nav }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <div className="cari-sekolah">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-md-3 pt-5 p-4">
-                <img
-                  src="/img/logo-smarteschool.png"
-                  alt="logo"
-                  className="img-fluid"
-                />
+      <main className={`${!search ? "" : "bg-main pb-5 height-100vh"}`}>
+        {!search ? (
+          <div className="cari-sekolah">
+            <div className="container">
+              <div className="row justify-content-center">
+                <div className="col-lg-3 col-md-5 col-sm-6 col-7 pt-5 p-4">
+                  <img
+                    src="/img/logo-smarteschool.png"
+                    alt="logo"
+                    className="img-fluid"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="row mb-5" style={{ marginTop: "75px" }}>
-              <div className="col-md-12 text-center">
-                <h1 className="color-dark fw-black">
-                  Cari <span className="color-primary">Sekolah</span>
-                </h1>
-                <h6 className="fw-bold mb-0">
-                  Cari dan temukan sekolah untuk mendapatkan alamat tautan
-                  menuju sekolah anda
-                </h6>
+              <div className="row mb-5" style={{ marginTop: "75px" }}>
+                <div className="col-md-12 text-center">
+                  <h1 className="color-dark fw-black">
+                    Cari <span className="color-primary">Sekolah</span>
+                  </h1>
+                  <h6 className="fw-bold mb-0">
+                    Cari dan temukan sekolah untuk mendapatkan alamat tautan
+                    menuju sekolah anda
+                  </h6>
+                </div>
               </div>
+              <SearchCariSekolah nav={nav} />
             </div>
-            <div className="row">
-              <div className="col-md-12">
-                <div className="search-illustasi-kolaborasi position-relative py-3">
-                  <div
-                    className={`search-form row position-absolute ${
-                      collapseOpen && "show"
-                    } ${dropdownOpen && "up"}`}
-                  >
-                    <div className="col-sm-12 d-flex flex-column">
-                      <div
-                        className={`card card-ss card-search-form ${
-                          collapseOpen && "show"
-                        }`}
-                      >
-                        <div className="row flex-sm-row flex-column">
-                          <div
-                            className={`${
-                              collapseOpen ? "col-md-12" : "col-md-9"
-                            } d-flex flex-column`}
-                            data-joyride="cari-buku"
-                          >
-                            <input
-                              type="text"
-                              className="form-control form-search-perpustakaan fs-5 fw-bold ms-4 pe-sm-0 pe-4"
-                              placeholder={`Cari Sekolah...`}
-                              autoComplete="off"
-                              name="cari"
-                              onClick={() => setcollapseOpen(true)}
-                              // value={formData.cari}
-                              // onChange={handleChangeForm}
-                            />
-
-                            <button type="submit" className="d-none">
-                              Cari
-                            </button>
-                          </div>
-                          {!collapseOpen && (
-                            <div className="col-md-3 d-flex justify-content-end">
-                              <div className="dropdown dropdown-ss dropdown-search-perpustakaan dropdown-search-rpp text-md-start text-center">
-                                <div
-                                  className="dropdown-perpustakaan-toggle-container py-4 pe-4"
-                                  data-bs-toggle="dropdown"
-                                  aria-expanded="false"
-                                  data-joyride="dropdown-perpustakaan"
-                                >
-                                  <a
-                                    onMouseOver={() => setdropdownOpen(true)}
-                                    onMouseLeave={() => setdropdownOpen(false)}
-                                    id="doubleOnClick"
-                                    className={`dropdown-toggle dropdown-search-perpustakaan-toggle dropdown-search-rpp-toggle border-start border-5 border-secondary border-light-secondary-ss ps-4 fs-5 fw-bold color-dark pointer text-decoration-none d-flex align-items-center justify-content-md-start justify-content-center`}
-                                  >
-                                    <img
-                                      src={`${
-                                        nav == "sd-mi" || !nav
-                                          ? "/img/icon-sd-mi.svg"
-                                          : nav == "smp-mts"
-                                          ? "/img/icon-smp-mts.svg"
-                                          : nav == "sma-ma"
-                                          ? "/img/icon-sma-ma.svg"
-                                          : nav == "smk-mak"
-                                          ? "/img/icon-smk-mak.svg"
-                                          : ""
-                                      }`}
-                                      height="35px"
-                                      alt="icon"
-                                      className="me-3 d-md-block d-none"
-                                    />
-
-                                    {(nav == "sd-mi" || !nav) && "SD / MI"}
-                                    {nav == "smp-mts" && "SMP / MTS"}
-                                    {nav == "sma-ma" && "SMA / MA"}
-                                    {nav == "smk-mak" && "SMK / MAK"}
-                                  </a>
-                                </div>
-                                <ul
-                                  className="dropdown-menu"
-                                  aria-labelledby="dropdownMenuButton1"
-                                  onMouseOver={() => setdropdownOpen(true)}
-                                  onMouseLeave={() => setdropdownOpen(false)}
-                                >
-                                  <li>
-                                    <Link href={`?nav=sd-mi`}>
-                                      <a
-                                        className={`dropdown-item   ${
-                                          (nav == "sd-mi" || !nav) && "active"
-                                        }`}
-                                        href="#"
-                                        onClick={() => setdropdownOpen(false)}
-                                      >
-                                        <img
-                                          src="/img/icon-sd-mi.svg"
-                                          alt="icon-sd-mi"
-                                          className="me-2"
-                                          style={{
-                                            width: "24px",
-                                            height: "24px",
-                                          }}
-                                        />
-                                        SD / MI
-                                      </a>
-                                    </Link>
-                                  </li>
-                                  <li>
-                                    <Link href={`?nav=smp-mts`}>
-                                      <a
-                                        className={`dropdown-item   ${
-                                          nav == "smp-mts" && "active"
-                                        }`}
-                                        href="#"
-                                        onClick={() => setdropdownOpen(false)}
-                                      >
-                                        <img
-                                          src="/img/icon-smp-mts.svg"
-                                          alt="icon-smp-mts"
-                                          className="me-2"
-                                        />
-                                        SMP / MTS
-                                      </a>
-                                    </Link>
-                                  </li>
-                                  <li>
-                                    <Link href={`?nav=sma-ma`}>
-                                      <a
-                                        className={`dropdown-item   ${
-                                          nav == "sma-ma" && "active"
-                                        }`}
-                                        href="#"
-                                        onClick={() => setdropdownOpen(false)}
-                                      >
-                                        <img
-                                          src="/img/icon-sma-ma.svg"
-                                          alt="icon-sma-ma"
-                                          className="me-2"
-                                        />
-                                        SMA / MA
-                                      </a>
-                                    </Link>
-                                  </li>
-                                  <li>
-                                    <Link href={`?nav=smk-mak`}>
-                                      <a
-                                        className={`dropdown-item   ${
-                                          nav == "smk-mak" && "active"
-                                        }`}
-                                        href="#"
-                                        onClick={() => setdropdownOpen(false)}
-                                      >
-                                        <img
-                                          src="/img/icon-smk-mak.svg"
-                                          alt="icon-smk-mak"
-                                          className="me-2"
-                                        />
-                                        SMK / MAK
-                                      </a>
-                                    </Link>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                        <div className="row">
-                          <div className="col-md-12">
-                            <div
-                              className={`pencarian-detail p-4 pt-0 ${
-                                collapseOpen && "show"
-                              }`}
-                            >
-                              <hr className="mb-3 mt-0" />
-                              <h4 className="fs-14-ss fw-extrabold color-dark mb-4">
-                                Pencarian Lebih Detail
-                              </h4>
-                              <div className="row mb-4">
-                                <div className="col-md-6">
-                                  <div className="mb-4">
-                                    <label className="form-label">
-                                      Provinsi
-                                    </label>
-                                    <SelectShared
-                                      name="provinsi"
-                                      placeholder="Pilih provinsi"
-                                      // // handleChangeSelect={handleChangeSelect}
-                                      // value={formData.agama}
-                                      // options={agamaData}
-                                    />
-                                  </div>
-                                </div>
-                                <div className="col-md-6">
-                                  <div className="mb-4">
-                                    <label className="form-label">
-                                      Kabupaten / Kota
-                                    </label>
-                                    <SelectShared
-                                      name="kabupatenKota"
-                                      placeholder="Pilih kabupaten / kota"
-                                      // // handleChangeSelect={handleChangeSelect}
-                                      // value={formData.agama}
-                                      // options={agamaData}
-                                    />
-                                  </div>
-                                </div>
-                                <hr className="mt-2 mt-4" />
-                                <div className="d-flex align-items-md-center justify-content-between search-form-button flex-md-row flex-column">
-                                  <span className="color-primary fw-bold mb-md-0 mb-3 text-center">
-                                    100 Pencarian
-                                  </span>
-                                  <div className="ms-md-auto d-flex flex-sm-row flex-column justify-content-between">
-                                    <button
-                                      type="button"
-                                      className="btn btn-secondary mb-sm-0 mb-3"
-                                    >
-                                      Reset Filter
-                                    </button>
-                                    <button
-                                      type="button"
-                                      className="btn btn-primary ms-sm-3"
-                                      // onClick={() => {
-                                      //   router.push(
-                                      //     `?search=${formData.cari}`
-                                      //   );
-                                      //   setcollapseOpen(false);
-                                      // }}
-                                    >
-                                      Cari Sekolah
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+          </div>
+        ) : (
+          <>
+            {" "}
+            <section className="banner-cari-sekolah position-absolute"></section>
+            <div className="container py-5 position-relative">
+              <div className="row mb-5" style={{ zIndex: "1px" }}>
+                <div className="col-md-12 text-center text-white pb-3">
+                  <h1 className="fw-black">Cari Sekolah</h1>
+                  <h6 className="fw-bold mb-0">
+                    Cari dan temukan sekolah untuk mendapatkan alamat tautan
+                    menuju sekolah anda
+                  </h6>
+                </div>
+              </div>
+              <div className="pt-4 mb-5 ">
+                <SearchCariSekolah nav={nav} />
+              </div>
+              <div
+                className="row pt-5 position-relative gy-4 search-rpp-content"
+                style={{ zIndex: "50" }}
+              >
+                <div className="col-md-12 text-center mb-4">
+                  <h2 className="color-dark fw-extrabold">SMK</h2>
+                  <p className="fw-semibold">
+                    1000 sekolah untuk kata kunci SMK
+                  </p>
                 </div>
               </div>
             </div>
-            <div
-              className={`backdrop-search-kolaborasi ${collapseOpen && "show"}`}
-              onClick={() => setcollapseOpen(false)}
-            ></div>
-          </div>
-        </div>
+          </>
+        )}
       </main>
 
       {/* <footer>
