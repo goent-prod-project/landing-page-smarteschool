@@ -3567,6 +3567,17 @@ main.main-ppdb {
   }
 }
 
+.icon-delete-search-cari-sekolah {
+  #Path_519 {
+    transition: 0.3s;
+  }
+  &:hover {
+    #Path_519 {
+      fill: var(--red);
+    }
+  }
+}
+
 /* ======================= Cari Sekolah Page End ======================= */
 
 /* ============== RWD ============== */

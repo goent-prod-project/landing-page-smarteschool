@@ -3,8 +3,16 @@ import Link from "next/link";
 import SelectShared from "../Shared/SelectShared/SelectShared";
 import { useRouter } from "next/router";
 
-const SearchCariSekolah = ({ nav, handleChangeForm, formData }) => {
+const SearchCariSekolah = ({ nav }) => {
   const router = useRouter();
+
+  const initialValue = {
+    search: "",
+    tingkat: "",
+    provinsi: "",
+    kabupaten: "",
+  };
+  const [formData, setformData] = useState(initialValue);
   const [collapseOpen, setcollapseOpen] = useState(false);
   const [dropdownOpen, setdropdownOpen] = useState(false);
 
@@ -38,11 +46,13 @@ const SearchCariSekolah = ({ nav, handleChangeForm, formData }) => {
                         placeholder={`Cari Sekolah...`}
                         autoComplete="off"
                         name="cari"
-                        onChange={() => setcollapseOpen(true)}
-                        // value={formData.cari}
-                        // onChange={handleChangeForm}
+                        onChange={(e) => (
+                          setcollapseOpen(true),
+                          setformData({ ...formData, search: e.target.value })
+                        )}
+                        value={formData?.search}
                       />
-                      {!collapseOpen && (
+                      {!formData?.search.trim() ? (
                         <img
                           src="/img/search-icon-cari-sekolah.svg"
                           alt="search-icon"
@@ -53,7 +63,48 @@ const SearchCariSekolah = ({ nav, handleChangeForm, formData }) => {
                             right: "24px",
                           }}
                         />
+                      ) : (
+                        <button
+                          className="border-0 icon-delete-search-cari-sekolah position-absolute"
+                          style={{
+                            background: "none",
+                            bottom: "50%",
+                            transform: "translateY(50%)",
+                            right: "20px",
+                          }}
+                          onClick={() => (
+                            setcollapseOpen(false),
+                            setformData({ ...formData, search: "" })
+                          )}
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                          >
+                            <g
+                              id="icon-delete-search"
+                              transform="translate(-646.347 -367.346)"
+                            >
+                              <path
+                                id="Path_519"
+                                data-name="Path 519"
+                                d="M12,0A12,12,0,1,1,0,12,12,12,0,0,1,12,0Z"
+                                transform="translate(646.347 367.346)"
+                                fill="#e1e1e7"
+                              />
+                              <path
+                                id="times-solid"
+                                d="M6.509,84.72l2.684-2.684a.844.844,0,0,0,0-1.193l-.6-.6a.844.844,0,0,0-1.193,0L4.72,82.931,2.036,80.247a.844.844,0,0,0-1.193,0l-.6.6a.844.844,0,0,0,0,1.193L2.931,84.72.247,87.4a.844.844,0,0,0,0,1.193l.6.6a.844.844,0,0,0,1.193,0L4.72,86.509,7.4,89.193a.844.844,0,0,0,1.193,0l.6-.6a.844.844,0,0,0,0-1.193Z"
+                                transform="translate(653.626 294.626)"
+                                fill="#fff"
+                              />
+                            </g>
+                          </svg>
+                        </button>
                       )}
+
                       <button type="submit" className="d-none">
                         Cari
                       </button>

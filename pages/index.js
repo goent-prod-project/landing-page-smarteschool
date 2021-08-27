@@ -149,7 +149,11 @@ export default function Home({ nav, search }) {
                       </div>
                       <div className="d-flex justify-content-end">
                         <a href="#">
-                          <img src="/img/icon-link.svg" alt="icon" />
+                          <img
+                            src="/img/icon-link.svg"
+                            alt="icon"
+                            style={{ width: "60px", height: "60px" }}
+                          />
                         </a>
                       </div>
                     </div>
