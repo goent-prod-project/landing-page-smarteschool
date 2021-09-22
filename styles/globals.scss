@@ -1899,6 +1899,14 @@ input[type="number"] {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .note-modal-backdrop {
   z-index: 899 !important;
 }
@@ -3681,6 +3689,18 @@ main.main-ppdb {
 }
 
 /* ======================= Cari Sekolah Page End ======================= */
+// ====================== Start Landing Page Smarteschool=========================
+.card-berita {
+  .judul{
+    transition: 0.5s;
+  }
+  &:hover {
+    .judul {
+      color: var(--blue) !important;
+    }
+  }
+}
+// ====================== End Landing Page Smarteschool=========================
 
 /* ============== RWD ============== */
 @media (max-width: 992px) {

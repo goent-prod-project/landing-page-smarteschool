@@ -1,3 +1,4 @@
+import "antd/dist/antd.css";
 import "../styles/globals.scss";
 import Head from "next/head";
 import NextNProgress from "nextjs-progressbar";
