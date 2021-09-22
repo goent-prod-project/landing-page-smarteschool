@@ -3607,6 +3607,30 @@ main.main-ppdb {
   background-position: right bottom;
 }
 /* ======================= New Profil Page End ======================= */
+/* ======================= Surel Page Start
+  ======================= */
+
+/* Card Arsip Start */
+.card-arsip-ss .card-body {
+  border-radius: 10px 10px 0 0;
+  background: var(--soft-gray);
+  height: 170px;
+  display: grid;
+  align-content: space-between;
+}
+
+.card-tambah-arsip-ss {
+  border-radius: 10px 10px 0 0;
+  background: var(--soft-blue);
+  border: 1px solid var(--blue);
+  height: 170px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+/* ======================= Surel Page End
+  ======================= */
+
 /* ======================= Disposisi Page Start
   ======================= */
 .form-control.form-search.form-search-disposisi {
@@ -3689,9 +3713,24 @@ main.main-ppdb {
 }
 
 /* ======================= Cari Sekolah Page End ======================= */
+
 // ====================== Start Landing Page Smarteschool=========================
+// About Page
+#hero-section-about-smarteschool {
+  background: url("/img/bg-hero-section.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-pengguna-smarteschool {
+  z-index: 1;
+  top: -75px;
+}
+
+// Berita Page
 .card-berita {
-  .judul{
+  .judul {
     transition: 0.5s;
   }
   &:hover {
@@ -3700,6 +3739,7 @@ main.main-ppdb {
     }
   }
 }
+
 // ====================== End Landing Page Smarteschool=========================
 
 /* ============== RWD ============== */
@@ -3731,6 +3771,11 @@ main.main-ppdb {
   }
   .lg-fs-12-ss {
     font-size: 12px !important;
+  }
+
+  // width
+  .lg-w-auto {
+    width: auto !important;
   }
 
   .card-kelas-ss .card-body .card-kelas-name {
@@ -3804,6 +3849,10 @@ main.main-ppdb {
   .rpp-meta-data {
     margin-top: none;
   }
+
+  .card-pengguna-smarteschool {
+    top: -125px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -3834,6 +3883,11 @@ main.main-ppdb {
   }
   .md-fs-12-ss {
     font-size: 12px !important;
+  }
+
+  //width
+  .md-w-auto {
+    width: auto !important;
   }
 
   .alert-hallo-content-new {
@@ -4024,24 +4078,10 @@ main.main-ppdb {
   .circle-help {
     bottom: 9% !important;
   }
-}
-/* Card Arsip Start */
-.card-arsip-ss .card-body {
-  border-radius: 10px 10px 0 0;
-  background: var(--soft-gray);
-  height: 170px;
-  display: grid;
-  align-content: space-between;
-}
 
-.card-tambah-arsip-ss {
-  border-radius: 10px 10px 0 0;
-  background: var(--soft-blue);
-  border: 1px solid var(--blue);
-  height: 170px;
-  display: grid;
-  align-content: center;
-  justify-content: center;
+  .card-pengguna-smarteschool {
+    top: -175px;
+  }
 }
 
 @media (max-width: 770px) {
@@ -4078,6 +4118,11 @@ main.main-ppdb {
   }
   .sm-fs-12-ss {
     font-size: 12px !important;
+  }
+
+  //width
+  .sm-w-auto {
+    width: auto !important;
   }
 
   .alert-hallo-new {

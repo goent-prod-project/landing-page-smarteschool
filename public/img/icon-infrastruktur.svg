@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" viewBox="0 0 85 85">
+  <g id="icon-infrastruktur" transform="translate(-899.174 -1391.174)">
+    <circle id="Ellipse_16" data-name="Ellipse 16" cx="42.5" cy="42.5" r="42.5" transform="translate(899.174 1391.174)" fill="#2680eb"/>
+    <g id="Group_3461" data-name="Group 3461" transform="translate(-109.934 -12.188)">
+      <rect id="Rectangle_1002" data-name="Rectangle 1002" width="6.683" height="13.072" rx="2" transform="translate(1028.553 1451.69)" fill="#fff"/>
+      <path id="Path_37240" data-name="Path 37240" d="M-18380.5-22674.734h11.721l7.08-12.6" transform="translate(19411.895 24132.961)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="6"/>
+      <path id="Path_37241" data-name="Path 37241" d="M2.575,0,15.706,3.062a2.442,2.442,0,0,1,2.046,2.175l-.506,30.769a2.015,2.015,0,0,1-2.01,1.925L1.948,38.14A1.864,1.864,0,0,1,0,36.277L.565,1.925A2.015,2.015,0,0,1,2.575,0Z" transform="translate(1071.077 1437.965) rotate(108)" fill="#fff"/>
+      <path id="Subtraction_48" data-name="Subtraction 48" d="M19561.975,24262.947a1.44,1.44,0,0,1-.465-.076l-5.389-1.758,6.012-9.818,3.008,1.035a1.425,1.425,0,0,1,.881,1.8l-2.7,7.855a1.431,1.431,0,0,1-1.344.959Z" transform="translate(-18491.436 -22808.439)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
