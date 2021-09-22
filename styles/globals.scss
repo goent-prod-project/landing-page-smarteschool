@@ -591,6 +591,15 @@ h6 {
   right: 0;
 }
 
+.banner-berita {
+  height: 250px;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  left: 0;
+  right: 0;
+  top: 2.25em;
+}
 /* Z index */
 .z-100 {
   z-index: 100;
@@ -3691,7 +3700,7 @@ main.main-ppdb {
 /* ======================= Cari Sekolah Page End ======================= */
 // ====================== Start Landing Page Smarteschool=========================
 .card-berita {
-  .judul{
+  .judul {
     transition: 0.5s;
   }
   &:hover {
