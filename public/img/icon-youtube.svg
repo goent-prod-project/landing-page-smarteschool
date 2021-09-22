@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="youtube-brands" d="M25.02,65.133a1.294,1.294,0,0,0-.911-.917A30.59,30.59,0,0,0,20.084,64a30.59,30.59,0,0,0-4.025.217,1.294,1.294,0,0,0-.911.917,14.575,14.575,0,0,0,0,4.992,1.275,1.275,0,0,0,.911.9,30.591,30.591,0,0,0,4.025.217,30.593,30.593,0,0,0,4.025-.217,1.275,1.275,0,0,0,.911-.9,14.575,14.575,0,0,0,0-4.992ZM19.03,69.161V66.1l2.693,1.532Z" transform="translate(-14.933 -64)" fill="#2680eb"/>
+    </clipPath>
+  </defs>
+  <g id="icon-youtube" transform="translate(-782 -12159)">
+    <g id="Group_3803" data-name="Group 3803" transform="translate(782 12159)">
+      <circle id="Ellipse_381" data-name="Ellipse 381" cx="10" cy="10" r="10" fill="#fff"/>
+    </g>
+    <g id="Group_3804" data-name="Group 3804" transform="translate(786.849 12165.832)">
+      <path id="youtube-brands-2" data-name="youtube-brands" d="M25.02,65.133a1.294,1.294,0,0,0-.911-.917A30.59,30.59,0,0,0,20.084,64a30.59,30.59,0,0,0-4.025.217,1.294,1.294,0,0,0-.911.917,14.575,14.575,0,0,0,0,4.992,1.275,1.275,0,0,0,.911.9,30.591,30.591,0,0,0,4.025.217,30.593,30.593,0,0,0,4.025-.217,1.275,1.275,0,0,0,.911-.9,14.575,14.575,0,0,0,0-4.992ZM19.03,69.161V66.1l2.693,1.532Z" transform="translate(-14.933 -64)" fill="#2680eb"/>
+      <g id="Mask_Group_1526" data-name="Mask Group 1526" transform="translate(0)" clip-path="url(#clip-path)">
+        <circle id="Ellipse_632" data-name="Ellipse 632" cx="8.272" cy="8.272" r="8.272" transform="translate(-8.684 -9.624)" fill="#6bb1fe" opacity="0.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

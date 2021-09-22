@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="linkedin-in-brands" d="M2.029,9.076H.15V3.023h1.88ZM1.089,2.2A1.094,1.094,0,1,1,2.177,1.1,1.1,1.1,0,0,1,1.089,2.2ZM9.064,9.076H7.189V6.13c0-.7-.014-1.6-.977-1.6S5.085,5.29,5.085,6.079v3H3.207V3.023h1.8v.826h.026a1.975,1.975,0,0,1,1.778-.977c1.9,0,2.252,1.253,2.252,2.88V9.076Z" transform="translate(0 -0.01)" fill="#2680eb"/>
+    </clipPath>
+  </defs>
+  <g id="icon-linkedin" transform="translate(-0.333 -0.066)">
+    <circle id="Ellipse_381" data-name="Ellipse 381" cx="10" cy="10" r="10" transform="translate(0.333 0.066)" fill="#fff"/>
+    <path id="linkedin-in-brands-2" data-name="linkedin-in-brands" d="M2.029,9.076H.15V3.023h1.88ZM1.089,2.2A1.094,1.094,0,1,1,2.177,1.1,1.1,1.1,0,0,1,1.089,2.2ZM9.064,9.076H7.189V6.13c0-.7-.014-1.6-.977-1.6S5.085,5.29,5.085,6.079v3H3.207V3.023h1.8v.826h.026a1.975,1.975,0,0,1,1.778-.977c1.9,0,2.252,1.253,2.252,2.88V9.076Z" transform="translate(5.928 5.703)" fill="#2680eb"/>
+    <g id="Mask_Group_1480" data-name="Mask Group 1480" transform="translate(5.928 5.713)" clip-path="url(#clip-path)">
+      <circle id="Ellipse_532" data-name="Ellipse 532" cx="7.428" cy="7.428" r="7.428" transform="translate(-8.02 -6.133)" fill="#6bb1fe" opacity="0.5"/>
+    </g>
+  </g>
+</svg>

@@ -1,14 +1,19 @@
 import "../styles/globals.scss";
 import Head from "next/head";
 import NextNProgress from "nextjs-progressbar";
+import { AnimatePresence } from "framer-motion";
+import "react-awesome-slider/dist/styles.css";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        <title>Smarteschool</title>
+        <meta name="description" content="Sekolah Digitalmu" />
+        <link rel="icon" href="/favicon.ico" />
+
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -23,13 +28,19 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         ></link>
       </Head>
-      <NextNProgress
-        color="#96DAFF"
-        startPosition={0.3}
-        stopDelayMs={200}
-        height="4"
-      />
-      <Component {...pageProps} />
+      <AnimatePresence
+        exitBeforeEnter
+        initial={false}
+        onExitComplete={() => window.scrollTo(0, 0)}
+      >
+        <NextNProgress
+          color="#96DAFF"
+          startPosition={0.3}
+          stopDelayMs={200}
+          height="4"
+        />
+        <Component {...pageProps} />
+      </AnimatePresence>
       <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"

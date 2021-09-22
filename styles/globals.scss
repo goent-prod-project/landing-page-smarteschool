@@ -10,6 +10,7 @@
   --blue: #2680eb;
   --blue-gradient: linear-gradient(to right, #2680eb, #3146bb);
   --blue-gradient-2: linear-gradient(to bottom, #2680eb, #6bb1fe);
+  --orange-gradient: linear-gradient(to right, #ffc107, #ff8700);
   --light-blue: #d9eeff;
   --soft-blue: #eef5ff;
   --green: #63ed7a;
@@ -23,6 +24,7 @@
   --shadow-primary: rgba(38, 128, 235, 0.3);
   --shadow-success: rgba(168, 245, 180, 0.75);
   --shadow-danger: rgba(255, 112, 79, 0.5);
+  --shadow-warning: rgba(255, 196, 115, 0.5);
   --shadow-dark: rgba(58, 65, 102, 0.075);
 }
 
@@ -297,6 +299,10 @@ h6 {
   background: var(--blue-gradient-2) !important;
 }
 
+.bg-gradient-warning {
+  background: var(--orange-gradient) !important;
+}
+
 .bg-light,
 .bg-white {
   background-color: white !important;
@@ -532,6 +538,10 @@ h6 {
   box-shadow: 0 5px 15px var(--shadow-dark) !important;
 }
 
+.shadow-warning-ss {
+  box-shadow: 0 5px 15px var(--shadow-warning) !important;
+}
+
 /* Border */
 .border-primary-ss {
   border-color: var(--blue) !important;
@@ -555,7 +565,7 @@ h6 {
 
 /* Border Radius */
 .rounded-ss {
-  border-radius: 0.625rem !important;
+  border-radius: 15px !important;
 }
 
 /* Cursor */
@@ -1897,6 +1907,97 @@ input[type="number"] {
   min-height: 100vh;
 }
 
+// Slider
+.awssld {
+  --content-background-color: none !important;
+}
+
+.awssld__wrapper {
+  height: 89vh !important;
+}
+
+.awssld__bullets {
+  z-index: 2 !important;
+  bottom: 5% !important;
+}
+
+.awssld__bullets button {
+  padding: 0;
+  display: block;
+  width: 8px !important;
+  height: 8px !important;
+  margin: 5px;
+  border-radius: 50%;
+  background: var(--control-bullet-color);
+  text-indent: -9999px;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  -webkit-transition: background-color 0.175s ease-out,
+    -webkit-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45);
+  transition: background-color 0.175s ease-out,
+    -webkit-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45);
+  -moz-transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45),
+    background-color 0.175s ease-out,
+    -moz-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45);
+  transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45),
+    background-color 0.175s ease-out;
+  transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45),
+    background-color 0.175s ease-out,
+    -webkit-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45),
+    -moz-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45);
+  transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45),
+    background-color 0.175s ease-out,
+    -webkit-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45);
+}
+
+.awssld__bullets .awssld__bullets--active {
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  transform: scale(1.5);
+  background: var(--control-bullet-active-color);
+}
+
+.awssld__bullets .awssld__bullets--loading {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.slider-body {
+  z-index: 2;
+  position: absolute;
+  bottom: 13%;
+}
+
+// Slider End
+
+.btn-collapse {
+  span {
+    img {
+      transition: 0.3s;
+    }
+  }
+}
+
+.btn-collapse.active {
+  span {
+    img {
+      transform: rotate(-180deg) !important;
+    }
+  }
+}
+
+.smarte-menu {
+  .card {
+    transition: 0.3s;
+    &:hover {
+      box-shadow: 0 10px 30px var(--shadow-primary) !important;
+      transform: translateY(-10px);
+    }
+  }
+}
+
 /* ============== Utility End ==============  */
 
 main.main-ppdb {
@@ -1906,7 +2007,7 @@ main.main-ppdb {
 .card-ss {
   box-shadow: 0 10px 30px rgba(58, 65, 102, 0.075) !important;
   border: none;
-  border-radius: 10px !important;
+  border-radius: 15px !important;
 }
 
 .navbar-ss {
@@ -3163,7 +3264,7 @@ main.main-ppdb {
 /* ======================= Landing Page PPDB Start ======================= */
 .navbar-ppdb {
   .navbar-brand {
-    margin-right: 150px;
+    margin-right: 175px;
   }
 
   .nav-link {
@@ -3186,10 +3287,11 @@ main.main-ppdb {
     .nav-item {
       .nav-link {
         color: var(--dark) !important;
+        border-bottom: 3px solid white;
       }
 
       .nav-link.active {
-        border-bottom: 1px solid var(--blue);
+        border-bottom: 3px solid var(--blue);
       }
     }
   }
@@ -3582,6 +3684,35 @@ main.main-ppdb {
 
 /* ============== RWD ============== */
 @media (max-width: 992px) {
+  // Font Size
+  .lg-fs-1 {
+    font-size: 40px !important;
+  }
+  .lg-fs-2 {
+    font-size: 32px !important;
+  }
+  .lg-fs-3 {
+    font-size: 28px !important;
+  }
+  .lg-fs-4 {
+    font-size: 24px !important;
+  }
+  .lg-fs-5 {
+    font-size: 20px !important;
+  }
+  .lg-fs-6 {
+    font-size: 16px !important;
+  }
+  .lg-fs-18-ss {
+    font-size: 18px !important;
+  }
+  .lg-fs-14-ss {
+    font-size: 14px !important;
+  }
+  .lg-fs-12-ss {
+    font-size: 12px !important;
+  }
+
   .card-kelas-ss .card-body .card-kelas-name {
     max-width: 100% !important;
   }
@@ -3656,6 +3787,35 @@ main.main-ppdb {
 }
 
 @media (max-width: 768px) {
+  // Font Size
+  .md-fs-1 {
+    font-size: 40px !important;
+  }
+  .md-fs-2 {
+    font-size: 32px !important;
+  }
+  .md-fs-3 {
+    font-size: 28px !important;
+  }
+  .md-fs-4 {
+    font-size: 24px !important;
+  }
+  .md-fs-5 {
+    font-size: 20px !important;
+  }
+  .md-fs-6 {
+    font-size: 16px !important;
+  }
+  .md-fs-18-ss {
+    font-size: 18px !important;
+  }
+  .md-fs-14-ss {
+    font-size: 14px !important;
+  }
+  .md-fs-12-ss {
+    font-size: 12px !important;
+  }
+
   .alert-hallo-content-new {
     h3 {
       font-size: 1.25em;
@@ -3871,6 +4031,35 @@ main.main-ppdb {
 }
 
 @media (max-width: 576px) {
+  // Font Size
+  .sm-fs-1 {
+    font-size: 40px !important;
+  }
+  .sm-fs-2 {
+    font-size: 32px !important;
+  }
+  .sm-fs-3 {
+    font-size: 28px !important;
+  }
+  .sm-fs-4 {
+    font-size: 24px !important;
+  }
+  .sm-fs-5 {
+    font-size: 20px !important;
+  }
+  .sm-fs-6 {
+    font-size: 16px !important;
+  }
+  .sm-fs-18-ss {
+    font-size: 18px !important;
+  }
+  .sm-fs-14-ss {
+    font-size: 14px !important;
+  }
+  .sm-fs-12-ss {
+    font-size: 12px !important;
+  }
+
   .alert-hallo-new {
     .alert-hallo-content-new {
       max-width: 100% !important;
@@ -3979,6 +4168,14 @@ main.main-ppdb {
     .form-check-input {
       left: 7%;
     }
+  }
+
+  .awssld__wrapper {
+    height: 375px !important;
+  }
+
+  main {
+    padding-top: 58px !important;
   }
 }
 
