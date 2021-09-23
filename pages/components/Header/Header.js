@@ -17,13 +17,18 @@ const Header = ({ isFrontPage }) => {
     },
     {
       isDropdown: false,
-      text: "Fitur",
-      url: `/fitur`,
+      text: "About",
+      url: `/about`,
     },
     {
       isDropdown: false,
       text: "Sekolah",
       url: `/sekolah`,
+    },
+    {
+      isDropdown: false,
+      text: "Event",
+      url: `/event`,
     },
     {
       isDropdown: false,
@@ -38,28 +43,47 @@ const Header = ({ isFrontPage }) => {
 
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-light navbar-ppdb active position-fixed w-100 py-sm-3 py-1">
+      <nav className="navbar navbar-expand-lg navbar-light navbar-ppdb active position-fixed w-100 py-sm-3 py-2">
         <div className="container-fluid px-lg-5 px-4">
-          <Link href={`/`}>
-            <a className="navbar-brand">
-              <div
-                className="logo-ss"
-                style={{ width: "40px", height: "40px" }}
-              ></div>
-              {/* <img src={`/img/ss-logo-white.png`} width={40} height={40} /> */}
-            </a>
-          </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+          <div className="d-lg-flex d-none align-items-center">
+            <Link href={`/`}>
+              <a className="navbar-brand">
+                <div
+                  className="logo-ss"
+                  style={{ width: "40px", height: "40px" }}
+                ></div>
+                {/* <img src={`/img/ss-logo-white.png`} width={40} height={40} /> */}
+              </a>
+            </Link>
+          </div>
+          <div
+            className="d-lg-none d-flex align-items-center"
+            // style={{ paddingTop: "6px", paddingBottom: "6px" }}
           >
-            <span className="navbar-toggler-icon"></span>
-          </button>
+            <div className="row justify-content-between">
+              <div className="col-md-4 col-sm-6 col-7 d-flex align-items-center">
+                <img
+                  src="/img/logo-smarteschool.png"
+                  alt=""
+                  className="img-fluid"
+                />
+              </div>
+              <div className="col-3 d-flex justify-content-end">
+                <button
+                  className="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span className="navbar-toggler-icon"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav navbar-nav-ppdb mx-auto mb-2 mb-lg-0">
               {headerMenus?.map((menu, idx) => {
@@ -94,11 +118,12 @@ const Header = ({ isFrontPage }) => {
                 </Link>
               </li>
               <li className="nav-item d-lg-block d-flex flex-lg-row flex-column">
-                <Link href={`/login`}>
-                  <a className="btn btn-ss btn-primary-ss shadow-primary-ss rounded-pill mt-lg-1">
-                    Daftar
-                  </a>
-                </Link>
+                <a
+                  href={`https://api.whatsapp.com/send?phone=6281284538354&text=Halo, CS Smarteschool sekolah saya ingin menjadi sekolah Smarteschool`}
+                  className="btn btn-ss btn-primary-ss shadow-primary-ss rounded-pill mt-lg-1"
+                >
+                  Daftar
+                </a>
               </li>
             </ul>
           </div>

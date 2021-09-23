@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="94" viewBox="0 0 64 94">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_257" data-name="Path 257" d="M6.207,4.138H35.173V26.9h4.138V2.586A2.589,2.589,0,0,0,36.724,0H4.655A2.589,2.589,0,0,0,2.069,2.586V26.9H6.207ZM40.345,28.966h-9.31V24.828H18.621v4.138H1.034A1.034,1.034,0,0,0,0,30v2.069A1.034,1.034,0,0,0,1.034,33.1H40.345a1.034,1.034,0,0,0,1.034-1.034V30A1.034,1.034,0,0,0,40.345,28.966Z" transform="translate(0 0)" fill="#2680eb"/>
+    </clipPath>
+  </defs>
+  <g id="icon-slider-role-guru-active" transform="translate(-702 -2139)">
+    <g id="icon-role-guru-tua" transform="translate(702.381 2139)">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="32" cy="32" r="32" transform="translate(-0.381)" fill="#2680eb"/>
+      <path id="Path_252" data-name="Path 252" d="M5.364,3.576h25.03V23.242h3.576V2.235A2.237,2.237,0,0,0,31.734,0H4.023A2.237,2.237,0,0,0,1.788,2.235V23.242H5.364Zm29.5,21.454H26.818V21.454H16.091V25.03H.894A.894.894,0,0,0,0,25.924v1.788a.894.894,0,0,0,.894.894H34.863a.894.894,0,0,0,.894-.894V25.924A.894.894,0,0,0,34.863,25.03Z" transform="translate(13.693 17.619)" fill="#fff"/>
+      <g id="Mask_Group_3" data-name="Mask Group 3" transform="translate(10.882 15.37)" opacity="0" clip-path="url(#clip-path)">
+        <circle id="Ellipse_84" data-name="Ellipse 84" cx="35.5" cy="35.5" r="35.5" transform="translate(-44.261 -32.37)" fill="#2680eb" opacity="0.5"/>
+      </g>
+    </g>
+    <text id="Guru" transform="translate(716 2227)" fill="#2680eb" font-size="16" font-family="NunitoSans-Bold, Nunito Sans" font-weight="700"><tspan x="0" y="0">Guru</tspan></text>
+  </g>
+</svg>

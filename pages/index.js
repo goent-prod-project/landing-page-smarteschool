@@ -8,6 +8,8 @@ import { FaFilter } from "react-icons/fa";
 import Layout from "./components/Layout/Layout";
 import AnimatePage from "./components/Shared/AnimatePage/AnimatePage";
 import Slider from "./components/Slider/Slider";
+import SectionMenuDesktop from "./components/SectionMenu/SectionMenuDesktop";
+import SectionMenuMobile from "./components/SectionMenu/SectionMenuMobile";
 
 export default function Home({ nav, search }) {
   const router = useRouter();
@@ -23,7 +25,7 @@ export default function Home({ nav, search }) {
     });
   }, []);
 
-  const slider = [ 
+  const slider = [
     {
       desktopBsanner: "/img/banner-desktop.png",
       mobileBanner: "/img/banner-mobile.png",
@@ -45,153 +47,32 @@ export default function Home({ nav, search }) {
   return (
     <Layout isIndex>
       <AnimatePage>
-        <Slider>
-          {slider?.map((d, idx) => (
-            <div
-              key={idx}
-              className="slider-body"
-              data-src={sliderWidth >= 768 ? d.desktopBsanner : d.mobileBanner}
-            >
-              <div className="d-sm-block d-none">
+        <div className="slider">
+          <Slider>
+            {slider?.map((d, idx) => (
+              <div
+                key={idx}
+                className="slider-body position-absolute"
+                data-src={
+                  sliderWidth > 576 ? d.desktopBsanner : d.mobileBanner
+                }
+              >
                 <a
-                  href="#"
-                  className="btn btn-ss btn-warning btn-warning-ss fs-18-ss fw-bold rounded-pill shadow-warning-ss bg-gradient-warning"
-                >
-                  Lihat Selengkapnya
-                </a>
+                  href="https://www.youtube.com/channel/UC5mNaPBo672Z-szp3k1QU_g"
+                  target="_blank"
+                ></a>
               </div>
-              <div className="d-sm-none d-block">
-                <a
-                  href="#"
-                  className="btn btn-ss btn-warning btn-warning-ss fs-12-ss fw-bold rounded-pill shadow-warning-ss bg-gradient-warning"
-                >
-                  Lihat Selengkapnya
-                </a>
-              </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </div>
 
         {/* Section Menu Start*/}
 
-        <div className="section py-5" style={{ backgroundColor: "#F6FAFF" }}>
-          <div className="container">
-            <div className="row mb-5">
-              <div className="col-md-12 text-center">
-                <h1 className="fs-1 fw-extrabold color-dark">
-                  Pelajari Lebih Lanjut
-                </h1>
-                <h5 className="fs-5 color-secondary mb-0">
-                  Kami menyediakan solusi untuk semua aspek sekolah di
-                  Smarteschool
-                </h5>
-              </div>
-            </div>
-            <div className="row gy-4">
-              <div className="col-md-4 col-6">
-                <Link href="#">
-                  <a className="text-decoration-none smarte-menu">
-                    {" "}
-                    <div className="card card-ss rounded-ss p-sm-4 p-3 text-center">
-                      <img
-                        src="/img/fitur.png"
-                        alt=""
-                        className="img-fluid mb-4"
-                      />
-                      <h4 className="fs-4 sm-fs-6 color-dark fw-bold mb-0">
-                        Fitur
-                      </h4>
-                    </div>
-                  </a>
-                </Link>
-              </div>
-              <div className="col-md-4 col-6">
-                <Link href="#">
-                  <a className="text-decoration-none smarte-menu">
-                    {" "}
-                    <div className="card card-ss rounded-ss p-sm-4 p-3 text-center">
-                      <img
-                        src="/img/uji-coba.png"
-                        alt=""
-                        className="img-fluid mb-4"
-                      />
-                      <h4 className="fs-4 sm-fs-6 color-dark fw-bold mb-0">
-                        Uji Coba
-                      </h4>
-                    </div>
-                  </a>
-                </Link>
-              </div>
-              <div className="col-md-4 col-6">
-                <Link href="#">
-                  <a className="text-decoration-none smarte-menu">
-                    {" "}
-                    <div className="card card-ss rounded-ss p-sm-4 p-3 text-center">
-                      <img
-                        src="/img/sekolah-partner.png"
-                        alt=""
-                        className="img-fluid mb-4"
-                      />
-                      <h4 className="fs-4 sm-fs-6 color-dark fw-bold mb-0">
-                        Sekolah Partner
-                      </h4>
-                    </div>
-                  </a>
-                </Link>
-              </div>
-              <div className="col-md-4 col-6">
-                <Link href="#">
-                  <a className="text-decoration-none smarte-menu">
-                    {" "}
-                    <div className="card card-ss rounded-ss p-sm-4 p-3 text-center">
-                      <img
-                        src="/img/berita.png"
-                        alt=""
-                        className="img-fluid mb-4"
-                      />
-                      <h4 className="fs-4 sm-fs-6 color-dark fw-bold mb-0">
-                        Berita
-                      </h4>
-                    </div>
-                  </a>
-                </Link>
-              </div>
-              <div className="col-md-4 col-6">
-                <Link href="#">
-                  <a className="text-decoration-none smarte-menu">
-                    {" "}
-                    <div className="card card-ss rounded-ss p-sm-4 p-3 text-center">
-                      <img
-                        src="/img/program.png"
-                        alt=""
-                        className="img-fluid mb-4"
-                      />
-                      <h4 className="fs-4 sm-fs-6 color-dark fw-bold mb-0">
-                        Program
-                      </h4>
-                    </div>
-                  </a>
-                </Link>
-              </div>
-              <div className="col-md-4 col-6">
-                <Link href="#">
-                  <a className="text-decoration-none smarte-menu">
-                    {" "}
-                    <div className="card card-ss rounded-ss p-sm-4 p-3 text-center">
-                      <img
-                        src="/img/hubungi-kami.png"
-                        alt=""
-                        className="img-fluid mb-4"
-                      />
-                      <h4 className="fs-4 sm-fs-6 color-dark fw-bold mb-0">
-                        Hubungi Kami
-                      </h4>
-                    </div>
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
+        <div className="d-md-block d-none">
+          <SectionMenuDesktop />
+        </div>
+        <div className="d-md-none d-block">
+          <SectionMenuMobile />
         </div>
 
         {/* Section Menu End */}

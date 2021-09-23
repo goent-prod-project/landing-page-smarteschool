@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { FaEnvelope, FaFax, FaPhone } from "react-icons/fa";
 import Header from "../Header/Header";
 import Link from "next/link";
+import BottomNavigation from "../BottomNavigation/BottomNavigation";
 
 const Layout = ({
   children,
@@ -25,15 +26,12 @@ const Layout = ({
         style={{ paddingTop: "82px" }}
       >
         {children}
+      
       </main>
       {modalWrapper}
       <>
         {/* Section CTA Start */}
-        <div
-          className={`section py-5 ${
-            isIndex ? "bg-light" : "bg-main"
-          }`}
-        >
+        <div className={`section py-5 ${isIndex ? "bg-light" : "bg-main"}`}>
           <div className="container">
             <div className="row">
               <div className="col-md-12">
@@ -49,7 +47,8 @@ const Layout = ({
                         </h1>
                         <div className="d-flex justify-content-lg-start justify-content-sm-center flex-sm-row flex-column align-items-center">
                           <a
-                            href="#"
+                            href={`https://api.whatsapp.com/send?phone=6281284538354&text=Halo, CS Smarteschool sekolah saya ingin menjadi anggota sekolah Smarteschool`}
+                            target="_blank"
                             className="btn btn-ss btn-primary btn-primary-ss bg-gradient-primary shadow-primary-ss fw-bold rounded-pill d-flex align-items-center justify-content-center me-sm-4 mb-sm-0 mb-3"
                             style={{ width: "190px" }}
                           >
@@ -86,7 +85,7 @@ const Layout = ({
               <div className="row gy-4">
                 <div className="col-md-3">
                   <div className="row">
-                    <div className="col-md-12 col-8">
+                    <div className="col-lg-10 col-md-12 col-8">
                       <img
                         src="/img/logo-smarteschool-putih.png"
                         alt="logo-smarteschool"
@@ -108,9 +107,9 @@ const Layout = ({
                     <div className="col-md-3 col-sm-6 mb-sm-0 mb-4">
                       <h4 className="fw-extrabold mb-4">Pelajari</h4>
                       <div className="mb-3">
-                        <Link href={`/fitur`}>
+                        <Link href={`/about`}>
                           <a className="text-white fs-14-ss text-decoration-none">
-                            Fitur
+                            About
                           </a>
                         </Link>
                       </div>
@@ -135,12 +134,12 @@ const Layout = ({
                         </Link>
                       </div>
                       <div className="mb-3">
-                        <Link href={`/artikel`}>
+                        <Link href={`/event`}>
                           <a
                             href="#"
                             className="text-white fs-14-ss text-decoration-none"
                           >
-                            Artikel
+                            Event
                           </a>
                         </Link>
                       </div>
@@ -170,7 +169,8 @@ const Layout = ({
                       <h4 className="fw-extrabold mb-4">Ikuti Kami</h4>
                       <div className="mb-3">
                         <a
-                          href={`tel:sekolah`}
+                          href={`https://www.youtube.com/channel/UC5mNaPBo672Z-szp3k1QU_g`}
+                          target="_blank"
                           className="text-white text-decoration-none fs-14-ss"
                         >
                           <div className="d-flex align-items-center">
@@ -189,7 +189,8 @@ const Layout = ({
                       </div>
                       <div className="mb-3">
                         <a
-                          href={`tel:sekolah`}
+                          href={`https://www.linkedin.com/company/smarteschool/`}
+                          target="_blank"
                           className="text-white text-decoration-none fs-14-ss"
                         >
                           <div className="d-flex align-items-center">
@@ -208,7 +209,8 @@ const Layout = ({
                       </div>
                       <div className="mb-3">
                         <a
-                          href={`tel:sekolah`}
+                          href={`https://www.facebook.com/smarteschool.smarteschool/`}
+                          target="_blank"
                           className="text-white text-decoration-none fs-14-ss"
                         >
                           <div className="d-flex align-items-center">
@@ -227,7 +229,8 @@ const Layout = ({
                       </div>
                       <div className="mb-3">
                         <a
-                          href={`tel:sekolah`}
+                          href={`https://www.instagram.com/smarteschool.id/`}
+                          target="_blank"
                           className="text-white text-decoration-none fs-14-ss"
                         >
                           <div className="d-flex align-items-center">
@@ -275,6 +278,8 @@ const Layout = ({
           </section>
         </footer>
       </>
+
+      <BottomNavigation />
     </>
   );
 };
