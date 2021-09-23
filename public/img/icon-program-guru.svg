@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="35" height="35" viewBox="0 0 35 35">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="user-solid" d="M8.6,9.823A4.912,4.912,0,1,0,3.684,4.912,4.911,4.911,0,0,0,8.6,9.823Zm3.438,1.228h-.641a6.68,6.68,0,0,1-5.595,0H5.157A5.158,5.158,0,0,0,0,16.208v1.6a1.842,1.842,0,0,0,1.842,1.842H15.349A1.842,1.842,0,0,0,17.191,17.8v-1.6A5.158,5.158,0,0,0,12.033,11.051Z" transform="translate(0 0)" fill="#2680eb"/>
+    </clipPath>
+  </defs>
+  <g id="icon-program-guru" transform="translate(-0.164)">
+    <circle id="Ellipse_111" data-name="Ellipse 111" cx="17.5" cy="17.5" r="17.5" transform="translate(0.164)" fill="#fff"/>
+    <g id="Group_3327" data-name="Group 3327" transform="translate(9.143 7.915)">
+      <path id="user-solid-2" data-name="user-solid" d="M8.6,9.823A4.912,4.912,0,1,0,3.684,4.912,4.911,4.911,0,0,0,8.6,9.823Zm3.438,1.228h-.641a6.68,6.68,0,0,1-5.595,0H5.157A5.158,5.158,0,0,0,0,16.208v1.6a1.842,1.842,0,0,0,1.842,1.842H15.349A1.842,1.842,0,0,0,17.191,17.8v-1.6A5.158,5.158,0,0,0,12.033,11.051Z" transform="translate(0 0)" fill="#2680eb"/>
+      <g id="Mask_Group_1358" data-name="Mask Group 1358" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <circle id="Ellipse_347" data-name="Ellipse 347" cx="12.222" cy="12.222" r="12.222" transform="translate(-10.069 -8.567)" fill="#6bb1fe" opacity="0.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

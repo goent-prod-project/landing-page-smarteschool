@@ -119,7 +119,7 @@ const index = ({ id }) => {
                 </h4>
                 <CardSideBerita data={dataBerita} />
 
-                <div>
+                <div className="text-center">
                   <a
                     href="/berita-terbaru"
                     className="bg-secondary py-2 px-4 text-white fw-bold fs-16-ss rounded-pill text-center pointer"

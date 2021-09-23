@@ -23,7 +23,7 @@ export default function Home({ nav, search }) {
     });
   }, []);
 
-  const slider = [ 
+  const slider = [
     {
       desktopBsanner: "/img/banner-desktop.png",
       mobileBanner: "/img/banner-mobile.png",
