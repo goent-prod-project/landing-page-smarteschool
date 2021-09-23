@@ -29,7 +29,11 @@ const Layout = ({
       {modalWrapper}
       <>
         {/* Section CTA Start */}
-        <div className="section py-5">
+        <div
+          className={`section py-5 ${
+            isIndex ? "bg-light" : "bg-main"
+          }`}
+        >
           <div className="container">
             <div className="row">
               <div className="col-md-12">

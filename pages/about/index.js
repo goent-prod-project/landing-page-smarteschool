@@ -32,14 +32,14 @@ export default function Home({ nav, search }) {
       desktopBsanner: "/img/banner-desktop.png",
       mobileBanner: "/img/banner-mobile.png",
     },
-    {
-      desktopBsanner: "/img/banner-desktop.png",
-      mobileBanner: "/img/banner-mobile.png",
-    },
-    {
-      desktopBsanner: "/img/banner-desktop.png",
-      mobileBanner: "/img/banner-mobile.png",
-    },
+    // {
+    //   desktopBsanner: "/img/banner-desktop.png",
+    //   mobileBanner: "/img/banner-mobile.png",
+    // },
+    // {
+    //   desktopBsanner: "/img/banner-desktop.png",
+    //   mobileBanner: "/img/banner-mobile.png",
+    // },
   ];
 
   return (
@@ -149,7 +149,7 @@ export default function Home({ nav, search }) {
           </div>
         </section>
 
-        <section className="pb-5" style={{ backgroundColor: "#F6FAFF" }}>
+        <section className="pb-4" style={{ backgroundColor: "#F6FAFF" }}>
           <div className="container">
             <div className="row">
               <div className="col-md-12 text-center">
@@ -163,13 +163,17 @@ export default function Home({ nav, search }) {
           </div>
         </section>
 
-        <section>
-          <div className="container">
-            <div className="row">
-              <div className="col-md-4">
+        <section className="position-relative mb-5">
+          <div
+            className="w-100 h-50 position-absolute"
+            style={{ backgroundColor: "#F6FAFF" }}
+          ></div>
+          <div className="container position-relative">
+            <div className="row gy-4">
+              <div className="col-lg-4">
                 <div
-                  className="card-ss p-4 rounded-ss"
-                  style={{ minHeight: "450px" }}
+                  className="card-ss p-4 rounded-ss h-100 lg-h-auto bg-white"
+                  style={{ minHeight: "465px" }}
                 >
                   <div
                     className="rounded-circle shadow-primary-ss mb-4"
@@ -187,10 +191,10 @@ export default function Home({ nav, search }) {
                   </p>
                 </div>
               </div>
-              <div className="col-md-4">
+              <div className="col-lg-4">
                 <div
-                  className="card-ss p-4 rounded-ss"
-                  style={{ minHeight: "450px" }}
+                  className="card-ss p-4 rounded-ss h-100 lg-h-auto bg-white"
+                  style={{ minHeight: "465px" }}
                 >
                   <div
                     className="rounded-circle shadow-primary-ss mb-4"
@@ -208,16 +212,16 @@ export default function Home({ nav, search }) {
                   </p>
                 </div>
               </div>
-              <div className="col-md-4">
+              <div className="col-lg-4">
                 <div
-                  className="card-ss p-4 rounded-ss"
-                  style={{ minHeight: "450px" }}
+                  className="card-ss p-4 rounded-ss h-100 lg-h-auto bg-white"
+                  style={{ minHeight: "465px" }}
                 >
                   <div
                     className="rounded-circle shadow-primary-ss mb-4"
                     style={{ width: "85px", height: "85px" }}
                   >
-                    <img src="/img/icon-infreastruktur.svg" alt="icon" />
+                    <img src="/img/icon-infrastruktur.svg" alt="icon" />
                   </div>
                   <h4 className="fs-4 color-dark fw-bold mb-4">
                     Infrastruktur
@@ -232,6 +236,93 @@ export default function Home({ nav, search }) {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section>
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12 text-center">
+                <h3 className="fs-3 fw-bold color-dark">Fitur Utama</h3>
+                <h5 className="fs-5 color-secondary color-secondary">
+                  Sudah saatnya akses digitalisasi didapatkan bagi seluruh
+                  kalangan pendidikan
+                </h5>
+              </div>
+            </div>
+          </div>
+          {/* <div className="slider-fitur">
+            <Slider>
+              {slider?.map((d, idx) => (
+                <div
+                  key={idx}
+                  className="slider-body"
+                  data-src={
+                    sliderWidth >= 768 ? d.desktopBsanner : d.mobileBanner
+                  }
+                >
+                  <div className="d-sm-block d-none">
+                    <a
+                      href="#"
+                      className="btn btn-ss btn-warning btn-warning-ss fs-18-ss fw-bold rounded-pill shadow-warning-ss bg-gradient-warning"
+                    >
+                      Lihat Selengkapnya
+                    </a>
+                  </div>
+                  <div className="d-sm-none d-block">
+                    <a
+                      href="#"
+                      className="btn btn-ss btn-warning btn-warning-ss fs-12-ss fw-bold rounded-pill shadow-warning-ss bg-gradient-warning"
+                    >
+                      Lihat Selengkapnya
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </Slider>
+          </div> */}
+          <div className="slider-fitur">
+            <Slider>
+              <div className="container">
+                <div className="row gx-4">
+                  <div className="col-md-6">
+                    <img
+                      src="/img/smarteschool-illustration.png"
+                      alt=""
+                      className="img-fluid"
+                    />
+                  </div>
+                  <div className="col-md-6">
+                    <span className="rounded-pill bg-light-primary py-1 px-3 color-primary fw-bold mb-4">
+                      Sebagai Guru
+                    </span>
+                    <h4 className="fs-4 color-dark fw-bold my-4">
+                      Guru adalah Pemimpin Masa Depan Indonesia, Kami hadir
+                      untuk membantu kegiatan belajar mengajar dengan maksimal
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <div className="container">
+                <div className="row gx-4">
+                  <div className="col-md-6">
+                    <img
+                      src="/img/smarteschool-illustration.png"
+                      alt=""
+                      className="img-fluid"
+                    />
+                  </div>
+                  <div className="col-md-6">
+                    <span className="rounded-pill bg-light-primary py-1 px-3 color-primary fw-bold mb-4">
+                      Sebagai Guru
+                    </span>
+                    <h4 className="fs-4 color-dark fw-bold my-4">
+                      Guru adalah Pemimpin Masa Depan Indonesia, Kami hadir
+                      untuk membantu kegiatan belajar mengajar dengan maksimal
+                    </h4>
+                  </div>
+                </div>
+              </div>
+            </Slider>
           </div>
         </section>
       </AnimatePage>

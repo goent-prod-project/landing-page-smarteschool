@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_257" data-name="Path 257" d="M6.081,4.054H34.457v22.3h4.054V2.534A2.536,2.536,0,0,0,35.977,0H4.561A2.536,2.536,0,0,0,2.027,2.534V26.35H6.081ZM39.525,28.377H30.4V24.323H18.242v4.054H1.013A1.013,1.013,0,0,0,0,29.39v2.027A1.013,1.013,0,0,0,1.013,32.43H39.525a1.013,1.013,0,0,0,1.013-1.013V29.39A1.013,1.013,0,0,0,39.525,28.377Z" transform="translate(0 0)" fill="#2680eb"/>
+    </clipPath>
+  </defs>
+  <g id="icon-role-guru" transform="translate(0.254 -0.349)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="32" cy="32" r="32" transform="translate(-0.254 0.349)" fill="#d9eeff" opacity="0.7"/>
+    <path id="Path_252" data-name="Path 252" d="M6.081,4.054H34.457v22.3h4.054V2.534A2.536,2.536,0,0,0,35.977,0H4.561A2.536,2.536,0,0,0,2.027,2.534V26.35H6.081ZM39.525,28.377H30.4V24.323H18.242v4.054H1.013A1.013,1.013,0,0,0,0,29.39v2.027A1.013,1.013,0,0,0,1.013,32.43H39.525a1.013,1.013,0,0,0,1.013-1.013V29.39A1.013,1.013,0,0,0,39.525,28.377Z" transform="translate(11.041 15.6)" fill="#2680eb"/>
+    <g id="Mask_Group_3" data-name="Mask Group 3" transform="translate(11.041 15.6)" clip-path="url(#clip-path)">
+      <ellipse id="Ellipse_84" data-name="Ellipse 84" cx="35" cy="34" rx="35" ry="34" transform="translate(-45.294 -31.251)" fill="#6bb1fe" opacity="0.5"/>
+    </g>
+  </g>
+</svg>

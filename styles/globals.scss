@@ -3468,6 +3468,7 @@ main.main-ppdb {
     background-size: cover;
     min-height: 319px;
     padding-top: 85px;
+    background-repeat: no-repeat;
   }
 }
 
@@ -3749,6 +3750,156 @@ main.main-ppdb {
   }
 }
 
+// About Page
+// .slider-fitur {
+//   .awssld__timer {
+//     background-color: transparent !important;
+//   }
+
+//   .awssld__wrapper {
+//     height: 75vh !important;
+//   }
+
+//   .awssld__bullets {
+//     z-index: 2 !important;
+//     top: -75% !important;
+//     button {
+//       position: relative;
+//       // background: white !important;
+//       width: 64px !important;
+//       height: 64px !important;
+//       margin: 24px;
+//       border-radius: 50%;
+//       background-repeat: no-repeat !important;
+//       background-size: cover !important;
+//       background-position: center !important;
+//       -webkit-transition: background-image 0.175s ease-out,
+//         -webkit-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45);
+//       transition: background-image 0.175s ease-out,
+//         -webkit-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45);
+//       -moz-transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45),
+//         background-image 0.175s ease-out,
+//         -moz-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45);
+//       transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45),
+//         background-image 0.175s ease-out;
+//       transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45),
+//         background-image 0.175s ease-out,
+//         -webkit-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45),
+//         -moz-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45);
+//       transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45),
+//         background-image 0.175s ease-out,
+//         -webkit-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45);
+//     }
+
+//     .awssld__bullets--active[data-index="0"] {
+//       -webkit-transform: scale(1.5);
+//       -moz-transform: scale(1.5);
+//       transform: none !important;
+//     }
+
+//     button[data-index="0"] {
+//       background-image: url("/img/icon-role-guru.svg") !important;
+//     }
+
+//     button[data-index="0"]::after {
+//       content: "";
+//       position: absolute;
+//       left: 0;
+//       display: block;
+//       width: 100px;
+//       height: 5px;
+//       color: salmon !important;
+//     }
+
+//     .awssld__bullets--active[data-index="0"] {
+//       background-image: url("/img/icon-role-guru-active.svg") !important;
+//     }
+//   }
+
+//   .awssld__bullets .awssld__bullets--active {
+//     -webkit-transform: scale(1.5);
+//     -moz-transform: scale(1.5);
+//     transform: none !important;
+//     background: var(--control-bullet-active-color);
+//   }
+
+//   .awssld__bullets .awssld__bullets--loading {
+//     -webkit-transform: scale(1.2);
+//     -moz-transform: scale(1.2);
+//     transform: scale(1.2);
+//   }
+
+//   .slider-body {
+//     z-index: 2;
+//     position: absolute;
+//     bottom: 13%;
+//   }
+// }
+.slider-fitur {
+  .awssld__timer {
+    background-color: transparent !important;
+  }
+
+  .awssld__wrapper {
+    height: auto !important;
+  }
+
+  .awssld__bullets {
+    // display: none !important;
+    z-index: 2 !important;
+    bottom: 5% !important;
+  }
+
+  .awssld__bullets button {
+    padding: 0;
+    display: block;
+    width: 8px !important;
+    height: 8px !important;
+    margin: 5px;
+    border-radius: 50%;
+    background: var(--control-bullet-color);
+    text-indent: -9999px;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
+    -webkit-transition: background-color 0.175s ease-out,
+      -webkit-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45);
+    transition: background-color 0.175s ease-out,
+      -webkit-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45);
+    -moz-transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45),
+      background-color 0.175s ease-out,
+      -moz-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45);
+    transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45),
+      background-color 0.175s ease-out;
+    transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45),
+      background-color 0.175s ease-out,
+      -webkit-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45),
+      -moz-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45);
+    transition: transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45),
+      background-color 0.175s ease-out,
+      -webkit-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45);
+  }
+
+  .awssld__bullets .awssld__bullets--active {
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    transform: scale(1.5);
+    background: var(--control-bullet-active-color);
+  }
+
+  .awssld__bullets .awssld__bullets--loading {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  .slider-body {
+    z-index: 2;
+    position: absolute;
+    bottom: 13%;
+  }
+}
+
 // ====================== End Landing Page Smarteschool=========================
 
 /* ============== RWD ============== */
@@ -3785,6 +3936,13 @@ main.main-ppdb {
   // width
   .lg-w-auto {
     width: auto !important;
+    min-width: auto !important;
+  }
+
+  // height
+  .lg-h-auto {
+    height: auto !important;
+    min-height: auto !important;
   }
 
   .card-kelas-ss .card-body .card-kelas-name {
@@ -3897,6 +4055,13 @@ main.main-ppdb {
   //width
   .md-w-auto {
     width: auto !important;
+    min-width: auto !important;
+  }
+
+  // height
+  .md-h-auto {
+    height: auto !important;
+    min-height: auto !important;
   }
 
   .alert-hallo-content-new {
@@ -4132,6 +4297,13 @@ main.main-ppdb {
   //width
   .sm-w-auto {
     width: auto !important;
+    min-width: auto !important;
+  }
+
+  // height
+  .sm-h-auto {
+    height: auto !important;
+    min-height: auto !important;
   }
 
   .alert-hallo-new {
