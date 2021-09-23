@@ -61,11 +61,11 @@ export default function Home({ nav, search }) {
         <section
           id="hero-section-about-smarteschool"
           className="py-4"
-          style={{ minHeight: "868px" }}
+          style={{ minHeight: "89vh" }}
         >
           <div className="container">
             <div className="row justify-content-center align-items-center text-center flex-column">
-              <div className="col-md-4">
+              <div className="col-md-4 col-sm-6 col-8">
                 <img
                   src="/img/logo-smarteschool.png"
                   alt=""
@@ -74,7 +74,7 @@ export default function Home({ nav, search }) {
               </div>
               <div className="col-md-6 position-relative">
                 <h1
-                  className="fs-1 fw-extrabold color-dark position-relative"
+                  className="fs-1 md-fs-4 fw-extrabold color-dark position-relative"
                   style={{ zIndex: "2" }}
                 >
                   Sistem Digitalisasi Sekolah
@@ -85,15 +85,9 @@ export default function Home({ nav, search }) {
                 ></div>
               </div>
               <div className="col-md-12 text-center">
-                <p className="fs-18-ss fw-semibold color-dark">
+                <p className="fs-18-ss md-fs-6 fw-semibold color-dark">
                   Smartschool adalah sistem yang diciptakan untuk mendigitalkan
-                  seluruh aspek yang ada di sekolah, meliputi pembelajaran,
-                  manajemen sarana dan prasarana sekolah, dengan tujuan untuk
-                  mempermudah kegiatan belajar mengajar di sekolah. Dilengkapi
-                  dengan fitur ujian online dan E - learning yang memudahkan
-                  guru dalam mengajar disaat pembelajaran jarak jauh. Memudahkan
-                  kegiatan belajar lewat kecerdasan buatan (artificial
-                  intelligence) sehingga meningkatkan efektivitas belajar siswa.
+                  seluruh aspek yang ada di sekolah.
                 </p>
               </div>
             </div>

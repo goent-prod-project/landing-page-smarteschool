@@ -17,7 +17,8 @@ const BottomNavigation = () => {
   return (
     <>
       <a
-        href="text-decoration-none"
+        href={`https://api.whatsapp.com/send?phone=6281284538354&text=Halo CS Smarteschool`}
+        target="_blank"
         className="floating-button rounded-circle shadow-primary-ss position-fixed d-lg-none d-block"
         style={{
           width: "60px",
@@ -50,7 +51,9 @@ const BottomNavigation = () => {
                     <img
                       height="24px"
                       src={`${
-                        activeMenu === `/berita`
+                        activeMenu === `/berita` ||
+                        activeMenu === `/berita-terbaru` ||
+                        activeMenu === `/artikel-terbaru`
                           ? "/img/icon-bottom-nav-berita-active.svg"
                           : "/img/icon-bottom-nav-berita.svg"
                       }`}
@@ -59,7 +62,9 @@ const BottomNavigation = () => {
                     />
                     <h6
                       className={`fs-12-ss fw-bold ${
-                        activeMenu === `/berita`
+                        activeMenu === `/berita` ||
+                        activeMenu === `/berita-terbaru` ||
+                        activeMenu === `/artikel-terbaru`
                           ? "color-primary"
                           : "color-secondary"
                       }`}

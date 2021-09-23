@@ -48,32 +48,32 @@ const InformasiUmum = ({ data }) => {
               Alur Pendaftaran Program GPDS :
             </p>
             <div className="row gy-4 mb-4">
-              <div className="col-md-4 mb-4 d-flex align-items-center">
+              <div className="col-lg-4 col-md-6 mb-4 d-flex align-items-center">
                 <img src="img/icon-alur-step1.svg" alt="Icon step 1" />
                 <h6 className="color-dark fw-bold ms-4">
                   Pendaftaran Calon Peserta Pendidikan GPDS bagi Guru
                 </h6>
               </div>
-              <div className="col-md-4 mb-4 d-flex align-items-center">
+              <div className="col-lg-4 col-md-6 mb-4 d-flex align-items-center">
                 <img src="img/icon-alur-step2.svg" alt="Icon step 2" />
                 <h6 className="color-dark fw-bold ms-4">
                   Undangan Grup / Kelompok WhatsApp
                 </h6>
               </div>
-              <div className="col-md-4 mb-4 d-flex align-items-center">
+              <div className="col-lg-4 col-md-6 mb-4 d-flex align-items-center">
                 <img src="img/icon-alur-step3.svg" alt="Icon step 3" />
                 <h6 className="color-dark fw-bold ms-4">
                   Pelaksanaan Workshop GPDS
                 </h6>
               </div>
             </div>
-            <hr className="my-4" />
+            {/* <hr className="my-4" />
             <div className="row">
               <a className="w-100 bg-primary d-flex rounded-ss justify-content-center align-items-center text-white p-3">
                 <img src="img/icon-daftar-sekarang.svg" alt="Icon step 1" />
                 <p className="ms-4 fw-bold fs-18-ss mb-0">Daftar Sekarang</p>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

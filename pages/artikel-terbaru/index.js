@@ -46,8 +46,8 @@ const index = ({}) => {
           <div className="container">
             <div className="py-4">
               <div className="row">
-                <div className="d-flex justify-content-between flex-column flex-md-row mb-4">
-                  <h3 className="color-dark fw-extrabold title-page position-relative mb-5 ps-0 ">
+                <div className="d-flex justify-content-between mb-4">
+                  <h3 className="md-fs-5 color-dark fw-extrabold title-page position-relative mb-5 ps-0 ">
                     Artikel Terbaru
                   </h3>
                   <div className="">

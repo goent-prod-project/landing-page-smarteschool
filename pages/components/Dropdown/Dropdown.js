@@ -26,7 +26,7 @@ const Dropdown = ({
       data-joyride={dataJoyride}
     >
       <button
-        className={`dropdown-toggle dropdown-search-perpustakaan-toggle dropdown-sort-perpus-toggle btn py-2 px-4 btn-link rounded-pill border bg-white text-decoration-none color-dark fw-bold ${
+        className={`dropdown-toggle dropdown-search-perpustakaan-toggle dropdown-sort-perpus-toggle btn py-2 px-4 btn-link rounded-pill border bg-white text-decoration-none color-dark fw-bold md-fs-14-ss ${
           isDropdownMutasi && "w-100"
         } ${false && "active"}`}
         data-bs-toggle="dropdown"
