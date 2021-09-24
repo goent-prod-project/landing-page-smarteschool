@@ -32,7 +32,7 @@ const PesertaPage = () => {
         marginTop: "-32px",
       }}
     >
-      <div className="row">
+      <div className="row justify-content-center position-relative mb-5">
         <div className="col-md-12">
           <div className="search-illustasi-kolaborasi rounded-ss bg-soft-primary p-4 position-relative d-flex mb-4 flex-md-row flex-column">
             <div className="search-illustasi-kolaborasi-content mb-4">
@@ -45,110 +45,111 @@ const PesertaPage = () => {
               </h6>
             </div>
             <img
-              src="/img/ilustrasi-peserta-gpds.svg"
+              src="/img/smarteschool-illustration.png"
               alt="illustrasi"
               class="search-illustrasi-kolaborasi-img img-fluid"
             ></img>
           </div>
         </div>
         <div
-          className="row justify-content-center position-relative"
+          className="col-md-10 position-absolute"
           style={{
-            top: "-70px",
+            bottom: "-16px",
+            transform: "translateX(50%)",
+            right: "50%",
+            zIndex: "1",
           }}
         >
-          <div className="col-md-10">
-            <div className="card card-ss">
-              <div className="dropdown dropdown-ss mb-md-0 mb-2 d-md-inline d-flex justify-content-end">
+          <div className="card card-ss">
+            <div className="dropdown dropdown-ss mb-md-0 mb-2 d-md-inline d-flex justify-content-end">
+              <div
+                className=" d-flex p-4 justify-content-between align-items-center w-100"
+                role="button"
+                id="dropdownOption"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                onClick={() => setdropdownOpen(!dropdownOpen)}
+              >
+                <h5 className="fw-bold color-dark mb-0">
+                  {formData?.pilihanGPDS}
+                </h5>
                 <div
-                  className=" d-flex p-4 justify-content-between align-items-center w-100"
-                  role="button"
-                  id="dropdownOption"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  onClick={() => setdropdownOpen(!dropdownOpen)}
+                  className="bg-primary rounded-circle shadow-primary d-flex align-items-center justify-content-center p-3"
+                  style={{
+                    width: "40px",
+                    height: "40px",
+                  }}
                 >
-                  <h5 className="fw-bold color-dark mb-0">
-                    {formData?.pilihanGPDS}
-                  </h5>
-                  <div
-                    className="bg-primary rounded-circle shadow-primary d-flex align-items-center justify-content-center"
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                    }}
-                  >
-                    {!dropdownOpen ? (
-                      <img
-                        src="/img/arrow-button-white.svg"
-                        alt="icon-dropdown"
-                        style={{
-                          transition: "0.3s",
-                        }}
-                      />
-                    ) : (
-                      <img
-                        src="/img/arrow-button-white.svg"
-                        alt="icon-dropdown"
-                        className="rotate-180"
-                        style={{
-                          transition: "0.3s",
-                        }}
-                      />
-                    )}
-                  </div>
+                  {!dropdownOpen ? (
+                    <img
+                      src="/img/arrow-button-white.svg"
+                      alt="icon-dropdown"
+                      style={{
+                        transition: "0.3s",
+                      }}
+                    />
+                  ) : (
+                    <img
+                      src="/img/arrow-button-white.svg"
+                      alt="icon-dropdown"
+                      className="rotate-180"
+                      style={{
+                        transition: "0.3s",
+                      }}
+                    />
+                  )}
                 </div>
-                <ul
-                  className="dropdown-menu dropdown-menu-ss my-1 w-100"
-                  aria-labelledby="dropdownOption"
-                >
-                  <li
-                    onClick={() =>
-                      setFormData({
-                        pilihanGPDS: ` Guru Penggerak Digitalisasi Sekolah Provinsi DKI
-                        Jakarta 2`,
-                      })
-                    }
-                  >
-                    <a className="dropdown-item">
-                      <h5 className="fw-bold color-dark mb-0">
-                        Guru Penggerak Digitalisasi Sekolah Provinsi DKI Jakarta
-                        2
-                      </h5>
-                    </a>
-                  </li>
-                  <li
-                    onClick={() =>
-                      setFormData({
-                        pilihanGPDS: `  Guru Penggerak Digitalisasi Sekolah Provinsi DKI
-                        Jakarta 3`,
-                      })
-                    }
-                  >
-                    <a className="dropdown-item">
-                      <h5 className="fw-bold color-dark mb-0">
-                        Guru Penggerak Digitalisasi Sekolah Provinsi DKI Jakarta
-                        3
-                      </h5>
-                    </a>
-                  </li>
-                  <li
-                    onClick={() =>
-                      setFormData({
-                        pilihanGPDS: ` Guru Penggerak Digitalisasi Sekolah Provinsi DKI
-                        Jakarta 4`,
-                      })
-                    }
-                  >
-                    <a className="dropdown-item">
-                      <h5 className="fw-bold color-dark mb-0">
-                        Guru Penggerak Digitalisasi Sekolah Provinsi DKI Jakarta
-                        4
-                      </h5>
-                    </a>
-                  </li>
-                </ul>
               </div>
+              <ul
+                className="dropdown-menu dropdown-menu-ss my-1 w-100"
+                aria-labelledby="dropdownOption"
+              >
+                <li
+                  onClick={() =>
+                    setFormData({
+                      pilihanGPDS: ` Guru Penggerak Digitalisasi Sekolah Provinsi DKI
+                        Jakarta 2`,
+                    })
+                  }
+                >
+                  <a
+                    className="dropdown-item"
+                    style={{ whiteSpace: "pre-wrap" }}
+                  >
+                    Guru Penggerak Digitalisasi Sekolah Provinsi DKI Jakarta 2
+                  </a>
+                </li>
+                <li
+                  onClick={() =>
+                    setFormData({
+                      pilihanGPDS: `  Guru Penggerak Digitalisasi Sekolah Provinsi DKI
+                        Jakarta 3`,
+                    })
+                  }
+                >
+                  <a
+                    className="dropdown-item"
+                    style={{ whiteSpace: "pre-wrap" }}
+                  >
+                    Guru Penggerak Digitalisasi Sekolah Provinsi DKI Jakarta 3
+                  </a>
+                </li>
+                <li
+                  onClick={() =>
+                    setFormData({
+                      pilihanGPDS: ` Guru Penggerak Digitalisasi Sekolah Provinsi DKI
+                        Jakarta 4`,
+                    })
+                  }
+                >
+                  <a
+                    className="dropdown-item"
+                    style={{ whiteSpace: "pre-wrap" }}
+                  >
+                    Guru Penggerak Digitalisasi Sekolah Provinsi DKI Jakarta 4
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -156,9 +157,9 @@ const PesertaPage = () => {
 
       <div
         className="card card-ss p-0 py-4 "
-        style={{
-          marginTop: "-32px",
-        }}
+        // style={{
+        //   marginTop: "-32px",
+        // }}
       >
         <div className="card-body p-0">
           <div className="row px-4">

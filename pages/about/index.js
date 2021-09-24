@@ -65,29 +65,36 @@ export default function Home({ nav, search }) {
         >
           <div className="container">
             <div className="row justify-content-center align-items-center text-center flex-column">
-              <div className="col-md-4 col-sm-6 col-8">
+              <div className="col-lg-3 col-md-4 col-sm-6 col-8">
                 <img
                   src="/img/logo-smarteschool.png"
                   alt=""
                   className="img-fluid mb-4"
                 />
               </div>
-              <div className="col-md-6 position-relative">
+              <div className="col-lg-7 col-sm-8 col-11 position-relative">
                 <h1
-                  className="fs-1 md-fs-4 fw-extrabold color-dark position-relative"
+                  className="fs-1 md-fs-4 sm-fs-6 fw-extrabold color-dark position-relative"
                   style={{ zIndex: "2" }}
                 >
                   Sistem Digitalisasi Sekolah
                 </h1>
                 <div
-                  className="bg-soft-primary w-100 position-absolute"
-                  style={{ height: "20px", bottom: "15px", zIndex: "1" }}
+                  className="bg-soft-primary w-100 position-absolute title-highlight"
+                  style={{
+                    height: "20px",
+                    bottom: "15px",
+                    zIndex: "1",
+                    left: "0",
+                  }}
                 ></div>
               </div>
-              <div className="col-md-12 text-center">
-                <p className="fs-18-ss md-fs-6 fw-semibold color-dark">
+              <div className="col-md-10 text-center">
+                <p className="fs-18-ss md-fs-6 sm-fs-14-ss fw-semibold color-dark">
                   Smartschool adalah sistem yang diciptakan untuk mendigitalkan
-                  seluruh aspek yang ada di sekolah.
+                  seluruh aspek yang ada di sekolah, meliputi pembelajaran,
+                  manajemen sarana dan prasarana sekolah, dengan tujuan untuk
+                  mempermudah kegiatan belajar mengajar di sekolah.
                 </p>
               </div>
             </div>
@@ -107,13 +114,13 @@ export default function Home({ nav, search }) {
           <div className="container">
             <div className="row position-relative card-pengguna-smarteschool">
               <div className="col-md-12">
-                <div className="card card-ss p-5 rounded-ss text-center">
-                  <h1 className="fs-1 fw-extrabold color-dark">
+                <div className="card card-ss p-md-5 p-4 rounded-ss text-center">
+                  <h1 className="fs-1 md-fs-4 sm-fs-6 fw-extrabold color-dark">
                     Pengguna Smarteschool
                   </h1>
                   <div className="row justify-content-center mb-4">
                     <div className="col-lg-6 col-md-8 text-center">
-                      <h5 className="fs-5 color-secondary fw-semibold">
+                      <h5 className="fs-5 md-fs-6 sm-fs-14-ss color-secondary fw-semibold">
                         Total pengguna aktif yang telah terintegrasi dan telah
                         menggunakan aplikasi Smarteschool
                       </h5>
@@ -125,28 +132,28 @@ export default function Home({ nav, search }) {
                         className="bg-soft-primary rounded-ss p-3 d-flex align-items-center justify-content-center flex-column md-w-auto mb-md-0 mb-3"
                         style={{ width: "175px", height: "125px" }}
                       >
-                        <h1 className="fs-1 fw-extrabold color-primary mb-1">
-                          52
+                        <h1 className="fs-1 md-fs-4 fw-extrabold color-primary mb-1">
+                          2.897
                         </h1>
-                        <h5 className="fw-bold color-dark mb-0">Sekolah</h5>
+                        <h5 className="fw-bold md-fs-6 color-dark mb-0">Sekolah</h5>
                       </div>
                       <div
                         className="bg-soft-primary rounded-ss p-3 d-flex align-items-center justify-content-center flex-column md-w-auto mb-md-0 mb-3"
                         style={{ width: "175px", height: "125px" }}
                       >
-                        <h1 className="fs-1 fw-extrabold color-primary mb-1">
-                          52
+                        <h1 className="fs-1 md-fs-4 fw-extrabold color-primary mb-1">
+                          20.934
                         </h1>
-                        <h5 className="fw-bold color-dark mb-0">Sekolah</h5>
+                        <h5 className="fw-bold md-fs-6 color-dark mb-0">Guru</h5>
                       </div>
                       <div
                         className="bg-soft-primary rounded-ss p-3 d-flex align-items-center justify-content-center flex-column md-w-auto"
                         style={{ width: "175px", height: "125px" }}
                       >
-                        <h1 className="fs-1 fw-extrabold color-primary mb-1">
-                          52
+                        <h1 className="fs-1 md-fs-4 fw-extrabold color-primary mb-1">
+                          53.431
                         </h1>
-                        <h5 className="fw-bold color-dark mb-0">Sekolah</h5>
+                        <h5 className="fw-bold md-fs-6 color-dark mb-0">Siswa</h5>
                       </div>
                     </div>
                   </div>
@@ -305,7 +312,7 @@ export default function Home({ nav, search }) {
                 />
               </div>
               <div className="col-md-5">
-                <h6 className="fs-6 fw-extrabold color-dark text-uppercase mb-4">
+                <h6 className="fs-6 fw-extrabold color-primary text-uppercase mb-4">
                   JELAJAH SEKOLAH
                 </h6>
                 <h3 className="fs-3 fw-extrabold color-dark pt-2">
@@ -320,7 +327,7 @@ export default function Home({ nav, search }) {
             </div>
             <div className="row justify-content-between align-items-center pb-5 mb-5">
               <div className="col-md-5 order-md-1 order-2">
-                <h6 className="fs-6 fw-extrabold color-dark text-uppercase mb-4">
+                <h6 className="fs-6 fw-extrabold color-primary text-uppercase mb-4">
                   PENDAFTARAN PESERTA DIDIK BARU
                 </h6>
                 <h3 className="fs-3 fw-extrabold color-dark pt-2">
@@ -350,7 +357,7 @@ export default function Home({ nav, search }) {
                 />
               </div>
               <div className="col-md-5">
-                <h6 className="fs-6 fw-extrabold color-dark text-uppercase mb-4">
+                <h6 className="fs-6 fw-extrabold color-primary text-uppercase mb-4">
                   KOLABORASI
                 </h6>
                 <h3 className="fs-3 fw-extrabold color-dark pt-2">
@@ -367,7 +374,7 @@ export default function Home({ nav, search }) {
             </div>
             <div className="row justify-content-between align-items-center pb-5 mb-5">
               <div className="col-md-5 order-md-1 order-2">
-                <h6 className="fs-6 fw-extrabold color-dark text-uppercase mb-4">
+                <h6 className="fs-6 fw-extrabold color-primary text-uppercase mb-4">
                   BURSA KERJA KHUSUS
                 </h6>
                 <h3 className="fs-3 fw-extrabold color-dark pt-2">
@@ -398,7 +405,7 @@ export default function Home({ nav, search }) {
                 />
               </div>
               <div className="col-md-5">
-                <h6 className="fs-6 fw-extrabold color-dark text-uppercase mb-4">
+                <h6 className="fs-6 fw-extrabold color-primary text-uppercase mb-4">
                   PENELUSURAN ALUMNI
                 </h6>
                 <h3 className="fs-3 fw-extrabold color-dark pt-2">

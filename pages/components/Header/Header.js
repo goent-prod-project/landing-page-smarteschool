@@ -62,11 +62,15 @@ const Header = ({ isFrontPage }) => {
           >
             <div className="row justify-content-between">
               <div className="col-md-4 col-sm-6 col-7 d-flex align-items-center">
-                <img
-                  src="/img/logo-smarteschool.png"
-                  alt=""
-                  className="img-fluid"
-                />
+                <Link href={`/`}>
+                  <a className="text-decoration-none">
+                    <img
+                      src="/img/logo-smarteschool.png"
+                      alt=""
+                      className="img-fluid"
+                    />
+                  </a>
+                </Link>
               </div>
               <div className="col-3 d-flex justify-content-end">
                 <button

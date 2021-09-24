@@ -122,7 +122,7 @@ const index = ({ id }) => {
                 <div className="text-center">
                   <a
                     href="/berita-terbaru"
-                    className="bg-secondary py-2 px-4 text-white fw-bold fs-16-ss rounded-pill text-center pointer"
+                    className="btn btn-ss btn-primary btn-primary-ss text-white fw-bold fs-16-ss rounded-pill text-center pointer"
                   >
                     Berita Selengkapnya
                   </a>

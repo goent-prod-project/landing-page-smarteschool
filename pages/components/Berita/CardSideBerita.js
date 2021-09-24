@@ -8,7 +8,7 @@ const CardSideBerita = ({ data }) => {
       {data?.map((d, idx) => {
         return (
           <>
-            <div className="pointer">
+            <div className="pointer card-berita">
               <img
                 src={d?.img}
                 alt=""
@@ -19,7 +19,7 @@ const CardSideBerita = ({ data }) => {
                 }}
               />
               <Tooltip title={d?.judul}>
-                <p className="fs-16-ss fw-extrabold mb-0 color-dark">
+                <p className="fs-16-ss fw-extrabold mb-0 color-dark judul clamp-2">
                   {d?.judul}
                 </p>
               </Tooltip>

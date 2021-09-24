@@ -27,25 +27,14 @@ export default function Home({ nav, search }) {
 
   const slider = [
     {
-      desktopBsanner: "/img/banner-desktop.png",
-      mobileBanner: "/img/banner-mobile.png",
-    },
-    {
-      desktopBsanner: "/img/banner-desktop.png",
-      mobileBanner: "/img/banner-mobile.png",
-    },
-    {
-      desktopBsanner: "/img/banner-desktop.png",
-      mobileBanner: "/img/banner-mobile.png",
-    },
-    {
-      desktopBsanner: "/img/banner-desktop.png",
-      mobileBanner: "/img/banner-mobile.png",
+      desktopBanner: "/img/banner-desktop-berita.png",
+      mobileSmBanner: "/img/banner-mobile-sm-berita.png",
+      mobileXmBanner: "/img/banner-mobile-xm-berita.png",
     },
   ];
 
   return (
-    <Layout isIndex>
+    <Layout isIndex isLandingPage={false}>
       <AnimatePage>
         <div className="slider">
           <Slider>
@@ -54,7 +43,11 @@ export default function Home({ nav, search }) {
                 key={idx}
                 className="slider-body position-absolute"
                 data-src={
-                  sliderWidth > 576 ? d.desktopBsanner : d.mobileBanner
+                  sliderWidth > 576
+                    ? d.desktopBanner
+                    : sliderWidth > 424
+                    ? d.mobileSmBanner
+                    : d.mobileXmBanner
                 }
               >
                 <a
@@ -79,11 +72,11 @@ export default function Home({ nav, search }) {
 
         {/* Section FaQ Start */}
 
-        <div className="section py-5">
+        <div className="section py-md-5 py-4">
           <div className="container">
             <div className="row mb-5">
               <div className="col-md-12 text-center">
-                <h1 className="fs-1 fw-extrabold color-dark mb-0">
+                <h1 className="fs-1 md-fs-5 sm-fs-6 fw-extrabold color-dark mb-0">
                   Pertanyaan yang Sering Diajukan
                 </h1>
               </div>
@@ -92,7 +85,7 @@ export default function Home({ nav, search }) {
               <div className="col-md-10">
                 <div className="card card-ss card-biaya-pendaftaran p-0">
                   <div className="card-header-ss rounded-ss d-flex justify-content-between align-items-between px-4 py-4">
-                    <h4 className="fw-extrabold color-dark mb-0 mt-2">
+                    <h4 className="fw-extrabold color-dark mb-0 mt-2 md-fs-5 sm-fs-6">
                       Apa itu Smarteschool?
                     </h4>
                     <div
@@ -122,7 +115,7 @@ export default function Home({ nav, search }) {
 
                   <div class="collapse" id="collapseExample">
                     <hr className="mb-4 mt-0" />
-                    <div class="card-body card-footer-ss pb-4 px-4 pt-0">
+                    <div class="card-body card-footer-ss pb-4 px-4 pt-0 md-fs-14-ss">
                       <p>
                         Smarteschool adalah sistem yang diciptakan untuk
                         mendigitalkan seluruh aspek yang ada di sekolah,
@@ -142,7 +135,7 @@ export default function Home({ nav, search }) {
             </div>
             <div className="row">
               <div className="col-md-12 text-center">
-                <a className="btn btn-ss btn-primary btn-primary-ss fw-bold shadow-primary-ss bg-gradient-primary rounded-pill fs-18-ss">
+                <a className="btn btn-ss btn-primary btn-primary-ss fw-bold shadow-primary-ss bg-gradient-primary rounded-pill fs-18-ss md-fs-6 sm-14-ss">
                   Lihat Semua Pertanyaan
                 </a>
               </div>

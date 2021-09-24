@@ -11,6 +11,7 @@ const Layout = ({
   modalWrapper,
   isIndex,
   isDashboard,
+  isLandingPage = true,
   isFrontPage = false,
 }) => {
   const router = useRouter();
@@ -26,37 +27,38 @@ const Layout = ({
         style={{ paddingTop: "82px" }}
       >
         {children}
-      
       </main>
       {modalWrapper}
       <>
         {/* Section CTA Start */}
-        <div className={`section py-5 ${isIndex ? "bg-light" : "bg-main"}`}>
+        <div
+          className={`section py-md-5 py-4 ${isIndex ? "bg-light" : "bg-main"}`}
+        >
           <div className="container">
             <div className="row">
               <div className="col-md-12">
                 <div
-                  className="cta-section p-5"
+                  className="cta-section p-md-5 p-4"
                   style={{ borderRadius: "25px", backgroundColor: "#F6FAFF" }}
                 >
                   <div className="row align-items-center justify-content-lg-start justify-content-md-center">
                     <div className="col-lg-7 col-md-12 order-lg-1 order-2 text-lg-start text-center">
                       <div>
-                        <h1 className="fs-1 fw-extrabold color-dark mb-5">
+                        <h1 className="fs-1 fw-extrabold color-dark mb-5 md-fs-5 sm-fs-6">
                           Awali Kesuksesan Sekolah Anda dengan Smarteschool
                         </h1>
                         <div className="d-flex justify-content-lg-start justify-content-sm-center flex-sm-row flex-column align-items-center">
                           <a
                             href={`https://api.whatsapp.com/send?phone=6281284538354&text=Halo, CS Smarteschool sekolah saya ingin menjadi anggota sekolah Smarteschool`}
                             target="_blank"
-                            className="btn btn-ss btn-primary btn-primary-ss bg-gradient-primary shadow-primary-ss fw-bold rounded-pill d-flex align-items-center justify-content-center me-sm-4 mb-sm-0 mb-3"
+                            className="btn btn-ss btn-primary btn-primary-ss bg-gradient-primary shadow-primary-ss fw-bold rounded-pill d-flex align-items-center justify-content-center me-sm-4 mb-sm-0 mb-3 md-fs-6 sm-14-ss"
                             style={{ width: "190px" }}
                           >
                             Daftar Sekarang
                           </a>
                           <a
                             href="#"
-                            className="btn btn-ss btn-warning btn-warning-ss bg-gradient-warning shadow-warning-ss fw-bold rounded-pill d-flex align-items-center justify-content-center"
+                            className="btn btn-ss btn-warning btn-warning-ss bg-gradient-warning shadow-warning-ss fw-bold rounded-pill d-flex align-items-center justify-content-center md-fs-6 sm-14-ss"
                             style={{ width: "190px" }}
                           >
                             Uji Coba Akun
@@ -102,10 +104,12 @@ const Layout = ({
                   /> */}
                   </div>
                 </div>
-                <div className="col-md-8">
-                  <div className="row">
-                    <div className="col-md-3 col-sm-6 mb-sm-0 mb-4">
-                      <h4 className="fw-extrabold mb-4">Pelajari</h4>
+                <div className="col-md-9">
+                  <div className="row g-4">
+                    <div className="col-md-3 col-6 mb-sm-0 mb-4">
+                      <h4 className="fw-extrabold mb-4 md-fs-5 sm-fs-6">
+                        Pelajari
+                      </h4>
                       <div className="mb-3">
                         <Link href={`/about`}>
                           <a className="text-white fs-14-ss text-decoration-none">
@@ -144,8 +148,10 @@ const Layout = ({
                         </Link>
                       </div>
                     </div>
-                    <div className="col-md-3 col-sm-6 mb-sm-0 mb-4">
-                      <h4 className="fw-extrabold mb-4">Tautan Lain</h4>
+                    <div className="col-md-3 col-6 mb-sm-0 mb-4">
+                      <h4 className="fw-extrabold mb-4 md-fs-5 sm-fs-6">
+                        Tautan Lain
+                      </h4>
                       <div className="mb-3">
                         <Link href={`/`}>
                           <a
@@ -166,90 +172,96 @@ const Layout = ({
                       </div>
                     </div>
                     <div className="col-md-3 col-sm-6 mb-sm-0 mb-4">
-                      <h4 className="fw-extrabold mb-4">Ikuti Kami</h4>
-                      <div className="mb-3">
-                        <a
-                          href={`https://www.youtube.com/channel/UC5mNaPBo672Z-szp3k1QU_g`}
-                          target="_blank"
-                          className="text-white text-decoration-none fs-14-ss"
-                        >
-                          <div className="d-flex align-items-center">
-                            <img
-                              src="/img/icon-youtube.svg"
-                              alt=""
-                              className="me-2"
-                              width="20px"
-                              height="20px"
-                            />
-                            <span className="text-white fs-14-ss mb-0">
-                              Smarteschool
-                            </span>
-                          </div>
-                        </a>
-                      </div>
-                      <div className="mb-3">
-                        <a
-                          href={`https://www.linkedin.com/company/smarteschool/`}
-                          target="_blank"
-                          className="text-white text-decoration-none fs-14-ss"
-                        >
-                          <div className="d-flex align-items-center">
-                            <img
-                              src="/img/icon-linkedin.svg"
-                              alt=""
-                              className="me-2"
-                              width="20px"
-                              height="20px"
-                            />
-                            <span className="text-white fs-14-ss mb-0">
-                              Smarteschool
-                            </span>
-                          </div>
-                        </a>
-                      </div>
-                      <div className="mb-3">
-                        <a
-                          href={`https://www.facebook.com/smarteschool.smarteschool/`}
-                          target="_blank"
-                          className="text-white text-decoration-none fs-14-ss"
-                        >
-                          <div className="d-flex align-items-center">
-                            <img
-                              src="/img/icon-facebook.svg"
-                              alt=""
-                              className="me-2"
-                              width="20px"
-                              height="20px"
-                            />
-                            <span className="text-white fs-14-ss mb-0">
-                              @smarteschool
-                            </span>
-                          </div>
-                        </a>
-                      </div>
-                      <div className="mb-3">
-                        <a
-                          href={`https://www.instagram.com/smarteschool.id/`}
-                          target="_blank"
-                          className="text-white text-decoration-none fs-14-ss"
-                        >
-                          <div className="d-flex align-items-center">
-                            <img
-                              src="/img/icon-instagram.svg"
-                              alt=""
-                              className="me-2"
-                              width="20px"
-                              height="20px"
-                            />
-                            <span className="text-white fs-14-ss mb-0">
-                              @smarteschool.id
-                            </span>
-                          </div>
-                        </a>
+                      <h4 className="fw-extrabold mb-4 md-fs-5 sm-fs-6">
+                        Ikuti Kami
+                      </h4>
+                      <div className="row">
+                        <div className="col-sm-12 col-6 mb-3">
+                          <a
+                            href={`https://www.youtube.com/channel/UC5mNaPBo672Z-szp3k1QU_g`}
+                            target="_blank"
+                            className="text-white text-decoration-none fs-14-ss"
+                          >
+                            <div className="d-flex align-items-center">
+                              <img
+                                src="/img/icon-youtube.svg"
+                                alt=""
+                                className="me-2"
+                                width="20px"
+                                height="20px"
+                              />
+                              <span className="text-white fs-14-ss mb-0">
+                                Smarteschool
+                              </span>
+                            </div>
+                          </a>
+                        </div>
+                        <div className="col-sm-12 col-6 mb-3">
+                          <a
+                            href={`https://www.linkedin.com/company/smarteschool/`}
+                            target="_blank"
+                            className="text-white text-decoration-none fs-14-ss"
+                          >
+                            <div className="d-flex align-items-center">
+                              <img
+                                src="/img/icon-linkedin.svg"
+                                alt=""
+                                className="me-2"
+                                width="20px"
+                                height="20px"
+                              />
+                              <span className="text-white fs-14-ss mb-0">
+                                Smarteschool
+                              </span>
+                            </div>
+                          </a>
+                        </div>
+                        <div className="col-sm-12 col-6 mb-3">
+                          <a
+                            href={`https://www.facebook.com/smarteschool.smarteschool/`}
+                            target="_blank"
+                            className="text-white text-decoration-none fs-14-ss"
+                          >
+                            <div className="d-flex align-items-center">
+                              <img
+                                src="/img/icon-facebook.svg"
+                                alt=""
+                                className="me-2"
+                                width="20px"
+                                height="20px"
+                              />
+                              <span className="text-white fs-14-ss mb-0">
+                                @smarteschool
+                              </span>
+                            </div>
+                          </a>
+                        </div>
+                        <div className="col-sm-12 col-6 mb-3">
+                          <a
+                            href={`https://www.instagram.com/smarteschool.id/`}
+                            target="_blank"
+                            className="text-white text-decoration-none fs-14-ss"
+                          >
+                            <div className="d-flex align-items-center">
+                              <img
+                                src="/img/icon-instagram.svg"
+                                alt=""
+                                className="me-2"
+                                width="20px"
+                                height="20px"
+                              />
+                              <span className="text-white fs-14-ss mb-0">
+                                @smarteschool.id
+                              </span>
+                            </div>
+                          </a>
+                        </div>
                       </div>
                     </div>
                     <div className="col-md-3 col-sm-6 mb-sm-0 mb-4">
-                      <h4 className="fw-extrabold mb-4">Kantor Pusat</h4>
+                      <h4 className="fw-extrabold mb-4 md-fs-5 sm-fs-6">
+                        Kantor Pusat
+                      </h4>
                       <p className="fs-14-ss">
                         Gedung ITHO, Jl. Karang Tengah Raya, Cilandak, Kota
                         Jakarta Selatan, Daerah Khusus Ibukota 12440
@@ -279,7 +291,7 @@ const Layout = ({
         </footer>
       </>
 
-      <BottomNavigation />
+      {isLandingPage && <BottomNavigation />}
     </>
   );
 };

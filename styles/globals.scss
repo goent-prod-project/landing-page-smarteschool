@@ -4021,6 +4021,10 @@ main.main-ppdb {
     min-height: auto !important;
   }
 
+  main {
+    padding-top: 72px !important;
+  }
+
   .card-kelas-ss .card-body .card-kelas-name {
     max-width: 100% !important;
   }
@@ -4144,6 +4148,10 @@ main.main-ppdb {
   .md-h-auto {
     height: auto !important;
     min-height: auto !important;
+  }
+
+  main {
+    padding-top: 72px !important;
   }
 
   .alert-hallo-content-new {
@@ -4393,6 +4401,10 @@ main.main-ppdb {
       }
     }
   }
+
+  .title-highlight {
+    bottom: 10px !important;
+  }
 }
 
 @media (max-width: 770px) {
@@ -4441,6 +4453,10 @@ main.main-ppdb {
   .sm-h-auto {
     height: auto !important;
     min-height: auto !important;
+  }
+
+  main {
+    padding-top: 72px !important;
   }
 
   .alert-hallo-new {
@@ -4553,13 +4569,9 @@ main.main-ppdb {
     }
   }
 
-  main {
-    padding-top: 58px !important;
-  }
-
   .slider {
     .awssld__wrapper {
-      height: 45vh !important;
+      height: 50vh !important;
     }
   }
 
@@ -4627,6 +4639,16 @@ main.main-ppdb {
       transform: scale(1.2) !important;
     }
   }
+
+  .title-highlight {
+    bottom: 3px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  main {
+    padding-top: 56px !important;
+  }
 }
 
 @media (max-width: 425px) {
@@ -4637,6 +4659,16 @@ main.main-ppdb {
   }
   .landing-app #buku-tamu p {
     width: 100% !important;
+  }
+
+  main {
+    padding-top: 56px !important;
+  }
+
+  .slider {
+    .awssld__wrapper {
+      height: 48vh !important;
+    }
   }
 
   .slider-fitur {

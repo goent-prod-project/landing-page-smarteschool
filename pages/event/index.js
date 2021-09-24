@@ -99,9 +99,9 @@ const index = ({ nav }) => {
           }}
         >
           <div className="container mt-4">
-            <div className="row gy-4 d-flex justify-content-center">
-              <div className="col-md-6 order-2 order-md-1 pt-4">
-                <h2 className="fw-black text-white">
+            <div className="row gy-4 d-flex justify-content-lg-between justify-content-center">
+              <div className="col-lg-6 order-2 order-lg-1 pt-4">
+                <h2 className="fw-black text-white lg-fs-4 md-fs-5 sm-fs-6">
                   Bersama Mendigitalkan Komunitas Pendidikan Indonesia
                 </h2>
                 <div className="d-flex">
@@ -111,7 +111,9 @@ const index = ({ nav }) => {
                       alt=""
                       className="me-2"
                     />
-                    <h4 className="fw-bold text-white mb-0">263 Sekolah</h4>
+                    <h4 className="fw-bold lg-fs-5 md-fs-6 text-white mb-0">
+                      263 Sekolah
+                    </h4>
                   </div>
                   <div className="d-flex align-items-center">
                     <img
@@ -119,11 +121,13 @@ const index = ({ nav }) => {
                       alt=""
                       className="me-2"
                     />
-                    <h4 className="fw-bold text-white mb-0">7823 Guru</h4>
+                    <h4 className="fw-bold lg-fs-5 md-fs-6 text-white mb-0">
+                      7823 Guru
+                    </h4>
                   </div>
                 </div>
                 <div>
-                  <p className="fs-18-ss text-white fw-regular mt-4">
+                  <p className="fs-18-ss text-white fw-regular mt-4 lg-fs-6 md-fs-14-ss">
                     Sudah saatnya bagi anda untuk menjadi bagian dari program
                     Guru Penggerak Digitalisasi Sekolah untuk mendapatkan
                     pelatihan khusus dan menjadi guru penggerak digital bersama
@@ -131,9 +135,8 @@ const index = ({ nav }) => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-1 d-none d-md-flex order-2"></div>
-              <div className="col-md-5 justify-content-end order-1 d-flex order-md-3">
-                <img src="/img/icon-program.png" className="w-100" />
+              <div className="col-lg-5 col-md-6 order-1 order-lg-2">
+                <img src="/img/icon-program.png" className="img-fluid" />
               </div>
             </div>
           </div>

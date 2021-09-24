@@ -37,7 +37,7 @@ const SectionMenuMobile = ({}) => {
               </Link>
             </div>
             <div className="col-4 d-flex justify-content-center align-items-center mb-3">
-              <Link href="/about">
+              <Link href="/berita">
                 <a className="text-decoration-none text-center">
                   <img
                     src="/img/icon-menu-berita.svg"
@@ -51,7 +51,7 @@ const SectionMenuMobile = ({}) => {
               </Link>
             </div>
             <div className="col-4 d-flex justify-content-center align-items-center mb-3">
-              <Link href="/about">
+              <Link href="/anggota">
                 <a className="text-decoration-none text-center">
                   <img
                     src="/img/icon-menu-demo.svg"
@@ -77,7 +77,7 @@ const SectionMenuMobile = ({}) => {
               </Link>
             </div>
             <div className="col-4 d-flex justify-content-center align-items-center mb-3">
-              <Link href="/about">
+              <Link href="/event">
                 <a className="text-decoration-none text-center">
                   <img
                     src="/img/icon-menu-event.svg"
