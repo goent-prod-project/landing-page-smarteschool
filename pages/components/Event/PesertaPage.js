@@ -36,10 +36,10 @@ const PesertaPage = () => {
         <div className="col-md-12">
           <div className="search-illustasi-kolaborasi rounded-ss bg-soft-primary p-4 position-relative d-flex mb-4 flex-md-row flex-column">
             <div className="search-illustasi-kolaborasi-content mb-4">
-              <h2 className="fw-extrabold color-dark text-capitalize mb-2">
+              <h2 className="md-fs-5 sm-fs-6 fw-extrabold color-dark text-capitalize mb-2">
                 Peserta GPDS
               </h2>
-              <h6 className="color-secondary mb-4 fs-18-ss">
+              <h6 className="md-fs-18-ss sm-fs-14-ss color-secondary mb-4 fs-18-ss">
                 Bersama mendigitalkan komunitas pendidikan Indonesia bersama
                 Smarteschool
               </h6>
@@ -52,7 +52,7 @@ const PesertaPage = () => {
           </div>
         </div>
         <div
-          className="col-md-10 position-absolute"
+          className="col-md-10 position-absolute card-dropdown-gpds"
           style={{
             bottom: "-16px",
             transform: "translateX(50%)",
@@ -70,7 +70,7 @@ const PesertaPage = () => {
                 aria-expanded="false"
                 onClick={() => setdropdownOpen(!dropdownOpen)}
               >
-                <h5 className="fw-bold color-dark mb-0">
+                <h5 className="md-fs-18-ss sm-fs-6 fw-bold color-dark mb-0">
                   {formData?.pilihanGPDS}
                 </h5>
                 <div
@@ -162,11 +162,11 @@ const PesertaPage = () => {
         // }}
       >
         <div className="card-body p-0">
-          <div className="row px-4">
-            <div className="col-md-9">
-              <h4 className="fw-extrabold color-dark">Daftar Peserta</h4>
+          <div className="row px-4 mb-4">
+            <div className="col-md-9 d-flex align-items-center">
+              <h4 className="fw-extrabold color-dark mb-md-0 mb-4">Daftar Peserta</h4>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3 mb-md-0 mb-4">
               <input
                 type="text"
                 className="form-control form-search form-search-mutasi rounded-pill fw-semibold border-secondary-ss w-100"

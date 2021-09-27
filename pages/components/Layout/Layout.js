@@ -4,6 +4,7 @@ import { FaEnvelope, FaFax, FaPhone } from "react-icons/fa";
 import Header from "../Header/Header";
 import Link from "next/link";
 import BottomNavigation from "../BottomNavigation/BottomNavigation";
+import ModalUjiCobaAkun from "../ModalUjiCobaAkun/ModalUjiCobaAkun";
 
 const Layout = ({
   children,
@@ -57,7 +58,8 @@ const Layout = ({
                             Daftar Sekarang
                           </a>
                           <a
-                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modalUjiCobaAkun"
                             className="btn btn-ss btn-warning btn-warning-ss bg-gradient-warning shadow-warning-ss fw-bold rounded-pill d-flex align-items-center justify-content-center md-fs-6 sm-14-ss"
                             style={{ width: "190px" }}
                           >
@@ -129,20 +131,14 @@ const Layout = ({
                       </div>
                       <div className="mb-3">
                         <Link href="/berita">
-                          <a
-                            href="#"
-                            className="text-white fs-14-ss text-decoration-none"
-                          >
+                          <a className="text-white fs-14-ss text-decoration-none">
                             Berita
                           </a>
                         </Link>
                       </div>
                       <div className="mb-3">
                         <Link href={`/event`}>
-                          <a
-                            href="#"
-                            className="text-white fs-14-ss text-decoration-none"
-                          >
+                          <a className="text-white fs-14-ss text-decoration-none">
                             Event
                           </a>
                         </Link>
@@ -290,7 +286,7 @@ const Layout = ({
           </section>
         </footer>
       </>
-
+      <ModalUjiCobaAkun />
       {isLandingPage && <BottomNavigation />}
     </>
   );

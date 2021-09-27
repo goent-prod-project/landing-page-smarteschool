@@ -19,7 +19,7 @@ const CardBerita = ({ data }) => {
                 }}
               />
               <Tooltip title={d?.judul}>
-                <p className="fs-18-ss color-dark fw-extrabold mb-2 clamp-2 judul">
+                <p className="fs-18-ss md-fs-6 color-dark fw-extrabold mb-2 clamp-2 judul">
                   {d?.judul}
                 </p>
               </Tooltip>

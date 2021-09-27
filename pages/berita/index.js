@@ -58,12 +58,12 @@ const index = ({}) => {
           <div className="container">
             <div className="py-4">
               <div className="row">
-                <div className="d-flex justify-content-between flex-column flex-md-row">
-                  <h3 className="color-dark fw-extrabold title-page position-relative mb-4 mb-md-5 ps-0 order-1">
+                <div className="d-flex justify-content-between mb-md-0 mb-3">
+                  <h3 className="md-fs-5 color-dark fw-extrabold title-page position-relative mb-4 mb-md-5 ps-0 order-1">
                     Berita Terbaru
                   </h3>
                   <Link href={`/berita-terbaru`}>
-                    <a className="text-decoration-none fw-bolder position-relative color-primary pointer mb-4 d-block order-2 d-flex justify-content-end align-items-center">
+                    <a className="text-decoration-none fw-bolder position-relative color-primary pointer mb-4 d-block order-2 d-flex justify-content-end align-items-center md-fs-14-ss">
                       <span className="me-2">Lihat Semua</span>
                       <FaChevronRight />
                     </a>
@@ -76,12 +76,12 @@ const index = ({}) => {
             </div>
             <div className="py-4">
               <div className="row">
-                <div className="d-flex justify-content-between flex-column flex-md-row">
-                  <h3 className="color-dark fw-extrabold title-page position-relative mb-4 mb-md-5 ps-0 order-1">
+                <div className="d-flex justify-content-between mb-md-0 mb-3">
+                  <h3 className="md-fs-5 color-dark fw-extrabold title-page position-relative mb-4 mb-md-5 ps-0 order-1">
                     Artikel Terbaru
                   </h3>
                   <Link href={`/artikel-terbaru`}>
-                    <a className="text-decoration-none fw-bolder position-relative color-primary pointer mb-4 d-block order-2 d-flex justify-content-end align-items-center">
+                    <a className="text-decoration-none fw-bolder position-relative color-primary pointer mb-4 d-block order-2 d-flex justify-content-end align-items-center md-fs-14-ss">
                       <span className="me-2">Lihat Semua</span>
                       <FaChevronRight />
                     </a>

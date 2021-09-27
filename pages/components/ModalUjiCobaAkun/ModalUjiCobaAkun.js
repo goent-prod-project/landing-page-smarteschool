@@ -1,10 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
+import toast from "react-hot-toast";
+import { FaWhatsapp } from "react-icons/fa";
 import TextareaAutosize from "react-textarea-autosize";
-import ReactiveButton from "reactive-button";
 import NewModal from "../Shared/NewModal/NewModal";
-import UploadBanner from "../Shared/UploadBanner/UploadBanner";
 
-const ModalUjiCobaAkun = ({ handleChangeForm, formData, _postProfilUser }) => {
+const ModalUjiCobaAkun = ({}) => {
+  const initialState = {
+    nama: "",
+    jabatan: "",
+    namaSekolah: "",
+    alamatSekolah: "",
+  };
+
+  const [stateForm, setStateForm] = useState(initialState);
+
+  const handleChange = (e) => {
+    setStateForm({ ...stateForm, [e.target.name]: e.target.value });
+  };
+
+  const handleClickSendWhatsapp = () => {
+    if (!stateForm.nama) {
+      toast.error("Kamu belum mengisi nama kamu");
+      return;
+    } else if (!stateForm.jabatan) {
+      toast.error("Kamu belum mengisi jabatan kamu");
+      return;
+    } else if (!stateForm.namaSekolah) {
+      toast.error("Kamu belum mengisi nama sekolah kamu");
+      return;
+    } else if (!stateForm.alamatSekolah) {
+      toast.error("Kamu belum mengisi alamat sekolah kamu");
+      return;
+    }
+
+    window.open(
+      `https://api.whatsapp.com/send?phone=6281284538354&text=Halo, Saya ingin memiliki akun untuk mencoba sistem Simulasi Sekolah Online Virtual by Smarteschool.%0ANama : ${stateForm.nama}%0AJabatan : ${stateForm.jabatan}%0ANama Sekolah : ${stateForm.namaSekolah}%0AAlamat Sekolah : ${stateForm.alamatSekolah}`
+    );
+  };
+
   return (
     <NewModal
       modalId="modalUjiCobaAkun"
@@ -12,8 +45,7 @@ const ModalUjiCobaAkun = ({ handleChangeForm, formData, _postProfilUser }) => {
         <>
           <h4 className="mb-1 fw-extrabold">Informasi Data Diri </h4>
           <span className="fs-6 fw-normal">
-            Isi informasi untuk mendapatkan akun virtual secara instan, berupa 1
-            akun guru dan 2 akun siswa.
+            Isi informasi untuk mendapatkan akun virtual untuk demo.
           </span>
         </>
       }

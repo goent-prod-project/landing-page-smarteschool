@@ -31,6 +31,11 @@ export default function Home({ nav, search }) {
       mobileSmBanner: "/img/banner-mobile-sm-berita.png",
       mobileXmBanner: "/img/banner-mobile-xm-berita.png",
     },
+    {
+      desktopBanner: "/img/banner-desktop-event.png",
+      mobileSmBanner: "/img/banner-mobile-sm-event.png",
+      mobileXmBanner: "/img/banner-mobile-xm-event.png",
+    },
   ];
 
   return (

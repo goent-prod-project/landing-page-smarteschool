@@ -41,8 +41,11 @@ const SectionMenuDesktop = ({}) => {
             </div>
             <div className="col-md-4 col-6">
               <Link href="#">
-                <a className="text-decoration-none smarte-menu">
-                  {" "}
+                <a
+                  className="text-decoration-none smarte-menu"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalUjiCobaAkun"
+                >
                   <div className="card card-ss rounded-ss p-sm-4 p-3 text-center">
                     <img
                       src="/img/uji-coba.png"
@@ -109,21 +112,22 @@ const SectionMenuDesktop = ({}) => {
               </Link>
             </div>
             <div className="col-md-4 col-6">
-              <Link href="#">
-                <a className="text-decoration-none smarte-menu">
-                  {" "}
-                  <div className="card card-ss rounded-ss p-sm-4 p-3 text-center">
-                    <img
-                      src="/img/hubungi-kami.png"
-                      alt=""
-                      className="img-fluid mb-4"
-                    />
-                    <h4 className="fs-4 sm-fs-6 color-dark fw-bold mb-0">
-                      Kontak
-                    </h4>
-                  </div>
-                </a>
-              </Link>
+              <a
+                href={`https://api.whatsapp.com/send?phone=6281284538354&text=Halo CS Smarteschool`}
+                target="_blank"
+                className="text-decoration-none smarte-menu"
+              >
+                <div className="card card-ss rounded-ss p-sm-4 p-3 text-center">
+                  <img
+                    src="/img/hubungi-kami.png"
+                    alt=""
+                    className="img-fluid mb-4"
+                  />
+                  <h4 className="fs-4 sm-fs-6 color-dark fw-bold mb-0">
+                    Kontak
+                  </h4>
+                </div>
+              </a>
             </div>
           </div>
         </div>

@@ -9,19 +9,12 @@ const RekamanWebinarPage = ({ data }) => {
         marginTop: "-32px",
       }}
     >
-      <div className="card card-ss p-4">
+      <div className="card card-ss p-4 pb-5">
         <div className="card-body p-0">
-          <h1 className="color-dark fw-extrabold mt-1 mb-2">
+          <h1 className="color-dark md-fs-5 sm-fs-6 fw-extrabold">
             Guru Penggerak Digitalisasi Sekolah Provinsi DKI Jakarta
           </h1>
-          <p
-            className=""
-            style={{
-              fontSize: "20px",
-            }}
-          >
-            Kamis, 22 Juli 2021 - Rabu, 28 Juli 2021
-          </p>
+          <h5 className="fs-5 md-fs-6 sm-fs-14-ss mb-md-5 mb-4">Kamis, 22 Juli 2021 - Rabu, 28 Juli 2021</h5>
           <div className="container">
             <div className="row g-4">
               {data.map((d) => (

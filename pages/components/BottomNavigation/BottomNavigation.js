@@ -76,35 +76,37 @@ const BottomNavigation = () => {
               </Link>
             </div>
             <div className="col d-flex align-items-center justify-content-center">
-              <Link href={`/demo`}>
-                <a className="text-decoration-none">
-                  <div
-                    className={
-                      "d-flex justify-content-center align-items-center flex-column"
-                    }
+              <a
+                data-bs-toggle="modal"
+                data-bs-target="#modalUjiCobaAkun"
+                className="text-decoration-none"
+              >
+                <div
+                  className={
+                    "d-flex justify-content-center align-items-center flex-column"
+                  }
+                >
+                  <img
+                    height="24px"
+                    src={`${
+                      activeMenu === `/demo`
+                        ? "/img/icon-bottom-nav-demo-active.svg"
+                        : "/img/icon-bottom-nav-demo.svg"
+                    }`}
+                    alt=""
+                    className="mb-2"
+                  />
+                  <h6
+                    className={`fs-12-ss fw-bold ${
+                      activeMenu === `/demo`
+                        ? "color-primary"
+                        : "color-secondary"
+                    }`}
                   >
-                    <img
-                      height="24px"
-                      src={`${
-                        activeMenu === `/demo`
-                          ? "/img/icon-bottom-nav-demo-active.svg"
-                          : "/img/icon-bottom-nav-demo.svg"
-                      }`}
-                      alt=""
-                      className="mb-2"
-                    />
-                    <h6
-                      className={`fs-12-ss fw-bold ${
-                        activeMenu === `/demo`
-                          ? "color-primary"
-                          : "color-secondary"
-                      }`}
-                    >
-                      Demo
-                    </h6>
-                  </div>
-                </a>
-              </Link>
+                    Demo
+                  </h6>
+                </div>
+              </a>
             </div>
             <div className="col d-flex align-items-center justify-content-center">
               <Link href={`/about`}>

@@ -4,6 +4,7 @@ import Head from "next/head";
 import NextNProgress from "nextjs-progressbar";
 import { AnimatePresence } from "framer-motion";
 import "react-awesome-slider/dist/styles.css";
+import { Toaster } from "react-hot-toast";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -41,6 +42,7 @@ function MyApp({ Component, pageProps }) {
           height="4"
         />
         <Component {...pageProps} />
+        <Toaster position="top-right" reverseOrder={false} />
       </AnimatePresence>
       <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"

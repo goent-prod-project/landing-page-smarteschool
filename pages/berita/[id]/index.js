@@ -57,13 +57,13 @@ const index = ({ id }) => {
                 </a>
               </Link>
             </div>
-            <div className="col-md-9">
+            <div className="col-lg-9">
               <div className="card card-ss p-4 pb-5  mb-4">
-                <h2 className="color-dark fw-black mb-2">
+                <h2 className="md-fs-5 sm-fs-6 color-dark fw-black mb-2">
                   Presentasi Smarteschool bersama Kepala Dinas Pendidikan
                   Pemprov DKI Jakarta
                 </h2>
-                <p className="fs-16-ss fw-semibold my-2 my-md-4">
+                <p className="md-fs-14-ss fw-semibold my-2 my-md-4">
                   Senin, 16 Agustus 2021
                 </p>
                 <div className="mt-4">
@@ -81,10 +81,10 @@ const index = ({ id }) => {
                       __html: `<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem</p>`,
                     }}
-                    className="color-dark fw-semibold fs-16-ss"
+                    className="color-dark fw-semibold md-fs-14-ss"
                   ></p>
                   <hr className="my-4" />
-                  <h4 className="title-border fw-extrabold mb-4 color-dark">
+                  <h4 className="md-fs-5 sm-fs-6 title-border fw-extrabold mb-4 color-dark">
                     Bagikan
                   </h4>
                   <div>
@@ -112,9 +112,9 @@ const index = ({ id }) => {
                 </div>
               </div>
             </div>
-            <div className="col-md-3 mt-0 mt-md-4">
+            <div className="col-lg-3 mt-0 mt-lg-4">
               <div className="card card-ss p-4 pb-5  mb-4">
-                <h4 className="title-border fw-extrabold mb-4 color-dark">
+                <h4 className="md-fs-5 sm-fs-6 title-border fw-extrabold mb-4 color-dark">
                   Berita Terbaru
                 </h4>
                 <CardSideBerita data={dataBerita} />
@@ -122,7 +122,7 @@ const index = ({ id }) => {
                 <div className="text-center">
                   <a
                     href="/berita-terbaru"
-                    className="btn btn-ss btn-primary btn-primary-ss text-white fw-bold fs-16-ss rounded-pill text-center pointer"
+                    className="btn btn-ss btn-primary btn-primary-ss text-white fw-bold md-fs-14-ss rounded-pill text-center pointer"
                   >
                     Berita Selengkapnya
                   </a>
@@ -130,7 +130,7 @@ const index = ({ id }) => {
               </div>
             </div>
             <div className="py-4 pt-0 pt-md-4">
-              <h4 className="title-border fw-extrabold mb-4 color-dark">
+              <h4 className="md-fs-5 sm-fs-6 title-border fw-extrabold mb-4 color-dark">
                 Berita Lainnya
               </h4>
               <div className="row gy-4">
