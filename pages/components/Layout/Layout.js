@@ -83,6 +83,69 @@ const Layout = ({
         </div>
         {/* Section CTA End */}
 
+        {/* Layanan Pelanggan Section Start */}
+
+        <section
+          style={{ backgroundColor: "#F9F9FB", borderTop: "2px solid #E2E2E5" }}
+        >
+          <div className="container py-5">
+            <div className="row">
+              <div className="col-md-4 d-flex align-items-center mb-lg-0 mb-4">
+                <h4 className="fs-4 md-fs-5 sm-fs-6 fw-extrabold color-dark mb-0">
+                  Layanan Pelanggan
+                </h4>
+              </div>
+              <div className="col-lg-8 d-flex align-items-sm-center justify-content-between flex-sm-row flex-column flex-md-nowrap flex-wrap">
+                <div className="d-flex align-items-center mb-sm-0 mb-3 ">
+                  <img
+                    src="/img/icon-whatsapp-dark.svg"
+                    alt="icon"
+                    className="me-3"
+                  />
+                  <div className="color-dark">
+                    <h6 className="fs-14-ss fw-bold mb-1">WhatsApp</h6>
+                    <a
+                      href="tel:6281284538354"
+                      className="fs-12-ss fw-bold color-dark text-decoration-none mb-0"
+                    >
+                      +62 812 8453 8354
+                    </a>
+                  </div>
+                </div>
+                <div className="d-flex align-items-center mb-sm-0 mb-3">
+                  <img
+                    src="/img/icon-email-dark.svg"
+                    alt="icon"
+                    className="me-3"
+                  />
+                  <div className="color-dark">
+                    <h6 className="fs-14-ss fw-bold mb-1">Email</h6>
+                    <a
+                      href="mailto:adm.smartschool@gmail.com"
+                      className="fs-12-ss fw-bold color-dark text-decoration-none mb-0"
+                    >
+                      adm@smarteschool.id
+                    </a>
+                  </div>
+                </div>
+                <div className="d-flex align-items-center mb-sm-0 mb-3">
+                  <img
+                    src="/img/icon-clock-dark.svg"
+                    alt="icon"
+                    className="me-3"
+                  />
+                  <div className="color-dark">
+                    <h6 className="fs-14-ss fw-bold mb-1">Jam Kerja</h6>
+                    <h6 className="fs-12-ss fw-bold mb-0">24/7</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Layanan Pelanggan Section End */}
+
         <footer id="footer-ppdb">
           <section className="footer-content pb-4">
             <div className="container text-white">
