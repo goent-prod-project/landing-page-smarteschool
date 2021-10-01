@@ -10,28 +10,6 @@ import RekamanWebinarPage from "../components/Event/RekamanWebinarPage";
 import PesertaPage from "../components/Event/PesertaPage";
 
 const index = ({ nav }) => {
-  const dataBerita = [
-    {
-      id: 1,
-      img: "http://api.goent26.com/uploads/medium_Whats_App_Image_2021_08_19_at_23_25_00_52f0386368.jpeg",
-      judul: `Workshop Guru Penggerak Digitalisasi Sekolah (GPDS) SD dan SMP se DKI Jakarta Hari Pertama`,
-      tanggal: "20 August 2021",
-    },
-    {
-      id: 2,
-      img: "http://api.goent26.com/uploads/medium_Whats_App_Image_2021_08_19_at_23_25_01_8599dac6a1.jpeg",
-      judul: `
-          Workshop Guru Penggerak Digitalisasi Sekolah (GPDS) SD dan SMP se DKI Jakarta Hari Kedua`,
-      tanggal: "20 August 2021",
-    },
-    {
-      id: 3,
-      img: "http://api.goent26.com/uploads/medium_Whats_App_Image_2021_08_19_at_23_25_03_6361a564b8.jpeg",
-      judul: `Workshop Guru Penggerak Digitalisasi Sekolah (GPDS) SD dan SMP se DKI Jakarta Hari Ketiga`,
-      tanggal: "20 August 2021",
-    },
-  ];
-
   const dataRekaman = [
     {
       link: "https://www.youtube.com/watch?v=nebzhnhb7fE",
@@ -78,11 +56,11 @@ const index = ({ nav }) => {
       text: "Rekaman Webinar",
       active: nav == "rekaman-webinar",
     },
-    {
-      url: `event?nav=peserta`,
-      text: "Peserta",
-      active: nav == "peserta",
-    },
+    // {
+    //   url: `event?nav=peserta`,
+    //   text: "Peserta",
+    //   active: nav == "peserta",
+    // },
   ];
 
   return (

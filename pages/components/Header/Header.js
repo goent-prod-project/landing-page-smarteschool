@@ -20,11 +20,11 @@ const Header = ({ isFrontPage }) => {
       text: "About",
       url: `/about`,
     },
-    {
-      isDropdown: false,
-      text: "Sekolah",
-      url: `/sekolah`,
-    },
+    // {
+    //   isDropdown: false,
+    //   text: "Sekolah",
+    //   url: `/sekolah`,
+    // },
     {
       isDropdown: false,
       text: "Event",

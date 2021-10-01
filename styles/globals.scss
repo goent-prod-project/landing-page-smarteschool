@@ -2153,6 +2153,10 @@ main.main-ppdb {
   box-shadow: 0 10px 25px rgba(3, 0, 26, 0.3) !important;
 }
 
+.sticky-top {
+  z-index: 10;
+}
+
 .avatar {
   border: 4px solid white !important;
   border-radius: 50%;

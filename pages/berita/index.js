@@ -4,53 +4,9 @@ import { useEffect, useState } from "react";
 import Layout from "../components/Layout/Layout";
 import AnimatePage from "../components/Shared/AnimatePage/AnimatePage";
 import CardBerita from "../components/Berita/CardBerita";
+import { getBerita } from "../../client/BeritaClient";
 
-const index = ({}) => {
-  const dataBerita = [
-    {
-      id: 1,
-      img: "http://api.goent26.com/uploads/medium_Whats_App_Image_2021_08_19_at_23_25_00_52f0386368.jpeg",
-      judul: `Workshop Guru Penggerak Digitalisasi Sekolah (GPDS) SD dan SMP se DKI Jakarta Hari Pertama`,
-      tanggal: "20 August 2021",
-    },
-    {
-      id: 2,
-      img: "http://api.goent26.com/uploads/medium_Whats_App_Image_2021_08_19_at_23_25_01_8599dac6a1.jpeg",
-      judul: `
-      Workshop Guru Penggerak Digitalisasi Sekolah (GPDS) SD dan SMP se DKI Jakarta Hari Kedua`,
-      tanggal: "20 August 2021",
-    },
-    {
-      id: 3,
-      img: "http://api.goent26.com/uploads/medium_Whats_App_Image_2021_08_19_at_23_25_03_6361a564b8.jpeg",
-      judul: `Workshop Guru Penggerak Digitalisasi Sekolah (GPDS) SD dan SMP se DKI Jakarta Hari Ketiga`,
-      tanggal: "20 August 2021",
-    },
-  ];
-
-  const dataArtikel = [
-    {
-      id: 1,
-      img: "http://api.goent26.com/uploads/medium_Whats_App_Image_2021_02_24_at_21_24_37_1_1366f5ebb4.jpeg",
-      judul: `Pembelajaran Daring Di Masa Pandemi, Solusi Atau Masalah?`,
-      tanggal: "24 February 2021",
-    },
-    {
-      id: 2,
-      img: "http://api.goent26.com/uploads/medium_distance_learning_1600x960_1600x960_898e69ba99.jpg",
-      judul: `
-      5 Fitur Utama Aplikasi Learning Management System`,
-      tanggal: "18 February 2021",
-    },
-    {
-      id: 3,
-      img: "http://api.goent26.com/uploads/medium_e_learning_295454ff86.jpg",
-      judul: `
-      5 Tantangan dan Solusi Belajar Daring untuk Pelajar di Masa Pandemi Covid 19`,
-      tanggal: "11 February 2021",
-    },
-  ];
-
+const index = ({ berita, artikel }) => {
   return (
     <Layout isIndex>
       <AnimatePage>
@@ -71,7 +27,9 @@ const index = ({}) => {
                 </div>
               </div>
               <div className="row gy-4">
-                <CardBerita data={dataBerita} />
+                {berita?.map((d, idx) => (
+                  <CardBerita data={d} key={idx} />
+                ))}
               </div>
             </div>
             <div className="py-4">
@@ -89,7 +47,9 @@ const index = ({}) => {
                 </div>
               </div>
               <div className="row gy-4">
-                <CardBerita data={dataArtikel} />
+                {artikel?.map((d, idx) => (
+                  <CardBerita data={d} key={idx} />
+                ))}
               </div>
             </div>
           </div>
@@ -98,5 +58,21 @@ const index = ({}) => {
     </Layout>
   );
 };
+
+export async function getServerSideProps() {
+  const { data: berita } = await getBerita(
+    "?_sort=id:DESC&apakah_berita=true&_limit=6"
+  );
+  const { data: artikel } = await getBerita(
+    "?_sort=id:DESC&apakah_berita=false&_limit=6"
+  );
+
+  return {
+    props: {
+      berita: berita || null,
+      artikel: artikel || null,
+    },
+  };
+}
 
 export default index;
