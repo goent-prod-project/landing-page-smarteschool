@@ -119,7 +119,7 @@ const SliderContent = ({ data, type }) => {
         <div className="row pb-5">
           <div className={`${type == "manajemen" ? "col-lg-12" : "col-lg-11"}`}>
             <div className="row">
-              {listFitur[type].map((item) => (
+              {listFitur[type]?.map((item) => (
                 <div
                   className={`${
                     type == "manajemen" ? "col-sm-4 col-6" : "col-6"

@@ -8,7 +8,7 @@ const Tabs = ({ navItems, className }) => {
         id="myTab"
         role="tablist"
       >
-        {navItems.map(({ id, active, nav, dataJoyride }) => (
+        {navItems?.map(({ id, active, nav, dataJoyride }) => (
           <li
             className="nav-item fw-bold"
             role="presentation"
@@ -24,7 +24,7 @@ const Tabs = ({ navItems, className }) => {
               aria-controls={id}
               aria-selected="true"
               onClick={() =>
-                navItems.map((d) => {
+                navItems?.map((d) => {
                   if (id == d.id) {
                     d.active = true;
                   } else {
@@ -40,7 +40,7 @@ const Tabs = ({ navItems, className }) => {
         ))}
       </ul>
       <div className="tab-content" id="myTabContent">
-        {navItems.map(({ id, active, nav, content }) => (
+        {navItems?.map(({ id, active, nav, content }) => (
           <div
             key={id}
             className={active ? "tab-pane fade show active" : "tab-pane fade"}
