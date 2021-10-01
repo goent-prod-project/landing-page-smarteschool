@@ -57,7 +57,23 @@ const SliderContent = ({ data, type }) => {
     <div className="row gx-5 pt-lg-5 pt-md-0 mt-md-4 align-items-center justify-content-center">
       <div className="col-md-6 col-sm-8 col-10 mb-4">
         <img
-          src="/img/smarteschool-illustration.png"
+          src={`/img/illustrasi-role-${
+            type == "guru"
+              ? "guru"
+              : type == "siswa"
+              ? "siswa"
+              : type == "orangTua"
+              ? "orang-tua"
+              : type == "kepsek"
+              ? "kepsek"
+              : type == "manajemen"
+              ? "Manajemen"
+              : type == "alumni"
+              ? "alumni"
+              : type == "perusahaan"
+              ? "perusahaan"
+              : ""
+          }.png`}
           alt=""
           className="img-fluid"
         />

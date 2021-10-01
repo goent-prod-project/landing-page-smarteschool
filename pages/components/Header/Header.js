@@ -118,7 +118,7 @@ const Header = ({ isFrontPage }) => {
                 <a
                   data-bs-toggle="modal"
                   data-bs-target="#modalUjiCobaAkun"
-                  className="btn btn-ss btn-outline-primary btn-outline-primary-ss  rounded-pill mt-1 me-lg-4 mb-lg-0 mb-3"
+                  className="btn btn-ss btn-outline-primary btn-outline-primary-ss  rounded-pill me-lg-4 mb-lg-0 mb-3"
                 >
                   Uji Coba
                 </a>
@@ -127,7 +127,7 @@ const Header = ({ isFrontPage }) => {
                 <a
                   href={`https://api.whatsapp.com/send?phone=6281284538354&text=Halo, CS Smarteschool sekolah saya ingin menjadi sekolah Smarteschool`}
                   target="_blank"
-                  className="btn btn-ss btn-primary-ss shadow-primary-ss rounded-pill mt-lg-1"
+                  className="btn btn-ss btn-primary-ss shadow-primary-ss rounded-pill"
                 >
                   Daftar
                 </a>
