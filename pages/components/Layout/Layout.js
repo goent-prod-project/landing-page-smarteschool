@@ -200,7 +200,9 @@ const Layout = ({
                         </Link>
                       </div>
                       <div className="mb-3">
-                        <Link href={`/event`}>
+                        <Link
+                          href={`/event/guru-penggerak-digitalisasi-sekolah`}
+                        >
                           <a className="text-white fs-14-ss text-decoration-none">
                             Event
                           </a>

@@ -1,13 +1,10 @@
-import React, { useState } from "react";
-import { FaChevronDown, FaPen, FaTrashAlt } from "react-icons/fa";
-import Layout from "../components/Layout/Layout";
-import Navbar from "../components/Navbar/Navbar";
-import InformasiUmum from "../components/Event/InformasiUmum";
-import TabelGuru from "../components/Event/TabelGuru";
-import TabelSekolah from "../components/Event/TabelSekolah";
-import AnimatePage from "../components/Shared/AnimatePage/AnimatePage";
-import RekamanWebinarPage from "../components/Event/RekamanWebinarPage";
-import PesertaPage from "../components/Event/PesertaPage";
+import React from "react";
+import InformasiUmum from "../../components/Event/InformasiUmum";
+import PesertaPage from "../../components/Event/PesertaPage";
+import RekamanWebinarPage from "../../components/Event/RekamanWebinarPage";
+import Layout from "../../components/Layout/Layout";
+import Navbar from "../../components/Navbar/Navbar";
+import AnimatePage from "../../components/Shared/AnimatePage/AnimatePage";
 
 const index = ({ nav }) => {
   const dataRekaman = [
@@ -47,17 +44,17 @@ const index = ({ nav }) => {
 
   const navItems = [
     {
-      url: `event?nav=informasi-umum`,
+      url: `guru-penggerak-digitalisasi-sekolah?nav=informasi-umum`,
       text: "Informasi Umum",
       active: nav == "informasi-umum" || !nav,
     },
     {
-      url: `event?nav=rekaman-webinar`,
+      url: `guru-penggerak-digitalisasi-sekolah?nav=rekaman-webinar`,
       text: "Rekaman Webinar",
       active: nav == "rekaman-webinar",
     },
     // {
-    //   url: `event?nav=peserta`,
+    //   url: `guru-penggerak-digitalisasi-sekolah?nav=peserta`,
     //   text: "Peserta",
     //   active: nav == "peserta",
     // },
