@@ -4011,6 +4011,10 @@ main.main-ppdb {
 }
 
 // Event Page
+.benner-event {
+  top: 80px !important;
+}
+
 .card-event {
   .card-body {
     h6,
@@ -4157,6 +4161,10 @@ main.main-ppdb {
     .awssld__wrapper {
       height: 80vh !important;
     }
+  }
+
+  .benner-event {
+    top: 70px !important;
   }
 }
 

@@ -45,7 +45,7 @@ const index = ({ nav }) => {
     <Layout>
       <AnimatePage>
         <section
-          className="banner position-absolute"
+          className="banner banner-event position-absolute"
           style={{
             height: "220px",
             background: `url("/img/banner-event.png")`,
@@ -53,7 +53,6 @@ const index = ({ nav }) => {
             backgroundRepeat: "center",
             left: "0",
             right: "0",
-            top: "80px",
           }}
         ></section>
 
@@ -63,14 +62,14 @@ const index = ({ nav }) => {
         >
           <div className="row mb-5">
             <div className="col-md-12 text-center">
-              <h3 className="fw-extrabold text-white mb-0">
+              <h3 className="fw-extrabold text-white mb-0 md-fs-5 sm-fs-6">
                 Ikuti Event Bersama Smarteschool untuk Menambah Pengalaman Anda{" "}
               </h3>
             </div>
           </div>
           <div className="row g-4">
             {dataEvent?.map((d, idx) => (
-              <div className="col-md-4">
+              <div className="col-lg-4 col-md-6">
                 <CardEvent data={d} key={idx} />
               </div>
             ))}
