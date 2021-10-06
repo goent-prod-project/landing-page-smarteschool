@@ -93,7 +93,7 @@ const index = ({ berita, beritaTerbaru }) => {
             <div className="col-lg-3 mt-0 mt-lg-4">
               <div
                 className="card card-ss p-4 pb-5 mb-4 sticky-top"
-                style={{ top: 100 }}
+                style={{ top: 107 }}
               >
                 <h4 className="md-fs-5 sm-fs-6 title-border fw-extrabold mb-4 color-dark">
                   Berita Terbaru

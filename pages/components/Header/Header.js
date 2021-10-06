@@ -28,7 +28,7 @@ const Header = ({ isFrontPage }) => {
     {
       isDropdown: false,
       text: "Event",
-      url: `/event/guru-penggerak-digitalisasi-sekolah`,
+      url: `/event`,
     },
     {
       isDropdown: false,

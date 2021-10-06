@@ -57,19 +57,19 @@ const InformasiUmum = ({ data }) => {
             </p>
             <div className="row gy-4 mb-4">
               <div className="col-lg-4 col-md-6 mb-4 d-flex align-items-center">
-                <img src="img/icon-alur-step1.svg" alt="Icon step 1" />
+                <img src="/img/icon-alur-step1.svg" alt="Icon step 1" />
                 <h6 className="color-dark md-fs-6 sm-fs-14-ss fw-bold ms-4 mb-0">
                   Pendaftaran Calon Peserta Pendidikan GPDS bagi Guru
                 </h6>
               </div>
               <div className="col-lg-4 col-md-6 mb-4 d-flex align-items-center">
-                <img src="img/icon-alur-step2.svg" alt="Icon step 2" />
+                <img src="/img/icon-alur-step2.svg" alt="Icon step 2" />
                 <h6 className="color-dark md-fs-6 sm-fs-14-ss fw-bold ms-4 mb-0">
                   Undangan Grup / Kelompok WhatsApp
                 </h6>
               </div>
               <div className="col-lg-4 col-md-6 mb-4 d-flex align-items-center">
-                <img src="img/icon-alur-step3.svg" alt="Icon step 3" />
+                <img src="/img/icon-alur-step3.svg" alt="Icon step 3" />
                 <h6 className="color-dark md-fs-6 sm-fs-14-ss fw-bold ms-4 mb-0">
                   Pelaksanaan Workshop GPDS
                 </h6>
