@@ -10,7 +10,8 @@ import { getDateTime, getImageUrl } from "../../../utilities/AppUtils";
 import ReactMarkdown from "react-markdown";
 import { getImageContent } from "../../../utilities/BeritaUtils";
 
-const index = ({ berita, beritaTerbaru }) => {
+const index = ({ berita, beritaTerbaru, apakahBerita }) => {
+  console.log(apakahBerita);
   return (
     <Layout>
       <AnimatePage>
@@ -96,7 +97,7 @@ const index = ({ berita, beritaTerbaru }) => {
                 style={{ top: 107 }}
               >
                 <h4 className="md-fs-5 sm-fs-6 title-border fw-extrabold mb-4 color-dark">
-                  Berita Terbaru
+                  {apakahBerita ? "Berita" : "Artikel"} Terbaru
                 </h4>
 
                 {beritaTerbaru?.map(
@@ -104,18 +105,19 @@ const index = ({ berita, beritaTerbaru }) => {
                 )}
 
                 <div className="text-center">
-                  <a
-                    href="/berita-terbaru"
-                    className="btn btn-ss btn-primary btn-primary-ss text-white fw-bold md-fs-14-ss rounded-pill text-center pointer"
+                  <Link
+                    href={apakahBerita ? "/berita-terbaru" : "/artikel-terbaru"}
                   >
-                    Berita Selengkapnya
-                  </a>
+                    <a className="btn btn-ss btn-primary btn-primary-ss text-white fw-bold md-fs-14-ss rounded-pill text-center pointer">
+                      {apakahBerita ? "Berita" : "Artikel"} Selengkapnya
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
             <div className="py-4 pt-0 pt-md-4">
               <h4 className="md-fs-5 sm-fs-6 title-border fw-extrabold mb-4 color-dark">
-                Berita Lainnya
+                {apakahBerita ? "Berita" : "Artikel"} Lainnya
               </h4>
               <div className="row gy-4">
                 {beritaTerbaru?.map(
@@ -140,6 +142,7 @@ export async function getServerSideProps({ params: { id } }) {
     props: {
       berita: berita?.[0] || null,
       beritaTerbaru: beritaTerbaru || null,
+      apakahBerita: berita?.[0]?.apakahBerita,
     },
   };
 }
