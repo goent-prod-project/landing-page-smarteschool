@@ -1,11 +1,14 @@
 import { API_HOST } from "../client/ApiClient";
 
-import dateFormat from "dateformat";
+import { DateTime } from "luxon";
+// import dateFormat from "dateformat";
 
 export const getImageUrl = (url) => {
   return API_HOST + url;
 };
 
 export const getDateTime = (datetime) => {
-  return dateFormat(datetime, "dddd, d mmmm yyyy");
+  return DateTime.fromISO(datetime)
+    .setLocale("ID")
+    .toFormat("cccc, dd LLLL yyyy");
 };
