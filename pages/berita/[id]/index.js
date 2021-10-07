@@ -11,7 +11,6 @@ import ReactMarkdown from "react-markdown";
 import { getImageContent } from "../../../utilities/BeritaUtils";
 
 const index = ({ berita, beritaTerbaru, apakahBerita }) => {
-  console.log(apakahBerita);
   return (
     <Layout>
       <AnimatePage>
