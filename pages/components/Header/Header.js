@@ -137,7 +137,7 @@ const Header = ({ isFrontPage }) => {
         </div>
       </nav>
     </header>
-  );
+  ); 
 };
 
 export default Header;
