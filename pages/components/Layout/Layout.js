@@ -105,7 +105,8 @@ const Layout = ({
                   <div className="color-dark">
                     <h6 className="fs-14-ss fw-bold mb-1">WhatsApp</h6>
                     <a
-                      href="tel:6281284538354"
+                      href={`https://api.whatsapp.com/send?phone=6281284538354&text=Halo, CS Smarteschool`}
+                      target="_blank"
                       className="fs-12-ss fw-bold color-dark text-decoration-none mb-0"
                     >
                       +62 812 8453 8354
