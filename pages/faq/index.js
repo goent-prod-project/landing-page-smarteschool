@@ -1,60 +1,53 @@
 import { Tooltip } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import CardEvent from "../components/Event/CardEvent";
+import SliderNavFaq from "../components/Faq/SliderNavFaq";
 import Layout from "../components/Layout/Layout";
 import AnimatePage from "../components/Shared/AnimatePage/AnimatePage";
 
 const index = ({ nav }) => {
-  const dataEvent = [
-    {
-      linkEvent: "https://smarteschool.id/event",
-      bannerEvent: "/img/thumbnail-gpds.png",
-      judulEvent: "Guru Penggerak Digitalisasi Sekolah",
-      deskripsiEvent:
-        "Program yang membantu guru untuk mengembangkan potensi dan kreatifitas dari Guru Penggerak agar dapat menyelenggarakan kegiatan belajar mengajar secara digital dan online kepada siswa.",
-    },
-    {
-      linkEvent:
-        "https://ditpsd.kemdikbud.go.id/gemapertiwi2021/videotik/daftar",
-      bannerEvent: "/img/poster-gemapertiwi.png",
-      judulEvent: "Gema Pertiwi Pelajar Pancasila 2021",
-      deskripsiEvent:
-        "Gema Pertiwi bertujuan untuk membangkitkan semangat dan kreativitas ekosistem pendidikan dalam rangka melahirkan profil Pelajar Pancasila. Nah, di dalam Gema Pertiwi terdapat serangkaian kegiatan berupa unjuk karya yang dapat diikuti oleh peserta didik, pendidik, dan atau satuan Pendidikan sekolah dasar Indonesia, baik yang ada di Indonesia maupun di luar negeri.",
-    },
-  ];
+  const [type, setType] = useState("");
 
   const navFaq = [
     {
       img: "/img/icon-faq-role-umum.svg",
       name: "Umum",
+      type: "umum",
     },
     {
       img: "/img/icon-faq-role-guru.svg",
       name: "Guru",
+      type: "guru",
     },
     {
       img: "/img/icon-faq-role-siswa.svg",
       name: "Siswa",
+      type: "siswa",
     },
     {
       img: "/img/icon-faq-role-orang-tua.svg",
       name: "Orang Tua",
+      type: "orangTua",
     },
     {
       img: "/img/icon-faq-role-kepsek.svg",
       name: "Kepsek",
+      type: "kepsek",
     },
     {
       img: "/img/icon-faq-role-manajemen.svg",
       name: "Manajemen",
+      type: "manajemen",
     },
     {
       img: "/img/icon-faq-role-alumni.svg",
       name: "Alumni",
+      type: "alumni",
     },
     {
       img: "/img/icon-faq-role-perusahaan.svg",
       name: "Perusahaan",
+      type: "perusahaan",
     },
   ];
 
@@ -88,14 +81,40 @@ const index = ({ nav }) => {
             <div className="col-md-12">
               <div className="nav-faq card card-ss p-4 rounded-ss">
                 <div className="row gx-4">
-                  {navFaq.map((d) => (
-                    <div className="col d-flex flex-column align-items-center">
-                      <img src={d.img} alt="icon-faq" className="mb-2" />
-                      <h6 className="fw-bold color-dark mb-0">{d.name}</h6>
+                  {navFaq.map((d, idx) => (
+                    <div className="col">
+                      <a
+                        className="d-flex flex-column align-items-center"
+                        onClick={() => setType(d.type)}
+                      >
+                        <img
+                          src={
+                            d.type == type || (!type && idx == 0)
+                              ? `${d.img.split(".")[0] + "-active"}.svg`
+                              : d.img
+                          }
+                          alt="icon-faq"
+                          className="mb-2"
+                        />
+                        <h6
+                          className={`fw-bold  mb-0 ${
+                            d.type == type || (!type && idx == 0)
+                              ? "color-primary"
+                              : "color-dark"
+                          }`}
+                        >
+                          {d.name}
+                        </h6>
+                      </a>
                     </div>
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="row mt-4">
+            <div className="col-md-12">
+              <SliderNavFaq data={navFaq} />
             </div>
           </div>
         </div>

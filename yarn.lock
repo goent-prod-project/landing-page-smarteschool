@@ -3686,6 +3686,11 @@ react-dom@17.0.2:
     object-assign "^4.1.1"
     scheduler "^0.20.2"
 
+react-horizontal-scrolling-menu@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/react-horizontal-scrolling-menu/-/react-horizontal-scrolling-menu-2.5.0.tgz#d5feab946e5c45e413683f4ee0905ca2154c48fa"
+  integrity sha512-Mn4Md33gaC2yGvf5mRFewK0D893oOGj/SOxpJtg+wPvAdp6rr5kMWKJcrQeAJzOoj0Y3haHcYRmL6A3+jNRWPQ==
+
 react-hot-toast@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/react-hot-toast/-/react-hot-toast-2.1.1.tgz#56409ab406b534e9e58274cf98d80355ba0fdda0"
