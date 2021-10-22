@@ -140,7 +140,7 @@ const BottomNavigation = () => {
               </Link>
             </div>
             <div className="col d-flex align-items-center justify-content-center">
-              <Link href={`/event/guru-penggerak-digitalisasi-sekolah`}>
+              <Link href={`/event`}>
                 <a className="text-decoration-none">
                   <div
                     className={
@@ -150,8 +150,7 @@ const BottomNavigation = () => {
                     <img
                       height="24px"
                       src={`${
-                        activeMenu ===
-                        `/event/guru-penggerak-digitalisasi-sekolah`
+                        activeMenu === `/event`
                           ? "/img/icon-bottom-nav-event-active.svg"
                           : "/img/icon-bottom-nav-event.svg"
                       }`}
@@ -160,8 +159,7 @@ const BottomNavigation = () => {
                     />
                     <h6
                       className={`fs-12-ss fw-bold ${
-                        activeMenu ===
-                        `/event/guru-penggerak-digitalisasi-sekolah`
+                        activeMenu === `/event`
                           ? "color-primary"
                           : "color-secondary"
                       }`}

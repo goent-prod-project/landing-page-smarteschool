@@ -122,7 +122,7 @@ export default function Home({ banner, faq }) {
                 </div>
               ))}
             </div>
-            <div className="row">
+            {/* <div className="row">
               <div className="col-md-12 text-center">
                 <Link href="/faq">
                   <a className="btn btn-ss btn-primary btn-primary-ss fw-bold shadow-primary-ss bg-gradient-primary rounded-pill fs-18-ss md-fs-6 sm-14-ss">
@@ -130,7 +130,7 @@ export default function Home({ banner, faq }) {
                   </a>
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
