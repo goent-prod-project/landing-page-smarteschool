@@ -17,7 +17,7 @@ const BottomNavigation = () => {
   return (
     <>
       <a
-        href={`https://api.whatsapp.com/send?phone=6281284538354&text=Halo CS Smarteschool`}
+        href={`https://api.whatsapp.com/send?phone=6285778537382&text=Halo CS Smarteschool`}
         target="_blank"
         className="floating-button rounded-circle shadow-primary-ss position-fixed d-lg-none d-block"
         style={{

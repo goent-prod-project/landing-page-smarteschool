@@ -97,7 +97,7 @@ const SectionMenuMobile = ({}) => {
             </div>
             <div className="col-4 d-flex justify-content-center align-items-center mb-3">
               <a
-                href={`https://api.whatsapp.com/send?phone=6281284538354&text=Halo CS Smarteschool`}
+                href={`https://api.whatsapp.com/send?phone=6285778537382&text=Halo CS Smarteschool`}
                 target="_blank"
                 className="text-decoration-none text-center"
               >

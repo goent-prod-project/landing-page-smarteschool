@@ -125,7 +125,7 @@ const Header = ({ isFrontPage }) => {
               </li>
               <li className="nav-item d-lg-block d-flex flex-lg-row flex-column">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=6281284538354&text=Halo, CS Smarteschool sekolah saya ingin menjadi sekolah Smarteschool`}
+                  href={`https://api.whatsapp.com/send?phone=6285778537382&text=Halo, CS Smarteschool sekolah saya ingin menjadi sekolah Smarteschool`}
                   target="_blank"
                   className="btn btn-ss btn-primary-ss shadow-primary-ss rounded-pill"
                 >
@@ -137,7 +137,7 @@ const Header = ({ isFrontPage }) => {
         </div>
       </nav>
     </header>
-  ); 
+  );
 };
 
 export default Header;
