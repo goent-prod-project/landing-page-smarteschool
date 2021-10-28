@@ -95,7 +95,7 @@ const SectionMenuDesktop = ({}) => {
             </div>
 
             <div className="col-md-4 col-6">
-              <Link href="#">
+              <Link href="/event">
                 <a className="text-decoration-none smarte-menu">
                   {" "}
                   <div className="card card-ss rounded-ss p-sm-4 p-3 text-center">

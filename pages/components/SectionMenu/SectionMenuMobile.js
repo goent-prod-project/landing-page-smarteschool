@@ -82,7 +82,7 @@ const SectionMenuMobile = ({}) => {
               </Link>
             </div>
             <div className="col-4 d-flex justify-content-center align-items-center mb-3">
-              <Link href="/event/guru-penggerak-digitalisasi-sekolah">
+              <Link href="/event">
                 <a className="text-decoration-none text-center">
                   <img
                     src="/img/icon-menu-event.svg"

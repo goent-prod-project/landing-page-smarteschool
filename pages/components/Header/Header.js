@@ -20,11 +20,11 @@ const Header = ({ isFrontPage }) => {
       text: "About",
       url: `/about`,
     },
-    // {
-    //   isDropdown: false,
-    //   text: "Sekolah",
-    //   url: `/sekolah`,
-    // },
+    {
+      isDropdown: false,
+      text: "Cari Sekolah",
+      url: `https://pencarian.smarteschool.net`,
+    },
     {
       isDropdown: false,
       text: "Event",
@@ -91,24 +91,43 @@ const Header = ({ isFrontPage }) => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav navbar-nav-ppdb mx-auto mb-2 mb-lg-0">
               {headerMenus?.map((menu, idx) => {
+                if (menu.text == "Cari Sekolah") {
+                  return (
+                    <li
+                      className="nav-item py-lg-1 py-2"
+                      key={idx}
+                      style={{ paddingLeft: "12px", paddingRight: "12px" }}
+                    >
+                      <a
+                        href={menu.url}
+                        target="_blank"
+                        className="nav-link p-0 fw-bold"
+                      >
+                        {menu.text}
+                      </a>
+                    </li>
+                  );
+                }
+
                 return (
                   <li
                     className="nav-item py-lg-1 py-2"
                     key={idx}
                     style={{ paddingLeft: "12px", paddingRight: "12px" }}
                   >
-                    <a
-                      href={menu.url}
-                      {...(menuAktif == menu.url
-                        ? {
-                            className: "nav-link p-0 fw-bold active",
-                            "aria-current": "page",
-                          }
-                        : { className: "nav-link p-0 fw-bold" })}
-                      onClick={() => setMenuAktif(menu.url)}
-                    >
-                      {menu.text}
-                    </a>
+                    <Link href={menu.url}>
+                      <a
+                        {...(menuAktif == menu.url
+                          ? {
+                              className: "nav-link p-0 fw-bold active",
+                              "aria-current": "page",
+                            }
+                          : { className: "nav-link p-0 fw-bold" })}
+                        onClick={() => setMenuAktif(menu.url)}
+                      >
+                        {menu.text}
+                      </a>
+                    </Link>
                   </li>
                 );
               })}
