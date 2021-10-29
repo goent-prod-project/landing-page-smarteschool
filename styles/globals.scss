@@ -1964,7 +1964,12 @@ input[type="number"] {
 // Slider
 .slider {
   .awssld {
+    --loader-bar-color: white !important;
     --content-background-color: none !important;
+  }
+
+  .awssld__timer.awssld__timer--run {
+    background-color: transparent !important;
   }
 
   .awssld__timer {
