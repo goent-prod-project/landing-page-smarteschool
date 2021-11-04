@@ -17,7 +17,7 @@ import { getImageUrl } from "../utilities/AppUtils";
 
 export default function Home({ banner, faq }) {
   const [sliderWidth, setsliderWidth] = useState(0);
-  const [collapseOpen, setcollapseOpen] = useState(false);
+  const [collapseOpen, setcollapseOpen] = useState({});
 
   useEffect(() => {
     setsliderWidth(window.innerWidth);
@@ -73,8 +73,8 @@ export default function Home({ banner, faq }) {
               </div>
             </div>
             <div className="row justify-content-center gy-4 mb-4">
-              <div className="col-md-10">
-                {faq?.map((d, idx) => (
+              {faq?.map((d, idx) => (
+                <div className="col-md-10">
                   <div className="card card-ss card-biaya-pendaftaran p-0">
                     <div className="card-header-ss rounded-ss d-flex justify-content-between align-items-between px-4 py-4">
                       <h4 className="fw-extrabold color-dark mb-0 mt-2 md-fs-5 sm-fs-6">
@@ -82,9 +82,14 @@ export default function Home({ banner, faq }) {
                       </h4>
                       <div
                         className={`btn-collapse ${
-                          collapseOpen ? "active" : ""
+                          collapseOpen[idx + 1] ? "active" : ""
                         }`}
-                        onClick={() => setcollapseOpen(!collapseOpen)}
+                        onClick={() =>
+                          setcollapseOpen({
+                            ...collapseOpen,
+                            [idx + 1]: !collapseOpen[idx + 1],
+                          })
+                        }
                       >
                         <a
                           data-bs-toggle="collapse"
@@ -114,16 +119,18 @@ export default function Home({ banner, faq }) {
                       </div>
                     </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-            <div className="row">
+            {/* <div className="row">
               <div className="col-md-12 text-center">
-                <a className="btn btn-ss btn-primary btn-primary-ss fw-bold shadow-primary-ss bg-gradient-primary rounded-pill fs-18-ss md-fs-6 sm-14-ss">
-                  Lihat Semua Pertanyaan
-                </a>
+                <Link href="/faq">
+                  <a className="btn btn-ss btn-primary btn-primary-ss fw-bold shadow-primary-ss bg-gradient-primary rounded-pill fs-18-ss md-fs-6 sm-14-ss">
+                    Lihat Semua Pertanyaan
+                  </a>
+                </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -135,7 +142,7 @@ export default function Home({ banner, faq }) {
 
 export async function getServerSideProps() {
   const { data: banner } = await getBanner(`?_sort=id:DESC`);
-  const { data: faq } = await getFaq(`?_sort=id:DESC`);
+  const { data: faq } = await getFaq(`?_sort=id:ASC`);
 
   return {
     props: {

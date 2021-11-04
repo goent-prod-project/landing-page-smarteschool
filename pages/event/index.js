@@ -7,7 +7,8 @@ import AnimatePage from "../components/Shared/AnimatePage/AnimatePage";
 const index = ({ nav }) => {
   const dataEvent = [
     {
-      linkEvent: "https://smarteschool.id/event",
+      linkEvent:
+        "https://smarteschool.id/event/guru-penggerak-digitalisasi-sekolah",
       bannerEvent: "/img/thumbnail-gpds.png",
       judulEvent: "Guru Penggerak Digitalisasi Sekolah",
       deskripsiEvent:

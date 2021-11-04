@@ -7,7 +7,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import AnimatePage from "../../components/Shared/AnimatePage/AnimatePage";
 
 const index = ({ nav }) => {
-  const dataRekaman = [
+  const gpdsSMASMKDKI = [
     {
       link: "https://www.youtube.com/watch?v=nebzhnhb7fE",
       thumbnail:
@@ -39,6 +39,95 @@ const index = ({ nav }) => {
       tanggal: "Rabu, 28 Juli 2021",
       judul: "GPDS Hari Ke - 4",
       deskripsi: "E - Exam",
+    },
+  ];
+
+  const gpdsSDSMPDKI = [
+    {
+      link: "https://www.youtube.com/watch?v=p3kISGvEQ74",
+      thumbnail:
+        "https://i.ytimg.com/vi/p3kISGvEQ74/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBH_QE2HKlrShk7wbOWznYhCxYTOQ",
+      tanggal: "Selasa, 10 Agustus 2021",
+      judul: "GPDS Hari Ke - 1 ",
+      deskripsi: "Pengenalan Program GPDS dan Smarteschool",
+    },
+    {
+      link: "https://www.youtube.com/watch?v=cZt2wVOCgxk",
+      thumbnail:
+        "https://i.ytimg.com/vi/cZt2wVOCgxk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCZkp4OuZmbDOcjgRZ-0HAanv_jRw",
+      tanggal: "Rabu, 11 Agustus 2021",
+      judul: "GPDS Hari Ke - 2",
+      deskripsi: "E - Learning",
+    },
+    {
+      link: "https://www.youtube.com/watch?v=bB4V5a_esRI",
+      thumbnail:
+        "https://i.ytimg.com/vi/bB4V5a_esRI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCNbmN6yUI2tfWAjf7177vnCU8ebQ",
+      tanggal: "Kamis, 12 Agustus 2021",
+      judul: "GPDS Hari Ke - 3",
+      deskripsi: "E - Manajement",
+    },
+    {
+      link: "https://www.youtube.com/watch?v=WMXe00zqpVA",
+      thumbnail:
+        "https://i.ytimg.com/vi/WMXe00zqpVA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBvvNW_skBTnFpYawRcwC2j0mL-rQ",
+      tanggal: "Senin, 16 Agustus 2021",
+      judul: "GPDS Hari Ke - 4",
+      deskripsi: "E - Exam",
+    },
+  ];
+
+  const gpdsNasional = [
+    {
+      link: "https://www.youtube.com/watch?v=gz-dbncwO_Q",
+      thumbnail:
+        "https://i.ytimg.com/vi/gz-dbncwO_Q/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC9LoLmd3EW2P4eH8Ki7sxl7C12XQ",
+      tanggal: "Rabu, 8 September 2021",
+      judul: "GPDS Hari Ke - 1 ",
+      deskripsi: "Pengenalan Program GPDS dan Smarteschool",
+    },
+    {
+      link: "https://www.youtube.com/watch?v=4YoClEcd3i0",
+      thumbnail:
+        "https://i.ytimg.com/vi/4YoClEcd3i0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDYdm1LrieJuEZRzyqyzv_jW5II0w",
+      tanggal: "Kamis, 9 September 2021",
+      judul: "GPDS Hari Ke - 2",
+      deskripsi: "E - Learning",
+    },
+    {
+      link: "https://www.youtube.com/watch?v=eXLv-3QSCkU",
+      thumbnail:
+        "https://i.ytimg.com/vi/eXLv-3QSCkU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD-qFaq8or09OhPOSwsGjEKAAkg7A",
+      tanggal: "Jumat, 10 September 2021",
+      judul: "GPDS Hari Ke - 3",
+      deskripsi: "E - Manajement",
+    },
+    {
+      link: "https://www.youtube.com/watch?v=SdDUV2JOtcs",
+      thumbnail:
+        "https://i.ytimg.com/vi/SdDUV2JOtcs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBL6EHbt4Rr-sDAL349hsc1Ad85cg",
+      tanggal: "Senin, 13 September 2021",
+      judul: "GPDS Hari Ke - 4",
+      deskripsi: "E - Exam",
+    },
+    {
+      link: "https://www.youtube.com/watch?v=UJn_k_bWACg",
+      thumbnail:
+        "https://i.ytimg.com/vi/UJn_k_bWACg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDfEhFdlVkCbwVzAvERwlG9dmchrA",
+      tanggal: "Selasa, 14 September 2021",
+      judul: "GPDS Hari Ke - 4",
+      deskripsi: "E - Rapor",
+    },
+  ];
+
+  const gpdsKalsel = [
+    {
+      link: "https://www.youtube.com/watch?v=pSdJBY1e4TQ",
+      thumbnail:
+        "https://i.ytimg.com/vi/pSdJBY1e4TQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCI4eB52pvoPK1kqp3CSqPUh3U2DA",
+      tanggal: "Senin, 10 Oktober 2021",
+      judul: "GPDS Hari Ke - 1 ",
+      deskripsi: "Pengenalan Program GPDS dan Smarteschool",
     },
   ];
 
@@ -127,7 +216,14 @@ const index = ({ nav }) => {
           </div>
         </div>
         {(!nav || nav === "informasi-umum") && <InformasiUmum />}
-        {nav === "rekaman-webinar" && <RekamanWebinarPage data={dataRekaman} />}
+        {nav === "rekaman-webinar" && (
+          <RekamanWebinarPage
+            data={gpdsSMASMKDKI}
+            gpdsSDSMPDKI={gpdsSDSMPDKI}
+            gpdsNasional={gpdsNasional}
+            gpdsKalsel={gpdsKalsel}
+          />
+        )}
         {nav === "peserta" && <PesertaPage />}
       </AnimatePage>
     </Layout>

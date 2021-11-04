@@ -50,7 +50,7 @@ const Layout = ({
                         </h1>
                         <div className="d-flex justify-content-lg-start justify-content-sm-center flex-sm-row flex-column align-items-center">
                           <a
-                            href={`https://api.whatsapp.com/send?phone=6281284538354&text=Halo, CS Smarteschool sekolah saya ingin menjadi anggota sekolah Smarteschool`}
+                            href={`https://api.whatsapp.com/send?phone=6285778537382&text=Halo, CS Smarteschool sekolah saya ingin menjadi anggota sekolah Smarteschool`}
                             target="_blank"
                             className="btn btn-ss btn-primary btn-primary-ss bg-gradient-primary shadow-primary-ss fw-bold rounded-pill d-flex align-items-center justify-content-center me-sm-4 mb-sm-0 mb-3 md-fs-6 sm-14-ss"
                             style={{ width: "190px" }}
@@ -105,10 +105,11 @@ const Layout = ({
                   <div className="color-dark">
                     <h6 className="fs-14-ss fw-bold mb-1">WhatsApp</h6>
                     <a
-                      href="tel:6281284538354"
+                      href={`https://api.whatsapp.com/send?phone=6285778537382&text=Halo, CS Smarteschool`}
+                      target="_blank"
                       className="fs-12-ss fw-bold color-dark text-decoration-none mb-0"
                     >
-                      +62 812 8453 8354
+                      +62 857 7853 7382
                     </a>
                   </div>
                 </div>
@@ -200,9 +201,7 @@ const Layout = ({
                         </Link>
                       </div>
                       <div className="mb-3">
-                        <Link
-                          href={`/event/guru-penggerak-digitalisasi-sekolah`}
-                        >
+                        <Link href={`/event`}>
                           <a className="text-white fs-14-ss text-decoration-none">
                             Event
                           </a>

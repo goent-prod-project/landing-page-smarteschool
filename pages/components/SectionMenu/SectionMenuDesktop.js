@@ -95,7 +95,7 @@ const SectionMenuDesktop = ({}) => {
             </div>
 
             <div className="col-md-4 col-6">
-              <Link href="#">
+              <Link href="/event">
                 <a className="text-decoration-none smarte-menu">
                   {" "}
                   <div className="card card-ss rounded-ss p-sm-4 p-3 text-center">
@@ -113,7 +113,7 @@ const SectionMenuDesktop = ({}) => {
             </div>
             <div className="col-md-4 col-6">
               <a
-                href={`https://api.whatsapp.com/send?phone=6281284538354&text=Halo CS Smarteschool`}
+                href={`https://api.whatsapp.com/send?phone=6285778537382&text=Halo CS Smarteschool`}
                 target="_blank"
                 className="text-decoration-none smarte-menu"
               >

@@ -12,7 +12,20 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <title>Smarteschool</title>
         <meta name="description" content="Sekolah Digitalmu" />
+        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/favicon-32x32.png"
+          sizes="32x32"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/favicon-16x16.png"
+          sizes="16x16"
+        />
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

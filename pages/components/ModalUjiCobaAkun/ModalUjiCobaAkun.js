@@ -34,7 +34,7 @@ const ModalUjiCobaAkun = ({}) => {
     }
 
     window.open(
-      `https://api.whatsapp.com/send?phone=6281284538354&text=Halo, Saya ingin memiliki akun untuk mencoba sistem Simulasi Sekolah Online Virtual by Smarteschool.%0ANama : ${stateForm.nama}%0AJabatan : ${stateForm.jabatan}%0ANama Sekolah : ${stateForm.namaSekolah}%0AAlamat Sekolah : ${stateForm.alamatSekolah}`
+      `https://api.whatsapp.com/send?phone=6285778537382&text=Halo, Saya ingin memiliki akun untuk mencoba sistem Simulasi Sekolah Online Virtual by Smarteschool.%0ANama : ${stateForm.nama}%0AJabatan : ${stateForm.jabatan}%0ANama Sekolah : ${stateForm.namaSekolah}%0AAlamat Sekolah : ${stateForm.alamatSekolah}`
     );
   };
 
