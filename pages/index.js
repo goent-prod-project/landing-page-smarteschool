@@ -109,7 +109,7 @@ export default function Home({ banner, faq }) {
 
                     <div class="collapse" id={`faq-${idx + 1}`}>
                       <hr className="mb-4 mt-0" />
-                      <div class="card-body card-footer-ss pb-4 px-4 pt-0 md-fs-14-ss">
+                      <div class="card-body card-footer-ss pb-4 px-4 pt-0 md-fs-14-ss dangerous-html">
                         <ReactMarkdown children={d?.kontenFaq} />
                       </div>
                     </div>

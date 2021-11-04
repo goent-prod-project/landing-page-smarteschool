@@ -58,7 +58,7 @@ const index = ({ berita, beritaTerbaru, apakahBerita }) => {
                     }}
                   />
                   <ReactMarkdown
-                    className="color-dark fw-semibold md-fs-14-ss"
+                    className="color-dark fw-semibold md-fs-14-ss dangerous-html"
                     children={getImageContent(berita?.konten)}
                   />
                   <hr className="my-4" />
