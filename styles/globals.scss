@@ -1959,7 +1959,12 @@ input[type="number"] {
 // Slider
 .slider {
   .awssld {
+    --loader-bar-color: white !important;
     --content-background-color: none !important;
+  }
+
+  .awssld__timer.awssld__timer--run {
+    background-color: transparent !important;
   }
 
   .awssld__timer {
@@ -3872,19 +3877,19 @@ main.main-ppdb {
 
 // About Page
 .slider-fitur {
-  .awssld {
+  .d {
     --content-background-color: none !important;
   }
 
-  .awssld__timer {
+  .d__timer {
     background-color: transparent !important;
   }
 
-  .awssld__wrapper {
+  .d__wrapper {
     height: 75vh !important;
   }
 
-  .awssld__bullets {
+  .d__bullets {
     z-index: 2 !important;
     top: 0 !important;
     bottom: unset !important;
@@ -3915,7 +3920,7 @@ main.main-ppdb {
         -webkit-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45);
     }
 
-    .awssld__bullets--active[data-index="0"] {
+    .d__bullets--active[data-index="0"] {
       -webkit-transform: scale(1.5);
       -moz-transform: scale(1.5);
       transform: none !important;
@@ -3926,7 +3931,7 @@ main.main-ppdb {
       background-image: url("/img/icon-slider-role-guru.svg") !important;
     }
 
-    .awssld__bullets--active[data-index="0"] {
+    .d__bullets--active[data-index="0"] {
       background-image: url("/img/icon-slider-role-guru-active.svg") !important;
     }
 
@@ -3935,7 +3940,7 @@ main.main-ppdb {
       background-image: url("/img/icon-slider-role-siswa.svg") !important;
     }
 
-    .awssld__bullets--active[data-index="1"] {
+    .d__bullets--active[data-index="1"] {
       background-image: url("/img/icon-slider-role-siswa-active.svg") !important;
     }
 
@@ -3944,7 +3949,7 @@ main.main-ppdb {
       background-image: url("/img/icon-slider-role-orang-tua.svg") !important;
     }
 
-    .awssld__bullets--active[data-index="2"] {
+    .d__bullets--active[data-index="2"] {
       background-image: url("/img/icon-slider-role-orang-tua-active.svg") !important;
     }
 
@@ -3953,7 +3958,7 @@ main.main-ppdb {
       background-image: url("/img/icon-slider-role-kepsek.svg") !important;
     }
 
-    .awssld__bullets--active[data-index="3"] {
+    .d__bullets--active[data-index="3"] {
       background-image: url("/img/icon-slider-role-kepsek-active.svg") !important;
     }
 
@@ -3962,7 +3967,7 @@ main.main-ppdb {
       background-image: url("/img/icon-slider-role-manajemen.svg") !important;
     }
 
-    .awssld__bullets--active[data-index="4"] {
+    .d__bullets--active[data-index="4"] {
       background-image: url("/img/icon-slider-role-manajemen-active.svg") !important;
     }
 
@@ -3971,7 +3976,7 @@ main.main-ppdb {
       background-image: url("/img/icon-slider-role-alumni.svg") !important;
     }
 
-    .awssld__bullets--active[data-index="5"] {
+    .d__bullets--active[data-index="5"] {
       background-image: url("/img/icon-slider-role-alumni-active.svg") !important;
     }
 
@@ -3980,19 +3985,19 @@ main.main-ppdb {
       background-image: url("/img/icon-slider-role-perusahaan.svg") !important;
     }
 
-    .awssld__bullets--active[data-index="6"] {
+    .d__bullets--active[data-index="6"] {
       background-image: url("/img/icon-slider-role-perusahaan-active.svg") !important;
     }
   }
 
-  .awssld__bullets .awssld__bullets--active {
+  .d__bullets .d__bullets--active {
     -webkit-transform: scale(1.5);
     -moz-transform: scale(1.5);
     transform: none !important;
     background: var(--control-bullet-active-color);
   }
 
-  .awssld__bullets .awssld__bullets--loading {
+  .d__bullets .d__bullets--loading {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
     transform: scale(1.2);
@@ -4153,7 +4158,7 @@ main.main-ppdb {
   }
 
   .slider-fitur {
-    .awssld__wrapper {
+    .d__wrapper {
       height: 80vh !important;
     }
   }
@@ -4927,3 +4932,4 @@ main.main-ppdb {
   left: 0;
   position: absolute;
 }
+
