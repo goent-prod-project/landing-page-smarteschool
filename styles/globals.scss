@@ -787,6 +787,18 @@ h6 {
   .form-select::placeholder {
     color: #bec8d0;
   }
+
+  .modal-header.modal-header-success {
+    background-color: white !important;
+    .btn-close {
+      background: url("/img/btn-close-modal-detail.svg") center center no-repeat !important;
+    }
+  }
+
+  .modal-body.modal-body-success {
+    height: auto !important;
+    min-height: 715px !important;
+  }
 }
 
 .modal-ss.modal-detail {
@@ -2133,6 +2145,46 @@ input[type="number"] {
     transition: 0.8s;
     transition-timing-function: ease-in;
     // background: var(--blue);
+  }
+}
+
+.file-input {
+  background: var(--soft-blue) !important;
+  border: 1px solid #98c7ff !important;
+  transition: 0.3s;
+
+  &:hover {
+    background: #dfecff !important;
+    border-color: var(--blue) !important;
+  }
+}
+
+.btn-link-smarteschool {
+  transition: 0.3s;
+  background-color: var(--soft-blue);
+  border: 1px solid var(--soft-blue);
+
+  &:hover {
+    background-color: #d7e8ff;
+    border-color: var(--blue);
+  }
+  &:focus {
+    border-color: var(--blue) !important;
+    outline: none !important;
+  }
+}
+
+.btn-link-smarteschool.btn-link-demo {
+  background-color: white;
+  border: 1px solid var(--blue);
+
+  &:hover {
+    background-color: #dcebff;
+    border-color: #3a8ff7;
+  }
+  &:focus {
+    border-color: #3a8ff7 !important;
+    outline: none !important;
   }
 }
 
@@ -4932,4 +4984,3 @@ main.main-ppdb {
   left: 0;
   position: absolute;
 }
-

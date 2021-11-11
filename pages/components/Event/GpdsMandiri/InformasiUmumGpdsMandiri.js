@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
-import ModalGabungSmarteschool from "../ModalGabungSmarteschool/ModalGabungSmarteschool";
+import ModalGabungSmarteschool from "../../ModalGabungSmarteschool/ModalGabungSmarteschool";
 
-const InformasiUmum = ({ data }) => {
+const InformasiUmumGpdsMandiri = ({ data }) => {
   const initial = {
     nama: "",
     whatsapp: "",
@@ -118,7 +118,7 @@ const InformasiUmum = ({ data }) => {
                 </h6>
               </div>
             </div>
-            {/* <hr className="my-4" />
+            <hr className="my-4" />
             <div className="row">
               <a
                 data-bs-toggle="modal"
@@ -129,7 +129,7 @@ const InformasiUmum = ({ data }) => {
                 <img src="/img/icon-daftar-sekarang.svg" alt="Icon step 1" />
                 <p className="ms-4 fw-bold fs-18-ss mb-0">Daftar Sekarang</p>
               </a>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
@@ -145,4 +145,4 @@ const InformasiUmum = ({ data }) => {
   );
 };
 
-export default InformasiUmum;
+export default InformasiUmumGpdsMandiri;

@@ -11,10 +11,12 @@ const NewModal = ({
   modalSize = "lg",
   removeFooter = false,
   isModalDetail = false,
+  isModalWhite = false,
   modalDetailKategori = false,
   isSurel = false,
   _postSurel,
   onCloseModal,
+  success = false,
 }) => {
   const onClickClose = () => {
     hideModal(modalId);
@@ -27,9 +29,9 @@ const NewModal = ({
       {button && button}
       {/* NewModal */}
       <div
-        className={`modal modal-ss ${isModalDetail && "modal-detail"} ${
+        className={`modal modal-ss ${isModalDetail ? "modal-detail" : ""} ${
           modalDetailKategori && "modal-detail-kategori"
-        } fade`}
+        } ${isModalWhite ? "modal-white" : ""} fade`}
         id={`${modalId}`}
         tabIndex="-1"
         aria-labelledby="exampleModalLabel"
@@ -44,7 +46,9 @@ const NewModal = ({
         >
           {isSurel ? (
             <div className="modal-content">
-              <div className="modal-header">
+              <div
+                className={`modal-header ${success && "modal-header-success"}`}
+              >
                 <div
                   className="modal-title fw-extrabold"
                   id="exampleModalLabel"
@@ -59,7 +63,9 @@ const NewModal = ({
                   aria-label="Close"
                 ></button>
               </div>
-              <div className="modal-body">{content}</div>
+              <div className={`modal-body ${success && "modal-body-success"}`}>
+                {content}
+              </div>
               {!removeFooter && (
                 <div className="modal-footer d-flex justify-content-between">
                   <div className="d-flex">
@@ -113,7 +119,9 @@ const NewModal = ({
             </div>
           ) : (
             <div className="modal-content">
-              <div className="modal-header">
+              <div
+                className={`modal-header ${success && "modal-header-success"}`}
+              >
                 <div
                   className="modal-title fw-extrabold"
                   id="exampleModalLabel"
@@ -128,7 +136,11 @@ const NewModal = ({
                   aria-label="Close"
                 ></button>
               </div>
-              <div className="modal-body">{content}</div>
+              <div
+                className={`modal-body ${success && "modal-body-success pt-0"}`}
+              >
+                {content}
+              </div>
               {!removeFooter && (
                 <div className="modal-footer">
                   <button
