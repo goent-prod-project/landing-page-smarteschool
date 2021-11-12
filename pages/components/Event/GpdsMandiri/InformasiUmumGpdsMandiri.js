@@ -98,38 +98,42 @@ const InformasiUmumGpdsMandiri = ({ data }) => {
             <p className="fs-18-ss md-fs-6 sm-fs-14-ss fw-bold color-dark">
               Alur Pendaftaran Program GPDS :
             </p>
-            <div className="row gy-4 mb-4">
+            <div className="row gy-4 gx-3 mb-4">
               <div className="col-lg-4 col-md-6 mb-4 d-flex align-items-center">
                 <img src="/img/icon-alur-step1.svg" alt="Icon step 1" />
                 <h6 className="color-dark md-fs-6 sm-fs-14-ss fw-bold ms-4 mb-0">
-                  Pendaftaran Calon Peserta Pendidikan GPDS bagi Guru
+                  Memberikan Surat Pernyataan Sekolah untuk mendapatkan akun
                 </h6>
               </div>
               <div className="col-lg-4 col-md-6 mb-4 d-flex align-items-center">
-                <img src="/img/icon-alur-step2.svg" alt="Icon step 2" />
+                <img
+                  src="/img/icon-alur-gpds-mandiri-step2.svg"
+                  alt="Icon step 2"
+                />
                 <h6 className="color-dark md-fs-6 sm-fs-14-ss fw-bold ms-4 mb-0">
-                  Undangan Grup / Kelompok WhatsApp
+                  Mengikuti materi pelatihan hingga selesai
                 </h6>
               </div>
               <div className="col-lg-4 col-md-6 mb-4 d-flex align-items-center">
-                <img src="/img/icon-alur-step3.svg" alt="Icon step 3" />
+                <img
+                  src="/img/icon-alur-gpds-mandiri-step3.svg"
+                  alt="Icon step 3"
+                />
                 <h6 className="color-dark md-fs-6 sm-fs-14-ss fw-bold ms-4 mb-0">
-                  Pelaksanaan Workshop GPDS
+                  Mengupload video laporan diseminasi ke YouTube
                 </h6>
               </div>
             </div>
             <hr className="my-4" />
-            <div className="row">
-              <a
-                data-bs-toggle="modal"
-                data-bs-target="#modalGabungSmarteschool"
-                onClick={() => setSuccess(false)}
-                className="btn btn-primary btn-primary-ss  w-100 bg-primary d-flex rounded-ss justify-content-center align-items-center text-white p-3"
-              >
-                <img src="/img/icon-daftar-sekarang.svg" alt="Icon step 1" />
-                <p className="ms-4 fw-bold fs-18-ss mb-0">Daftar Sekarang</p>
-              </a>
-            </div>
+            <a
+              data-bs-toggle="modal"
+              data-bs-target="#modalGabungSmarteschool"
+              onClick={() => setSuccess(false)}
+              className="btn btn-primary btn-primary-ss  w-100 bg-primary d-flex rounded-ss justify-content-center align-items-center text-white p-3"
+            >
+              <img src="/img/icon-daftar-sekarang.svg" alt="Icon step 1" />
+              <p className="ms-4 fw-bold fs-18-ss mb-0">Daftar Sekarang</p>
+            </a>
           </div>
         </div>
       </div>
