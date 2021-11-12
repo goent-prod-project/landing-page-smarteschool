@@ -124,7 +124,7 @@ const InformasiUmumGpdsMandiri = ({ data }) => {
                 </h6>
               </div>
             </div>
-            <hr className="my-4" />
+            {/* <hr className="my-4" />
             <a
               data-bs-toggle="modal"
               data-bs-target="#modalGabungSmarteschool"
@@ -133,7 +133,7 @@ const InformasiUmumGpdsMandiri = ({ data }) => {
             >
               <img src="/img/icon-daftar-sekarang.svg" alt="Icon step 1" />
               <p className="ms-4 fw-bold fs-18-ss mb-0">Daftar Sekarang</p>
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
