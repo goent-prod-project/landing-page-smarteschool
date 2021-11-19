@@ -86,7 +86,8 @@ const InformasiUmumGpdsMandiri = ({ data }) => {
                 </p>
                 <ul className="checklist-ss">
                   <li className="md-fs-6 sm-fs-14-ss">
-                    Penggunaan Smarteschool selama 3 bulan
+                    Penggunaan Smarteschool{" "}
+                    <span className="color-primary fw-bold">GRATIS</span>
                   </li>
                   <li className="md-fs-6 sm-fs-14-ss">Materi Pelatihan</li>
                   <li className="md-fs-6 sm-fs-14-ss">
