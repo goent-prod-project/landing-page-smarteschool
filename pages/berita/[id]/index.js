@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { FaChevronLeft } from "react-icons/fa";
 import AnimatePage from "../../components/Shared/AnimatePage/AnimatePage";
 import Layout from "../../components/Layout/Layout";
@@ -9,8 +9,14 @@ import { getBerita } from "../../../client/BeritaClient";
 import { getDateTime, getImageUrl } from "../../../utilities/AppUtils";
 import ReactMarkdown from "react-markdown";
 import { getImageContent } from "../../../utilities/BeritaUtils";
+import { useRouter } from "next/router";
+import SocialMediaShared from "../../components/Shared/SocialMediaShare/SocialMediaShared";
 
 const index = ({ berita, beritaTerbaru, apakahBerita }) => {
+  const router = useRouter();
+  useEffect(() => {
+    console.log(router.asPath);
+  }, [router]);
   return (
     <Layout>
       <AnimatePage>
@@ -66,7 +72,10 @@ const index = ({ berita, beritaTerbaru, apakahBerita }) => {
                     Bagikan
                   </h4>
                   <div>
-                    <img
+                    <SocialMediaShared
+                      news={{ title: berita?.judul, url: router.asPath }}
+                    />
+                    {/* <img
                       src="/img/icon-share-wa.svg"
                       alt="Whatsapp"
                       className="me-3 pointer"
@@ -85,7 +94,7 @@ const index = ({ berita, beritaTerbaru, apakahBerita }) => {
                       src="/img/icon-share-twitter.svg"
                       alt="Twitter"
                       className="pointer"
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>
