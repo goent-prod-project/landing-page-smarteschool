@@ -187,14 +187,13 @@ const Layout = ({
                         </Link>
                       </div>
                       <div className="mb-3">
-                        <Link href={`/sekolah`}>
-                          <a
-                            href={`#`}
-                            className="text-white fs-14-ss text-decoration-none"
-                          >
-                            Sekolah
-                          </a>
-                        </Link>
+                        <a
+                          href={`https://pencarian.smarteschool.net/`}
+                          target="_blank"
+                          className="text-white fs-14-ss text-decoration-none"
+                        >
+                          Sekolah
+                        </a>
                       </div>
                       <div className="mb-3">
                         <Link href="/berita">
@@ -216,14 +215,13 @@ const Layout = ({
                         Tautan Lain
                       </h4>
                       <div className="mb-3">
-                        <Link href={`/`}>
-                          <a
-                            href="#"
-                            className="text-white fs-14-ss text-decoration-none"
-                          >
-                            Cari Sekolah
-                          </a>
-                        </Link>
+                        <a
+                          href="https://pencarian.smarteschool.net/"
+                          target="_blank"
+                          className="text-white fs-14-ss text-decoration-none"
+                        >
+                          Cari Sekolah
+                        </a>
                       </div>
                       <div className="mb-3">
                         <a
