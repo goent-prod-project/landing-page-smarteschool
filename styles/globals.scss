@@ -181,6 +181,10 @@ h6 {
   font-family: "Tahoma", sans-serif !important;
 }
 
+.ff-great-vibes {
+  font-family: "Great Vibes" !important;
+}
+
 /* Font Weight */
 .fw-semibold {
   font-weight: 600 !important;
@@ -591,14 +595,14 @@ h6 {
 
 /* Cursor */
 .pointer {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 .cursor-default {
   cursor: default !important;
 }
 
 .no-drop {
-  cursor: not-allowed;
+  cursor: not-allowed !important;
 }
 
 /* Banner */
@@ -1922,7 +1926,6 @@ input[type="number"] {
 
 .print-page {
   width: 100%;
-  font-family: "Tahoma", sans-serif !important;
   color: #000000 !important;
   .border-dark {
     border-color: #000000 !important;
@@ -2186,6 +2189,20 @@ input[type="number"] {
     border-color: #3a8ff7 !important;
     outline: none !important;
   }
+}
+
+// Background
+.bg-cover {
+  background-size: cover !important;
+}
+.bg-contain {
+  background-size: contain !important;
+}
+.bg-no-repeat {
+  background-repeat: no-repeat !important;
+}
+.bg-center {
+  background-position: center !important;
 }
 
 /* ============== Utility End ==============  */
@@ -4096,6 +4113,44 @@ main.main-ppdb {
   }
 }
 
+// Sertifikat Page
+.card-select-sertifikat-gpds {
+  .css-yk16xz-control {
+    cursor: pointer !important;
+  }
+
+  .css-yk16xz-control,
+  .css-1pahdxg-control {
+    padding: 24px !important;
+    border: none !important;
+    box-shadow: 0 10px 30px rgba(58, 65, 102, 0.075) !important;
+    border-radius: 15px !important;
+  }
+
+  .css-b8ldur-Input {
+    input {
+      font-size: 20px !important;
+    }
+  }
+
+  .css-1wa3eu0-placeholder {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+  }
+}
+
+.card-verifikasi-sertifikat-gpds {
+  .form-control {
+    padding: 24px !important;
+    border: none !important;
+    box-shadow: 0 10px 30px rgba(58, 65, 102, 0.075) !important;
+    border-radius: 15px !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    height: 91px !important;
+  }
+}
+
 // ====================== End Landing Page Smarteschool=========================
 
 /* ============== RWD ============== */
@@ -4533,6 +4588,24 @@ main.main-ppdb {
   .icon-layanan-kami {
     width: 65px !important;
     height: 65px !important;
+  }
+
+  .card-select-sertifikat-gpds {
+    .css-b8ldur-Input {
+      input {
+        font-size: 16px !important;
+      }
+    }
+
+    .css-1wa3eu0-placeholder {
+      font-size: 16px !important;
+    }
+  }
+
+  .card-verifikasi-sertifikat-gpds {
+    .form-control {
+      font-size: 16px !important;
+    }
   }
 }
 
@@ -4996,3 +5069,13 @@ main.main-ppdb {
   left: 0;
   position: absolute;
 }
+
+// @media print {
+//   @page {
+//     size: landscape;
+//     margin: 0 !important;
+//   }
+//   .sertifikat-gpds {
+//     -webkit-print-color-adjust: exact;
+//   }
+// }
