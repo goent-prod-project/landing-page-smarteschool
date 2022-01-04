@@ -171,35 +171,37 @@ const BottomNavigation = () => {
               </Link>
             </div>
             <div className="col d-flex align-items-center justify-content-center pe-0">
-              <Link href={`/anggota`}>
-                <a className="text-decoration-none">
-                  <div
-                    className={
-                      "d-flex justify-content-center align-items-center flex-column"
-                    }
+              <a
+                href="https://pencarian.smarteschool.net"
+                target="_blank"
+                className="text-decoration-none"
+              >
+                <div
+                  className={
+                    "d-flex justify-content-center align-items-center flex-column"
+                  }
+                >
+                  <img
+                    height="24px"
+                    src={`${
+                      activeMenu === `/anggota`
+                        ? "/img/icon-bottom-nav-anggota-active.svg"
+                        : "/img/icon-bottom-nav-anggota.svg"
+                    }`}
+                    alt=""
+                    className="mb-2"
+                  />
+                  <h6
+                    className={`fs-12-ss fw-bold ${
+                      activeMenu === `/anggota`
+                        ? "color-primary"
+                        : "color-secondary"
+                    }`}
                   >
-                    <img
-                      height="24px"
-                      src={`${
-                        activeMenu === `/anggota`
-                          ? "/img/icon-bottom-nav-anggota-active.svg"
-                          : "/img/icon-bottom-nav-anggota.svg"
-                      }`}
-                      alt=""
-                      className="mb-2"
-                    />
-                    <h6
-                      className={`fs-12-ss fw-bold ${
-                        activeMenu === `/anggota`
-                          ? "color-primary"
-                          : "color-secondary"
-                      }`}
-                    >
-                      Anggota
-                    </h6>
-                  </div>
-                </a>
-              </Link>
+                    Anggota
+                  </h6>
+                </div>
+              </a>
             </div>
           </div>
         </div>
