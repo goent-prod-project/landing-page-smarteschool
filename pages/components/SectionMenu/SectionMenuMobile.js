@@ -68,18 +68,20 @@ const SectionMenuMobile = ({}) => {
               </a>
             </div>
             <div className="col-4 d-flex justify-content-center align-items-center mb-3">
-              <Link href="/about">
-                <a className="text-decoration-none text-center">
-                  <img
-                    src="/img/icon-menu-anggota.svg"
-                    alt=""
-                    className="img-fluid mb-2"
-                  />
-                  <h6 className="fs-6 sm-fs-6 color-dark fw-bold mb-0">
-                    Anggota
-                  </h6>
-                </a>
-              </Link>
+              <a
+                href="https://pencarian.smarteschool.net"
+                target="_blank"
+                className="text-decoration-none text-center"
+              >
+                <img
+                  src="/img/icon-menu-anggota.svg"
+                  alt=""
+                  className="img-fluid mb-2"
+                />
+                <h6 className="fs-6 sm-fs-6 color-dark fw-bold mb-0">
+                  Anggota
+                </h6>
+              </a>
             </div>
             <div className="col-4 d-flex justify-content-center align-items-center mb-3">
               <Link href="/event">
@@ -96,6 +98,20 @@ const SectionMenuMobile = ({}) => {
               </Link>
             </div>
             <div className="col-4 d-flex justify-content-center align-items-center mb-3">
+              <Link href="/sertifikat">
+                <a className="text-decoration-none text-center">
+                  <img
+                    src="/img/icon-menu-sertifikat.svg"
+                    alt=""
+                    className="img-fluid mb-2"
+                  />
+                  <h6 className="fs-6 sm-fs-6 color-dark fw-bold mb-0">
+                    Sertifikat
+                  </h6>
+                </a>
+              </Link>
+            </div>
+            {/* <div className="col-4 d-flex justify-content-center align-items-center mb-3">
               <a
                 href={`https://api.whatsapp.com/send?phone=6285778537382&text=Halo CS Smarteschool`}
                 target="_blank"
@@ -108,7 +124,7 @@ const SectionMenuMobile = ({}) => {
                 />
                 <h6 className="fs-6 sm-fs-6 color-dark fw-bold mb-0">Kontak</h6>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

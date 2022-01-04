@@ -35,6 +35,11 @@ const Header = ({ isFrontPage }) => {
       text: "Berita",
       url: `/berita`,
     },
+    {
+      isDropdown: false,
+      text: "Sertifikat",
+      url: `/sertifikat`,
+    },
   ];
 
   useEffect(() => {

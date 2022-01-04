@@ -101,13 +101,14 @@ const Layout = ({
                     src="/img/icon-whatsapp-dark.svg"
                     alt="icon"
                     className="me-3"
+                    height="37px"
                   />
                   <div className="color-dark">
-                    <h6 className="fs-14-ss fw-bold mb-1">WhatsApp</h6>
+                    <h6 className="fw-bold mb-1">WhatsApp</h6>
                     <a
                       href={`https://api.whatsapp.com/send?phone=6285778537382&text=Halo, CS Smarteschool`}
                       target="_blank"
-                      className="fs-12-ss fw-bold color-dark text-decoration-none mb-0"
+                      className="fs-14-ss fw-bold color-dark text-decoration-none mb-0"
                     >
                       +62 857 7853 7382
                     </a>
@@ -118,12 +119,13 @@ const Layout = ({
                     src="/img/icon-email-dark.svg"
                     alt="icon"
                     className="me-3"
+                    height="30px"
                   />
                   <div className="color-dark">
-                    <h6 className="fs-14-ss fw-bold mb-1">Email</h6>
+                    <h6 className="fw-bold mb-1">Email</h6>
                     <a
                       href="mailto:adm.smartschool@gmail.com"
-                      className="fs-12-ss fw-bold color-dark text-decoration-none mb-0"
+                      className="fs-14-ss fw-bold color-dark text-decoration-none mb-0"
                     >
                       adm@smarteschool.id
                     </a>
@@ -134,10 +136,11 @@ const Layout = ({
                     src="/img/icon-clock-dark.svg"
                     alt="icon"
                     className="me-3"
+                    height="35px"
                   />
                   <div className="color-dark">
-                    <h6 className="fs-14-ss fw-bold mb-1">Jam Kerja</h6>
-                    <h6 className="fs-12-ss fw-bold mb-0">24/7</h6>
+                    <h6 className="fw-bold mb-1">Jam Kerja</h6>
+                    <h6 className="fs-14-ss fw-bold mb-0">24/7</h6>
                   </div>
                 </div>
               </div>
@@ -184,14 +187,13 @@ const Layout = ({
                         </Link>
                       </div>
                       <div className="mb-3">
-                        <Link href={`/sekolah`}>
-                          <a
-                            href={`#`}
-                            className="text-white fs-14-ss text-decoration-none"
-                          >
-                            Sekolah
-                          </a>
-                        </Link>
+                        <a
+                          href={`https://pencarian.smarteschool.net/`}
+                          target="_blank"
+                          className="text-white fs-14-ss text-decoration-none"
+                        >
+                          Sekolah
+                        </a>
                       </div>
                       <div className="mb-3">
                         <Link href="/berita">
@@ -213,14 +215,13 @@ const Layout = ({
                         Tautan Lain
                       </h4>
                       <div className="mb-3">
-                        <Link href={`/`}>
-                          <a
-                            href="#"
-                            className="text-white fs-14-ss text-decoration-none"
-                          >
-                            Cari Sekolah
-                          </a>
-                        </Link>
+                        <a
+                          href="https://pencarian.smarteschool.net/"
+                          target="_blank"
+                          className="text-white fs-14-ss text-decoration-none"
+                        >
+                          Cari Sekolah
+                        </a>
                       </div>
                       <div className="mb-3">
                         <a

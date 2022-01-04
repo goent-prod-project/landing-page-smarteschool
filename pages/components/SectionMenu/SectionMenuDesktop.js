@@ -77,21 +77,23 @@ const SectionMenuDesktop = ({}) => {
               </Link>
             </div>
             <div className="col-md-4 col-6">
-              <Link href="#">
-                <a className="text-decoration-none smarte-menu">
-                  {" "}
-                  <div className="card card-ss rounded-ss p-sm-4 p-3 text-center">
-                    <img
-                      src="/img/sekolah-partner.png"
-                      alt=""
-                      className="img-fluid mb-4"
-                    />
-                    <h4 className="fs-4 sm-fs-6 color-dark fw-bold mb-0">
-                      Anggota
-                    </h4>
-                  </div>
-                </a>
-              </Link>
+              <a
+                href="https://pencarian.smarteschool.net"
+                target="_blank"
+                className="text-decoration-none smarte-menu"
+              >
+                {" "}
+                <div className="card card-ss rounded-ss p-sm-4 p-3 text-center">
+                  <img
+                    src="/img/sekolah-partner.png"
+                    alt=""
+                    className="img-fluid mb-4"
+                  />
+                  <h4 className="fs-4 sm-fs-6 color-dark fw-bold mb-0">
+                    Anggota
+                  </h4>
+                </div>
+              </a>
             </div>
 
             <div className="col-md-4 col-6">
@@ -112,6 +114,23 @@ const SectionMenuDesktop = ({}) => {
               </Link>
             </div>
             <div className="col-md-4 col-6">
+              <Link href="/sertifikat">
+                <a className="text-decoration-none smarte-menu">
+                  {" "}
+                  <div className="card card-ss rounded-ss p-sm-4 p-3 text-center">
+                    <img
+                      src="/img/sertifikat.png"
+                      alt=""
+                      className="img-fluid mb-4"
+                    />
+                    <h4 className="fs-4 sm-fs-6 color-dark fw-bold mb-0">
+                      Sertifikat
+                    </h4>
+                  </div>
+                </a>
+              </Link>
+            </div>
+            {/* <div className="col-md-4 col-6">
               <a
                 href={`https://api.whatsapp.com/send?phone=6285778537382&text=Halo CS Smarteschool`}
                 target="_blank"
@@ -128,7 +147,7 @@ const SectionMenuDesktop = ({}) => {
                   </h4>
                 </div>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
