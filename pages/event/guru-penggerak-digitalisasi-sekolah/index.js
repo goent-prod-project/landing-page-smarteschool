@@ -176,7 +176,7 @@ const index = ({ nav }) => {
                       className="me-2"
                     />
                     <h4 className="fw-bold lg-fs-5 md-fs-6 text-white mb-0">
-                      263 Sekolah
+                      3194 Sekolah
                     </h4>
                   </div>
                   <div className="d-flex align-items-center">
@@ -186,7 +186,7 @@ const index = ({ nav }) => {
                       className="me-2"
                     />
                     <h4 className="fw-bold lg-fs-5 md-fs-6 text-white mb-0">
-                      7823 Guru
+                      91.280 Pengguna
                     </h4>
                   </div>
                 </div>
