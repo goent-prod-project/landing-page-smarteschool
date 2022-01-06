@@ -4189,11 +4189,43 @@ main.main-ppdb {
     width: auto !important;
     min-width: auto !important;
   }
+  .lg-w-100 {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+  .lg-w-75 {
+    width: 75% !important;
+    min-width: 75% !important;
+  }
+  .lg-w-50 {
+    width: 50% !important;
+    min-width: 50% !important;
+  }
+  .lg-w-25 {
+    width: 25% !important;
+    min-width: 25% !important;
+  }
 
   // height
   .lg-h-auto {
     height: auto !important;
     min-height: auto !important;
+  }
+  .lg-h-100 {
+    height: 100% !important;
+    min-height: 100% !important;
+  }
+  .lg-h-75 {
+    height: 75% !important;
+    min-height: 75% !important;
+  }
+  .lg-h-50 {
+    height: 50% !important;
+    min-height: 50% !important;
+  }
+  .lg-h-25 {
+    height: 25% !important;
+    min-height: 25% !important;
   }
 
   main {
@@ -4317,16 +4349,48 @@ main.main-ppdb {
     font-size: 12px !important;
   }
 
-  //width
+  // width
   .md-w-auto {
     width: auto !important;
     min-width: auto !important;
+  }
+  .md-w-100 {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+  .md-w-75 {
+    width: 75% !important;
+    min-width: 75% !important;
+  }
+  .md-w-50 {
+    width: 50% !important;
+    min-width: 50% !important;
+  }
+  .md-w-25 {
+    width: 25% !important;
+    min-width: 25% !important;
   }
 
   // height
   .md-h-auto {
     height: auto !important;
     min-height: auto !important;
+  }
+  .md-h-100 {
+    height: 100% !important;
+    min-height: 100% !important;
+  }
+  .md-h-75 {
+    height: 75% !important;
+    min-height: 75% !important;
+  }
+  .md-h-50 {
+    height: 50% !important;
+    min-height: 50% !important;
+  }
+  .md-h-25 {
+    height: 25% !important;
+    min-height: 25% !important;
   }
 
   main {
@@ -4645,16 +4709,48 @@ main.main-ppdb {
     font-size: 12px !important;
   }
 
-  //width
+  // width
   .sm-w-auto {
     width: auto !important;
     min-width: auto !important;
+  }
+  .sm-w-100 {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+  .sm-w-75 {
+    width: 75% !important;
+    min-width: 75% !important;
+  }
+  .sm-w-50 {
+    width: 50% !important;
+    min-width: 50% !important;
+  }
+  .sm-w-25 {
+    width: 25% !important;
+    min-width: 25% !important;
   }
 
   // height
   .sm-h-auto {
     height: auto !important;
     min-height: auto !important;
+  }
+  .sm-h-100 {
+    height: 100% !important;
+    min-height: 100% !important;
+  }
+  .sm-h-75 {
+    height: 75% !important;
+    min-height: 75% !important;
+  }
+  .sm-h-50 {
+    height: 50% !important;
+    min-height: 50% !important;
+  }
+  .sm-h-25 {
+    height: 25% !important;
+    min-height: 25% !important;
   }
 
   main {
@@ -4849,6 +4945,11 @@ main.main-ppdb {
   .icon-layanan-kami {
     width: 50px !important;
     height: 50px !important;
+  }
+
+  .icon-panduan-pengguna {
+    width: 100px !important;
+    height: 100px !important;
   }
 }
 

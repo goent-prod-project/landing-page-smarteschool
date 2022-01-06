@@ -40,11 +40,11 @@ const Header = ({ isFrontPage }) => {
     //   text: "Sertifikat",
     //   url: `/sertifikat`,
     // },
-    {
-      isDropdown: false,
-      text: "Panduan",
-      url: `/panduan`,
-    },
+    // {
+    //   isDropdown: false,
+    //   text: "Panduan",
+    //   url: `/panduan`,
+    // },
   ];
 
   useEffect(() => {
