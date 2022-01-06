@@ -209,6 +209,13 @@ const Layout = ({
                           </a>
                         </Link>
                       </div>
+                      <div className="mb-3">
+                        <Link href={`/panduan`}>
+                          <a className="text-white fs-14-ss text-decoration-none">
+                            Panduan
+                          </a>
+                        </Link>
+                      </div>
                     </div>
                     <div className="col-md-3 col-6 mb-sm-0 mb-4">
                       <h4 className="fw-extrabold mb-4 md-fs-5 sm-fs-6">
