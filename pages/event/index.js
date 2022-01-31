@@ -2,10 +2,18 @@ import { Tooltip } from "antd";
 import React from "react";
 import CardEvent from "../components/Event/CardEvent";
 import Layout from "../components/Layout/Layout";
+import Navbar from "../components/Navbar/Navbar";
 import AnimatePage from "../components/Shared/AnimatePage/AnimatePage";
 
 const index = ({ nav }) => {
   const dataEvent = [
+    {
+      linkEvent: "/event/gpds/1",
+      bannerEvent: "/img/thumbnail-gpds.png",
+      judulEvent: "GPDS Jawa Timur",
+      deskripsiEvent:
+        "Program yang membantu guru untuk mengembangkan potensi dan kreatifitas dari Guru Penggerak agar dapat menyelenggarakan kegiatan belajar mengajar secara digital dan online kepada siswa.",
+    },
     {
       linkEvent:
         "https://smarteschool.id/event/guru-penggerak-digitalisasi-sekolah",
@@ -26,17 +34,22 @@ const index = ({ nav }) => {
 
   const navItems = [
     {
-      url: `guru-penggerak-digitalisasi-sekolah?nav=informasi-umum`,
-      text: "Informasi Umum",
-      active: nav == "informasi-umum" || !nav,
+      url: `event?nav=berlangsung`,
+      text: "Berlangsung",
+      active: nav == "berlangsung" || !nav,
     },
     {
-      url: `guru-penggerak-digitalisasi-sekolah?nav=rekaman-webinar`,
-      text: "Rekaman Webinar",
-      active: nav == "rekaman-webinar",
+      url: `event?nav=akan-datang`,
+      text: "Akan Datang",
+      active: nav == "akan-datang",
+    },
+    {
+      url: `event?nav=selesai`,
+      text: "Selesai",
+      active: nav == "selesai",
     },
     // {
-    //   url: `guru-penggerak-digitalisasi-sekolah?nav=peserta`,
+    //   url: `event?nav=peserta`,
     //   text: "Peserta",
     //   active: nav == "peserta",
     // },
@@ -66,6 +79,11 @@ const index = ({ nav }) => {
               <h3 className="fw-extrabold text-white mb-0 md-fs-5 sm-fs-6">
                 Ikuti Event Bersama Smarteschool untuk Menambah Pengalaman Anda{" "}
               </h3>
+            </div>
+          </div>
+          <div className="row pt-5 mb-4">
+            <div className="col-md-12">
+              <Navbar nav={navItems} />
             </div>
           </div>
           <div className="row g-4">

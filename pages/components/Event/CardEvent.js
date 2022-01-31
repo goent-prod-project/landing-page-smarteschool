@@ -18,6 +18,16 @@ const CardEvent = ({ data }) => {
               {data?.judulEvent}
             </h6>
           </Tooltip>
+          <div className="d-flex align-items-cneter mb-3">
+            <img
+              src="/img/icon-tanggal-event.svg"
+              alt="icon-tanggal-event"
+              className="me-2"
+            />
+            <span className="fs-14-ss color-primary mb-0 fw-semibold">
+              31 Jan - 4 Feb 2022
+            </span>
+          </div>
           <Tooltip title={data?.deskripsiEvent}>
             <p className="fw-semibold color-secondary clamp-2 mb-4">
               {data?.deskripsiEvent}
