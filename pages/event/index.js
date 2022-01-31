@@ -6,6 +6,7 @@ import CardEvent from "../components/Event/CardEvent";
 import Layout from "../components/Layout/Layout";
 import Navbar from "../components/Navbar/Navbar";
 import AnimatePage from "../components/Shared/AnimatePage/AnimatePage";
+import Link from "next/link";
 
 const index = ({ nav, dataEvent }) => {
   // const dataEvent = [
@@ -88,7 +89,56 @@ const index = ({ nav, dataEvent }) => {
               <Navbar nav={navItems} />
             </div>
           </div>
-          <div className="row g-4">
+          <div
+            className={`row g-4 ${
+              dataEvent?.length == 0 ? "justify-content-center" : ""
+            }`}
+          >
+            {dataEvent?.length == 0 && (
+              <>
+                {" "}
+                <div className="col-sm-7 col-10 text-center">
+                  <img
+                    src="/img/empty-state-jadwal.png"
+                    alt=""
+                    className="img-fluid mb-md-0 mb-2"
+                  />
+                </div>
+                <div className="col-12 text-center">
+                  <h4 className="color-dark fw-black mb-2">
+                    {(nav == "berlangsung" || !nav) &&
+                      "Tidak Ada Event Yang Berlangsung"}
+                    {nav == "akan-datang" && "Jadwal Event Kosong"}
+                    {nav == "selesai" && "Belum Ada Event Yang Selesai"}
+                  </h4>
+                  <p className="fw-bold">
+                    {(nav == "berlangsung" || !nav) && (
+                      <>
+                        Lihat pada tab {""}
+                        <Link href={`/event?nav=akan-datang`}>
+                          <a className="color-primary text-decoration-none">
+                            Akan Datang
+                          </a>
+                        </Link>{" "}
+                        untuk mengecek jadwal event
+                      </>
+                    )}
+                    {nav == "selesai" && (
+                      <>
+                        Lihat pada tab{" "}
+                        <Link href={`/event?nav=berlangsung`}>
+                          <a className="color-primary text-decoration-none">
+                            Berlangsung
+                          </a>
+                        </Link>{" "}
+                        untuk mengikuti event
+                      </>
+                    )}
+                  </p>
+                </div>
+              </>
+            )}
+
             {dataEvent?.map((d, idx) => (
               <div className="col-lg-4 col-md-6">
                 <CardEvent data={d} key={idx} />
