@@ -1,4 +1,5 @@
 import React from "react";
+import { momentPackage } from "../../../../utilities/HelperUtils";
 import CardRekamanWebinar from "../CardRekamanWebinar";
 
 const RekamanWebinarPage = ({
@@ -6,6 +7,7 @@ const RekamanWebinarPage = ({
   gpdsSDSMPDKI,
   gpdsNasional,
   gpdsKalsel,
+  eventData,
 }) => {
   return (
     <div
@@ -17,10 +19,17 @@ const RekamanWebinarPage = ({
       <div className="card card-ss p-4 pb-5 mb-4">
         <div className="card-body p-0">
           <h1 className="color-dark md-fs-5 sm-fs-6 fw-extrabold">
-            GPDS Jawa Timur
+            {eventData?.judul}
           </h1>
           <h5 className="fs-5 md-fs-6 sm-fs-14-ss mb-md-5 mb-4">
-            Senin, 24 Januari 2022 - Jum'at, 28 Januari 2022
+            {`${momentPackage(eventData?.tanggalAwal).format(
+              "dddd, DD MMMM YYYY"
+            )}`}{" "}
+            {eventData?.tanggalAkhir
+              ? `- ${momentPackage(eventData?.tanggalAkhir).format(
+                  "dddd, DD MMMM YYYY"
+                )}`
+              : ""}
           </h5>
           <div className="container">
             <div className="row g-4">

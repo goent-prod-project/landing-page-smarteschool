@@ -5,8 +5,9 @@ import RekamanWebinarPage from "../../../components/Event/Gpds/RekamanWebinarPag
 import Layout from "../../../components/Layout/Layout";
 import Navbar from "../../../components/Navbar/Navbar";
 import AnimatePage from "../../../components/Shared/AnimatePage/AnimatePage";
+import { detailEvents } from "../../../../client/EventClient";
 
-const index = ({ nav }) => {
+const index = ({ nav, data, id }) => {
   const gpdsSMASMKDKI = [
     {
       link: "https://www.youtube.com/watch?v=nebzhnhb7fE",
@@ -133,12 +134,12 @@ const index = ({ nav }) => {
 
   const navItems = [
     {
-      url: `/event/gpds/1?nav=informasi-umum`,
+      url: `/event/gpds/${id}?nav=informasi-umum`,
       text: "Informasi Umum",
       active: nav == "informasi-umum" || !nav,
     },
     {
-      url: `/event/gpds/1?nav=rekaman-webinar`,
+      url: `/event/gpds/${id}?nav=rekaman-webinar`,
       text: "Rekaman Webinar",
       active: nav == "rekaman-webinar",
     },
@@ -215,10 +216,11 @@ const index = ({ nav }) => {
             <Navbar nav={navItems} />
           </div>
         </div>
-        {(!nav || nav === "informasi-umum") && <InformasiUmum />}
+        {(!nav || nav === "informasi-umum") && <InformasiUmum data={data[0]} />}
         {nav === "rekaman-webinar" && (
           <RekamanWebinarPage
-            data={gpdsSMASMKDKI}
+            data={data[0]?.content?.video}
+            eventData={data[0]}
             gpdsSDSMPDKI={gpdsSDSMPDKI}
             gpdsNasional={gpdsNasional}
             gpdsKalsel={gpdsKalsel}
@@ -230,10 +232,13 @@ const index = ({ nav }) => {
   );
 };
 
-export async function getServerSideProps({ query: { nav } }) {
+export async function getServerSideProps({ query: { nav }, params: { id } }) {
+  const { data } = await detailEvents(`slug=${id}`);
   return {
     props: {
       nav: nav || null,
+      id: id || null,
+      data: data || [],
     },
   };
 }
