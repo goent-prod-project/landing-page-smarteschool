@@ -1,36 +1,38 @@
 import { Tooltip } from "antd";
+import moment from "moment";
 import React from "react";
+import { getEvents } from "../../client/EventClient";
 import CardEvent from "../components/Event/CardEvent";
 import Layout from "../components/Layout/Layout";
 import Navbar from "../components/Navbar/Navbar";
 import AnimatePage from "../components/Shared/AnimatePage/AnimatePage";
 
-const index = ({ nav }) => {
-  const dataEvent = [
-    {
-      linkEvent: "/event/gpds/1",
-      bannerEvent: "/img/thumbnail-gpds.png",
-      judulEvent: "GPDS Jawa Timur",
-      deskripsiEvent:
-        "Program yang membantu guru untuk mengembangkan potensi dan kreatifitas dari Guru Penggerak agar dapat menyelenggarakan kegiatan belajar mengajar secara digital dan online kepada siswa.",
-    },
-    {
-      linkEvent:
-        "https://smarteschool.id/event/guru-penggerak-digitalisasi-sekolah",
-      bannerEvent: "/img/thumbnail-gpds.png",
-      judulEvent: "Guru Penggerak Digitalisasi Sekolah",
-      deskripsiEvent:
-        "Program yang membantu guru untuk mengembangkan potensi dan kreatifitas dari Guru Penggerak agar dapat menyelenggarakan kegiatan belajar mengajar secara digital dan online kepada siswa.",
-    },
-    {
-      linkEvent:
-        "https://ditpsd.kemdikbud.go.id/gemapertiwi2021/videotik/daftar",
-      bannerEvent: "/img/poster-gemapertiwi.png",
-      judulEvent: "Gema Pertiwi Pelajar Pancasila 2021",
-      deskripsiEvent:
-        "Gema Pertiwi bertujuan untuk membangkitkan semangat dan kreativitas ekosistem pendidikan dalam rangka melahirkan profil Pelajar Pancasila. Nah, di dalam Gema Pertiwi terdapat serangkaian kegiatan berupa unjuk karya yang dapat diikuti oleh peserta didik, pendidik, dan atau satuan Pendidikan sekolah dasar Indonesia, baik yang ada di Indonesia maupun di luar negeri.",
-    },
-  ];
+const index = ({ nav, dataEvent }) => {
+  // const dataEvent = [
+  //   {
+  //     linkEvent: "/event/gpds/1",
+  //     bannerEvent: "/img/thumbnail-gpds.png",
+  //     judulEvent: "GPDS Jawa Timur",
+  //     deskripsiEvent:
+  //       "Program yang membantu guru untuk mengembangkan potensi dan kreatifitas dari Guru Penggerak agar dapat menyelenggarakan kegiatan belajar mengajar secara digital dan online kepada siswa.",
+  //   },
+  //   {
+  //     linkEvent:
+  //       "https://smarteschool.id/event/guru-penggerak-digitalisasi-sekolah",
+  //     bannerEvent: "/img/thumbnail-gpds.png",
+  //     judulEvent: "Guru Penggerak Digitalisasi Sekolah",
+  //     deskripsiEvent:
+  //       "Program yang membantu guru untuk mengembangkan potensi dan kreatifitas dari Guru Penggerak agar dapat menyelenggarakan kegiatan belajar mengajar secara digital dan online kepada siswa.",
+  //   },
+  //   {
+  //     linkEvent:
+  //       "https://ditpsd.kemdikbud.go.id/gemapertiwi2021/videotik/daftar",
+  //     bannerEvent: "/img/poster-gemapertiwi.png",
+  //     judulEvent: "Gema Pertiwi Pelajar Pancasila 2021",
+  //     deskripsiEvent:
+  //       "Gema Pertiwi bertujuan untuk membangkitkan semangat dan kreativitas ekosistem pendidikan dalam rangka melahirkan profil Pelajar Pancasila. Nah, di dalam Gema Pertiwi terdapat serangkaian kegiatan berupa unjuk karya yang dapat diikuti oleh peserta didik, pendidik, dan atau satuan Pendidikan sekolah dasar Indonesia, baik yang ada di Indonesia maupun di luar negeri.",
+  //   },
+  // ];
 
   const navItems = [
     {
@@ -154,9 +156,23 @@ const index = ({ nav }) => {
 };
 
 export async function getServerSideProps({ query: { nav } }) {
+  let query = "";
+  if (nav == "akan-datang") {
+    query = `tanggal_awal_gt=${moment().format("YYYY-MM-DD 00:00:00")}`;
+  }
+  if (nav == "berlangsung") {
+    query = `tanggal_awal_lt=${moment().format(
+      "YYYY-MM-DD 00:00:00"
+    )}&tanggal_akhir_gt=${moment().format("YYYY-MM-DD 00:00:00")}`;
+  }
+  if (nav == "selesai") {
+    query = `tanggal_akhir_lt=${moment().format("YYYY-MM-DD 00:00:00")}`;
+  }
+  const { data } = await getEvents(query);
   return {
     props: {
       nav: nav || null,
+      dataEvent: data || [],
     },
   };
 }
