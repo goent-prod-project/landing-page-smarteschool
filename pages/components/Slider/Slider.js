@@ -8,7 +8,7 @@ const Slider = ({ children }) => {
     <AutoplaySlider
       play={true}
       cancelOnInteraction={true} // should stop playing on user interaction
-      interval={4000}
+      interval={15000}
     >
       {children}
     </AutoplaySlider>

@@ -127,7 +127,7 @@ const Layout = ({
                       href="mailto:adm.smartschool@gmail.com"
                       className="fs-14-ss fw-bold color-dark text-decoration-none mb-0"
                     >
-                      adm@smarteschool.id
+                      adm.smartschool@gmail.com
                     </a>
                   </div>
                 </div>

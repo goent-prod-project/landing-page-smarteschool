@@ -55,7 +55,7 @@ const InformasiUmum = ({ data }) => {
         <div className="card card-ss">
           <div className="card-body p-4">
             <h1 className="color-dark md-fs-5 sm-fs-6 fw-extrabold">
-              GPDS Jawa Timur
+              {data?.judul || "GPDS Jawa Timur"}
             </h1>
             <p className="fs-18-ss md-fs-6 sm-fs-14-ss">
               Program yang membantu guru untuk mengembangkan potensi dan
@@ -120,15 +120,25 @@ const InformasiUmum = ({ data }) => {
             </div>
             <hr className="my-4" />
             <div className="row">
-              <a
-                data-bs-toggle="modal"
-                data-bs-target="#modalGabungSmarteschool"
-                onClick={() => setSuccess(false)}
-                className="btn btn-primary btn-primary-ss  w-100 bg-primary d-flex rounded-ss justify-content-center align-items-center text-white p-3"
-              >
-                <img src="/img/icon-daftar-sekarang.svg" alt="Icon step 1" />
-                <p className="ms-4 fw-bold fs-18-ss mb-0">Daftar Sekarang</p>
-              </a>
+              {data?.content?.link ? (
+                <a
+                  onClick={() => window.open(data?.content?.link)}
+                  className="btn btn-primary btn-primary-ss  w-100 bg-primary d-flex rounded-ss justify-content-center align-items-center text-white p-3"
+                >
+                  <img src="/img/icon-daftar-sekarang.svg" alt="Icon step 1" />
+                  <p className="ms-4 fw-bold fs-18-ss mb-0">Daftar Sekarang</p>
+                </a>
+              ) : (
+                <a
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalGabungSmarteschool"
+                  onClick={() => setSuccess(false)}
+                  className="btn btn-primary btn-primary-ss  w-100 bg-primary d-flex rounded-ss justify-content-center align-items-center text-white p-3"
+                >
+                  <img src="/img/icon-daftar-sekarang.svg" alt="Icon step 1" />
+                  <p className="ms-4 fw-bold fs-18-ss mb-0">Daftar Sekarang</p>
+                </a>
+              )}
             </div>
           </div>
         </div>
