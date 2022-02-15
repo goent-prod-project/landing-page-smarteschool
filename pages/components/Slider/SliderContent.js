@@ -67,7 +67,7 @@ const SliderContent = ({ data, type }) => {
               : type == "kepsek"
               ? "kepsek"
               : type == "manajemen"
-              ? "Manajemen"
+              ? "manajemen"
               : type == "alumni"
               ? "alumni"
               : type == "perusahaan"
