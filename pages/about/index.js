@@ -91,7 +91,7 @@ export default function Home({ nav, search }) {
               </div>
               <div className="col-md-10 text-center">
                 <p className="fs-18-ss md-fs-6 sm-fs-14-ss fw-semibold color-dark">
-                  Smartschool adalah sistem yang diciptakan untuk mendigitalkan
+                  Smarteschool adalah sistem yang diciptakan untuk mendigitalkan
                   seluruh aspek yang ada di sekolah, meliputi pembelajaran,
                   manajemen sarana dan prasarana sekolah, dengan tujuan untuk
                   mempermudah kegiatan belajar mengajar di sekolah.
