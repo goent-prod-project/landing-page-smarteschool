@@ -108,14 +108,24 @@ export default function Home({ banner, faq }) {
                       Panduan cara menggunakan aplikasi Smarteschool secara
                       lengkap yang dapat dibaca secara offline
                     </p>
-                    <a
+                    <Link href="/buku-panduan">
+                      <a
+                        // href="https://drive.google.com/file/d/1utbJsl9p_xhgiqbarty7vxx05e1ZBfU_/view?usp=sharing"
+                        // target="_blank"
+                        className="btn btn-ss btn-warning btn-warning-ss bg-gradient-warning shadow-warning-ss fw-bold rounded-pill d-flex align-items-center justify-content-center md-fs-6 sm-14-ss mt-3"
+                        style={{ width: "140px" }}
+                      >
+                        Unduh
+                      </a>
+                    </Link>
+                    {/* <a
                       href="https://drive.google.com/file/d/1utbJsl9p_xhgiqbarty7vxx05e1ZBfU_/view?usp=sharing"
                       target="_blank"
                       className="btn btn-ss btn-warning btn-warning-ss bg-gradient-warning shadow-warning-ss fw-bold rounded-pill d-flex align-items-center justify-content-center md-fs-6 sm-14-ss mt-3"
                       style={{ width: "140px" }}
                     >
                       Unduh
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
