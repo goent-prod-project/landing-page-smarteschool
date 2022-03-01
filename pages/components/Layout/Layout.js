@@ -286,7 +286,7 @@ const Layout = ({
                         </div>
                         <div className="col-sm-12 col-6 mb-3">
                           <a
-                            href={`https://www.facebook.com/smarteschool.smarteschool/`}
+                            href={`https://web.facebook.com/smarteschool.smarteschool.id`}
                             target="_blank"
                             className="text-white text-decoration-none fs-14-ss"
                           >
