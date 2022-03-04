@@ -115,7 +115,7 @@ export default function Home({ banner, faq }) {
                         className="btn btn-ss btn-warning btn-warning-ss bg-gradient-warning shadow-warning-ss fw-bold rounded-pill d-flex align-items-center justify-content-center md-fs-6 sm-14-ss mt-3"
                         style={{ width: "140px" }}
                       >
-                        Unduh
+                        Lihat
                       </a>
                     </Link>
                     {/* <a
@@ -134,7 +134,7 @@ export default function Home({ banner, faq }) {
                   <img
                     src="/img/element-2.svg"
                     alt="element-2"
-                    className="position-absolute"
+                    className="position-absolute video-panduan-element-2"
                     style={{ bottom: "-15px", right: "-25px" }}
                   />
                   <div
