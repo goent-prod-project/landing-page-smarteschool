@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import QRCode from "react-qr-code";
 
 const index = ({}) => {
   const [loading, setLoading] = useState(true);
@@ -54,6 +55,7 @@ const index = ({}) => {
           >
             Boy Andarsen Wicaksono
           </h1>
+
           <hr
             className="bg-primary w-100 position-absolute"
             style={{
@@ -119,6 +121,15 @@ const index = ({}) => {
       ></div> */}
 
       {/* If Sertifikat 32 Jam End */}
+      <div
+        className="position-absolute"
+        style={{
+          bottom: "50px",
+          left: "140px",
+        }}
+      >
+        <QRCode value="hey" bgColor="transparent" size={100} />
+      </div>
     </div>
   );
 };
