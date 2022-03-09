@@ -1,5 +1,5 @@
-import client from "./ApiClient";
+import client, { API_HOST } from "./ApiClient";
 
 export const getFaq = (params) => {
-  return client("smart-school-faqs" + params);
+  return client(API_HOST + "smart-school-faqs" + params);
 };

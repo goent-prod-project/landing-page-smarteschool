@@ -1,9 +1,9 @@
-import client from "./ApiClient";
+import client, { API_HOST } from "./ApiClient";
 
 export const getEvents = (params = "") => {
-  return client("smart-school-events?" + params);
+  return client(API_HOST + "smart-school-events?" + params);
 };
 
 export const detailEvents = (id) => {
-  return client("smart-school-events?" + id);
+  return client(API_HOST + "smart-school-events?" + id);
 };

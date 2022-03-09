@@ -1,5 +1,5 @@
-import client from "./ApiClient";
+import client, { API_HOST } from "./ApiClient";
 
 export const getBerita = (params) => {
-  return client("smart-school-blogs" + params);
+  return client(API_HOST + "smart-school-blogs" + params);
 };
