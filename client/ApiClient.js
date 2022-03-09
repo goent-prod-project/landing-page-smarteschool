@@ -1,7 +1,8 @@
 import axios from "axios";
 import { camelizeKeys, decamelizeKeys } from "humps";
 
-export const API_HOST = "https://api.goent26.com";
+export const API_HOST = "https://api.goent26.com/";
+export const API_CERT = "http://localhost:3333/";
 
 const client = (endpoint, { body, method, headers, params } = {}) => {
   headers = {
@@ -11,7 +12,7 @@ const client = (endpoint, { body, method, headers, params } = {}) => {
   };
 
   const config = {
-    url: `${API_HOST}/${endpoint}`,
+    url: endpoint,
     headers: {
       ...headers,
     },
