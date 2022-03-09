@@ -1,14 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SelectShared from "../Shared/SelectShared/SelectShared";
 import Link from "next/link";
+import { getCertGDS } from "../../../client/ResourceCertClient";
+import { Pagination } from "antd";
+import { useRouter } from "next/router";
 
-const DaftarSertifikatPeserta = () => {
+const DaftarSertifikatPeserta = ({ page }) => {
   const initialState = {
     pilihanGPDS: `Guru Penggerak Digitalisasi Sekolah Provinsi DKI
         Jakarta`,
   };
   const [formData, setFormData] = useState(initialState);
   const [dropdownOpen, setdropdownOpen] = useState(false);
+
+  const [certs, setCerts] = useState([]);
+  const [certsMeta, setCertsMeta] = useState({});
+
+  const _getCertGDS = async () => {
+    const params = { page: page };
+
+    const { data } = await getCertGDS(params);
+
+    if (data) {
+      setCerts(data.data);
+      setCertsMeta(data.meta);
+    }
+  };
+
+  const router = useRouter();
+
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const onChange = (page) => {
+    setCurrentPage(page);
+
+    router.push(`${router.pathname}?page=${page}`);
+  };
+
+  useEffect(() => {
+    _getCertGDS();
+  }, [page]);
 
   return (
     <div
@@ -87,24 +118,34 @@ const DaftarSertifikatPeserta = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td data-th="No">1</td>
-                <td data-th="Nama">Armando Salazar</td>
-                <td data-th="Asal Sekolah">SMKN 7 Jakarta</td>
-                <td data-th="Sertifikat">
-                  {" "}
-                  <Link href="/sertifikat-print">
-                    <a
-                      target="_blank"
-                      className={`btn btn-primary btn-primary-ss shadow-primary-ss rounded-pill fs-14-ss py-1 px-4 hover-shadow-none fw-semibold`}
-                    >
-                      Unduh
-                    </a>
-                  </Link>
-                </td>
-              </tr>
+              {certs?.map((d, idx) => (
+                <tr key={idx}>
+                  <td data-th="No">{idx + 1}</td>
+                  <td data-th="Nama">{d?.name}</td>
+                  <td data-th="Asal Sekolah">{d?.school}</td>
+                  <td data-th="Sertifikat">
+                    {" "}
+                    <Link href={`/sertifikat/${d?.id}`}>
+                      <a
+                        target="_blank"
+                        className={`btn btn-primary btn-primary-ss shadow-primary-ss rounded-pill fs-14-ss py-1 px-4 hover-shadow-none fw-semibold`}
+                      >
+                        Unduh
+                      </a>
+                    </Link>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
+          <div className="d-flex justify-content-center my-4">
+            <Pagination
+              current={currentPage}
+              total={certsMeta?.total}
+              onChange={onChange}
+              showSizeChanger={false}
+            />
+          </div>
         </div>
       </div>
     </div>
