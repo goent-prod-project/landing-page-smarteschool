@@ -10,16 +10,6 @@ import AnimatePage from "../components/Shared/AnimatePage/AnimatePage";
 
 const index = ({ page, nav }) => {
   const navItems = [
-    // {
-    //   url: `guru-penggerak-digitalisasi-sekolah?nav=informasi-umum`,
-    //   text: "Informasi Umum",
-    //   active: nav == "informasi-umum" || !nav,
-    // },
-    // {
-    //   url: `guru-penggerak-digitalisasi-sekolah?nav=rekaman-webinar`,
-    //   text: "Rekaman Webinar",
-    //   active: nav == "rekaman-webinar",
-    // },
     {
       url: `sertifikat?nav=daftar-sertifikat`,
       text: "Daftar Sertifikat",
