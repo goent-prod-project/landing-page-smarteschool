@@ -29,12 +29,15 @@ const index = ({ id }) => {
   }, [loading]);
 
   return (
-    <div className="sertifikat-gpds-print" style={{ color: "#333333" }}>
+    <div
+      className="sertifikat-gpds-print"
+      style={{ color: "#333333", marginTop: "-9px" }}
+    >
       <style jsx>
         {`
           @media print {
             @page {
-              size: landscape;
+              size: A4 landscape;
               margin: 0 !important;
             }
             .sertifikat-gpds {
@@ -142,14 +145,14 @@ const index = ({ id }) => {
       <div
         className="position-absolute"
         style={{
-          bottom: "50px",
-          left: "140px",
+          bottom: "90px",
+          left: "100px",
         }}
       >
         <QRCode
           value={`https://smarteschool.id/sertifikat/${cert?.id}`}
           bgColor="transparent"
-          size={100}
+          size={75}
         />
       </div>
     </div>
