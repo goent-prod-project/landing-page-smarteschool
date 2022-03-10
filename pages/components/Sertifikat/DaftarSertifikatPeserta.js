@@ -5,7 +5,7 @@ import { getCertGDS, getEventGDS } from "../../../client/ResourceCertClient";
 import { Pagination } from "antd";
 import { useRouter } from "next/router";
 
-const DaftarSertifikatPeserta = ({ page }) => {
+const DaftarSertifikatPeserta = ({ page, event }) => {
   const [events, setEvents] = useState([]);
 
   const _getEventGDS = async () => {
@@ -22,7 +22,10 @@ const DaftarSertifikatPeserta = ({ page }) => {
   const [certsMeta, setCertsMeta] = useState({});
 
   const _getCertGDS = async () => {
-    const params = { page: page };
+    const params = {
+      page: page,
+      event: event,
+    };
 
     const { data } = await getCertGDS(params);
 
@@ -48,13 +51,10 @@ const DaftarSertifikatPeserta = ({ page }) => {
 
   useEffect(() => {
     _getCertGDS();
-  }, [page]);
+  }, [page, event]);
 
   const handleChangeSelect = (e, name) => {
-    setFormData({
-      ...formData,
-      [name]: e.value,
-    });
+    router.push(`${router.pathname}?page=${page}&event=${e.value}`);
   };
 
   return (
@@ -96,7 +96,8 @@ const DaftarSertifikatPeserta = ({ page }) => {
             name="selectProgram"
             placeholder="Pilih program GPDS..."
             options={events}
-            onChange={handleChangeSelect}
+            handleChangeSelect={handleChangeSelect}
+            name="event"
           />
         </div>
       </div>
