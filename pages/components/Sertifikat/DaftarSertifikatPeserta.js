@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from "react";
 import SelectShared from "../Shared/SelectShared/SelectShared";
 import Link from "next/link";
-import { getCertGDS } from "../../../client/ResourceCertClient";
+import { getCertGDS, getEventGDS } from "../../../client/ResourceCertClient";
 import { Pagination } from "antd";
 import { useRouter } from "next/router";
 
 const DaftarSertifikatPeserta = ({ page }) => {
-  const initialState = {
-    pilihanGPDS: `Guru Penggerak Digitalisasi Sekolah Provinsi DKI
-        Jakarta`,
+  const [events, setEvents] = useState([]);
+
+  const _getEventGDS = async () => {
+    const params = { page: page };
+
+    const { data } = await getEventGDS(params);
+
+    if (data) {
+      setEvents(data.data?.map((d) => ({ label: d.name, value: d.id })));
+    }
   };
-  const [formData, setFormData] = useState(initialState);
-  const [dropdownOpen, setdropdownOpen] = useState(false);
 
   const [certs, setCerts] = useState([]);
   const [certsMeta, setCertsMeta] = useState({});
@@ -38,8 +43,19 @@ const DaftarSertifikatPeserta = ({ page }) => {
   };
 
   useEffect(() => {
+    _getEventGDS();
+  }, []);
+
+  useEffect(() => {
     _getCertGDS();
   }, [page]);
+
+  const handleChangeSelect = (e, name) => {
+    setFormData({
+      ...formData,
+      [name]: e.value,
+    });
+  };
 
   return (
     <div
@@ -79,6 +95,8 @@ const DaftarSertifikatPeserta = ({ page }) => {
           <SelectShared
             name="selectProgram"
             placeholder="Pilih program GPDS..."
+            options={events}
+            onChange={handleChangeSelect}
           />
         </div>
       </div>
