@@ -4,7 +4,7 @@ import { DateTime } from "luxon";
 // import dateFormat from "dateformat";
 
 export const getImageUrl = (url) => {
-  return API_HOST + url;
+  return API_HOST + url?.substr(1);
 };
 
 export const getDateTime = (datetime) => {

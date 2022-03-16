@@ -8,18 +8,8 @@ import DaftarSertifikatPeserta from "../components/Sertifikat/DaftarSertifikatPe
 import VerifikasiSertifikat from "../components/Sertifikat/VerifikasiSertifikat";
 import AnimatePage from "../components/Shared/AnimatePage/AnimatePage";
 
-const index = ({ page, nav }) => {
+const index = ({ page, nav, event }) => {
   const navItems = [
-    // {
-    //   url: `guru-penggerak-digitalisasi-sekolah?nav=informasi-umum`,
-    //   text: "Informasi Umum",
-    //   active: nav == "informasi-umum" || !nav,
-    // },
-    // {
-    //   url: `guru-penggerak-digitalisasi-sekolah?nav=rekaman-webinar`,
-    //   text: "Rekaman Webinar",
-    //   active: nav == "rekaman-webinar",
-    // },
     {
       url: `sertifikat?nav=daftar-sertifikat`,
       text: "Daftar Sertifikat",
@@ -99,7 +89,7 @@ const index = ({ page, nav }) => {
           </div>
         </div>
         {(!nav || nav === "daftar-sertifikat") && (
-          <DaftarSertifikatPeserta page={page} />
+          <DaftarSertifikatPeserta page={page} event={event} />
         )}
         {nav === "verifikasi-sertifikat" && <VerifikasiSertifikat />}
       </AnimatePage>
@@ -107,11 +97,12 @@ const index = ({ page, nav }) => {
   );
 };
 
-export async function getServerSideProps({ query: { page, nav } }) {
+export async function getServerSideProps({ query: { page, nav, event } }) {
   return {
     props: {
       page: page || 1,
       nav: nav || null,
+      event: event || null,
     },
   };
 }
