@@ -8,14 +8,24 @@ import {
   FaSearch,
   FaTimesCircle,
 } from "react-icons/fa";
+import { showNomor } from "../../../client/ResourceCertClient";
+import { getCertDate } from "../../../utilities/AppUtils";
 
 const VerifikasiSertifikat = () => {
-  const initialState = {
-    pilihanGPDS: `Guru Penggerak Digitalisasi Sekolah Provinsi DKI
-        Jakarta`,
+  const [certShow, setCertShow] = useState({});
+  const [certStatus, setCertStatus] = useState(0);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const form = new FormData(e.target);
+    const formData = Object.fromEntries(form.entries());
+    const { data, status } = await showNomor(formData);
+    setCertStatus(status);
+    if (data) {
+      setCertShow(data);
+    }
   };
-  const [formData, setFormData] = useState(initialState);
-  const [dropdownOpen, setdropdownOpen] = useState(false);
 
   return (
     <div
@@ -53,23 +63,23 @@ const VerifikasiSertifikat = () => {
           }}
         >
           <div className="position-relative">
-            <input
-              className="form-control"
-              autoComplete="off"
-              placeholder="Tulis nomor sertifikat Anda disini"
-              type="text"
-              name="verifikasiSertifikat"
-              // onChange={handleChangeForm}
-              // value={formData?.jabatan}
-            />
-            <FaSearch
-              className="color-secondary position-absolute fs-4"
-              style={{
-                right: "24px",
-                top: "50%",
-                transform: "translateY(-50%)",
-              }}
-            />
+            <form onSubmit={handleSubmit}>
+              <input
+                className="form-control"
+                autoComplete="off"
+                placeholder="Tulis nomor sertifikat Anda disini"
+                type="text"
+                name="nomor"
+              />
+              <FaSearch
+                className="color-secondary position-absolute fs-4"
+                style={{
+                  right: "24px",
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                }}
+              />
+            </form>
           </div>
         </div>
       </div>
@@ -79,80 +89,80 @@ const VerifikasiSertifikat = () => {
           <div className="card card-ss p-4 pb-5">
             <div className="card-body p-0">
               <div className="row justify-content-center">
-                <div className="col-md-10">
-                  <div className="w-100 rounded-ss p-4 bg-soft-success color-success d-flex align-items-center mb-4">
-                    <FaCheckCircle className="me-2 fs-5" />{" "}
-                    <h6 className="fw-semibold mb-0">
-                      Sertifikat Anda Valid - Nomor. 1001/SES/SEM.1/V/2021
-                    </h6>
-                  </div>
-                  <div className="w-100 rounded-ss p-4 bg-very-soft-secondary color-dark mb-4">
-                    <div className="d-flex align-items-center mb-4">
-                      <img
-                        src="/img/icon-data-peserta-sertifikat.svg"
-                        alt="icon-data-peserta-sertifikat"
-                        className="me-2"
-                      />
-                      <h6 className="fw-extrabold text-uppercase mb-0">
-                        DATA PESERTA
+                {certShow?.nomor ? (
+                  <div className="col-md-10">
+                    <div className="w-100 rounded-ss p-4 bg-soft-success color-success d-flex align-items-center mb-4">
+                      <FaCheckCircle className="me-2 fs-5" />{" "}
+                      <h6 className="fw-semibold mb-0">
+                        Sertifikat Anda Valid - {certShow?.nomor}
                       </h6>
                     </div>
-                    <h4 className="fw-extrabold mb-2">
-                      Adrihanna Qaisara Binti Amra
-                    </h4>
-                    <h6 className="fw-bold color-secondary mb-0">
-                      SMKN 69 Jakarta
-                    </h6>
-                  </div>
-                  <div className="w-100 rounded-ss p-4 bg-very-soft-secondary color-dark mb-5">
-                    <div className="d-flex align-items-center mb-4">
-                      <img
-                        src="/img/icon-program-sertifikat.svg"
-                        alt="icon-program-sertifikat"
-                        className="me-2"
-                      />
-                      <h6 className="fw-extrabold text-uppercase mb-0">
-                        PROGRAM
+                    <div className="w-100 rounded-ss p-4 bg-very-soft-secondary color-dark mb-4">
+                      <div className="d-flex align-items-center mb-4">
+                        <img
+                          src="/img/icon-data-peserta-sertifikat.svg"
+                          alt="icon-data-peserta-sertifikat"
+                          className="me-2"
+                        />
+                        <h6 className="fw-extrabold text-uppercase mb-0">
+                          DATA PESERTA
+                        </h6>
+                      </div>
+                      <h4 className="fw-extrabold mb-2">{certShow?.name}</h4>
+                      <h6 className="fw-bold color-secondary mb-0">
+                        {certShow?.school}
                       </h6>
                     </div>
-                    <h4 className="fw-extrabold mb-2">
-                      Workshop Guru Penggerak Digitalisasi Sekolah Nusa Tenggara
-                      Timur
-                    </h4>
-                    <h6 className="fw-bold color-secondary mb-0">
-                      15 November 2021 - 19 November 2021
-                    </h6>
+                    <div className="w-100 rounded-ss p-4 bg-very-soft-secondary color-dark mb-5">
+                      <div className="d-flex align-items-center mb-4">
+                        <img
+                          src="/img/icon-program-sertifikat.svg"
+                          alt="icon-program-sertifikat"
+                          className="me-2"
+                        />
+                        <h6 className="fw-extrabold text-uppercase mb-0">
+                          PROGRAM
+                        </h6>
+                      </div>
+                      <h4 className="fw-extrabold mb-2">
+                        {certShow?.event?.name}
+                      </h4>
+                      <h6 className="fw-bold color-secondary mb-0">
+                        {getCertDate(
+                          certShow?.event?.dateStart,
+                          certShow?.event?.dateEnd
+                        )}
+                      </h6>
+                    </div>
+                    <Link href={`/sertifikat/${certShow?.id}`}>
+                      <a
+                        target="_blank"
+                        className="btn btn-ss btn-primary btn-primary-ss w-100 fs-5 fw-bold"
+                        style={{ borderRadius: "10px" }}
+                      >
+                        Unduh Sertifikat
+                      </a>
+                    </Link>
                   </div>
-                  <Link href="/sertifikat-print">
-                    <a
-                      target="_blank"
-                      className="btn btn-ss btn-primary btn-primary-ss w-100 fs-5 fw-bold"
-                      style={{ borderRadius: "10px" }}
-                    >
-                      Unduh Sertifikat
-                    </a>
-                  </Link>
-                </div>
+                ) : (
+                  <div className="col-md-10">
+                    {certStatus == 404 ? (
+                      <div className="w-100 rounded-ss p-4 bg-soft-danger color-danger d-flex align-items-center mb-4">
+                        <FaTimesCircle className="me-2 fs-5" />{" "}
+                        <h6 className="fw-semibold mb-0">
+                          Sertifikat Anda Tidak Valid
+                        </h6>
+                      </div>
+                    ) : null}
 
-                {/* If Tidak Ada Data Start */}
-
-                {/* <div className="col-md-10">
-                  <div className="w-100 rounded-ss p-4 bg-soft-danger color-danger d-flex align-items-center mb-4">
-                    <FaTimesCircle className="me-2 fs-5" />{" "}
-                    <h6 className="fw-semibold mb-0">
-                      Sertifikat Anda Tidak Valid
-                    </h6>
+                    <div className="text-center">
+                      <img src="/img/empty-state-data.svg" alt="" width="200" />
+                      <h6 className="color-dark fw-bold mt-3">
+                        Tidak Ada Data Sertifikat
+                      </h6>
+                    </div>
                   </div>
-                  <div className="text-center">
-                    <img src="/img/empty-state-data.svg" alt="" width="200" />
-                    <h6 className="color-dark fw-bold mt-3">
-                      Tidak Ada Data Sertifikat
-                    </h6>
-                  </div>
-                </div> */}
-
-                {/* If Tidak Ada Data End */}
-
+                )}
               </div>
             </div>
           </div>

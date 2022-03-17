@@ -8,7 +8,7 @@ import DaftarSertifikatPeserta from "../components/Sertifikat/DaftarSertifikatPe
 import VerifikasiSertifikat from "../components/Sertifikat/VerifikasiSertifikat";
 import AnimatePage from "../components/Shared/AnimatePage/AnimatePage";
 
-const index = ({ page, nav, event }) => {
+const index = ({ page, nav, event, search }) => {
   const navItems = [
     {
       url: `sertifikat?nav=daftar-sertifikat`,
@@ -89,7 +89,7 @@ const index = ({ page, nav, event }) => {
           </div>
         </div>
         {(!nav || nav === "daftar-sertifikat") && (
-          <DaftarSertifikatPeserta page={page} event={event} />
+          <DaftarSertifikatPeserta page={page} event={event} search={search} />
         )}
         {nav === "verifikasi-sertifikat" && <VerifikasiSertifikat />}
       </AnimatePage>
@@ -97,12 +97,15 @@ const index = ({ page, nav, event }) => {
   );
 };
 
-export async function getServerSideProps({ query: { page, nav, event } }) {
+export async function getServerSideProps({
+  query: { page, nav, event, search },
+}) {
   return {
     props: {
       page: page || 1,
       nav: nav || null,
       event: event || null,
+      search: search || "",
     },
   };
 }

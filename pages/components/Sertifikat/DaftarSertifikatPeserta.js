@@ -4,8 +4,22 @@ import Link from "next/link";
 import { getCertGDS, getEventGDS } from "../../../client/ResourceCertClient";
 import { Pagination } from "antd";
 import { useRouter } from "next/router";
+import { useDebounce } from "use-debounce";
 
-const DaftarSertifikatPeserta = ({ page, event }) => {
+const DaftarSertifikatPeserta = ({ page, event, search }) => {
+  const [searchInput, setSearchInput] = useState("");
+  const [searchDebounce] = useDebounce(searchInput, 1000);
+
+  useEffect(() => {
+    router.push(`${router.pathname}`, {
+      query: {
+        page,
+        event: event,
+        search: searchDebounce,
+      },
+    });
+  }, [searchDebounce]);
+
   const [events, setEvents] = useState([]);
 
   const _getEventGDS = async () => {
@@ -25,6 +39,7 @@ const DaftarSertifikatPeserta = ({ page, event }) => {
     const params = {
       page: page,
       event: event,
+      search: search,
     };
 
     const { data } = await getCertGDS(params);
@@ -53,8 +68,24 @@ const DaftarSertifikatPeserta = ({ page, event }) => {
     _getCertGDS();
   }, [page, event]);
 
+  useEffect(() => {
+    _getCertGDS();
+  }, [search]);
+
+  const [formData, setFormData] = useState({ event });
+
   const handleChangeSelect = (e, name) => {
-    router.push(`${router.pathname}?page=${page}&event=${e.value}`);
+    setFormData({
+      ...formData,
+      [name]: e.value,
+    });
+
+    router.push(`${router.pathname}`, {
+      query: {
+        page,
+        event: e.value,
+      },
+    });
   };
 
   return (
@@ -98,6 +129,7 @@ const DaftarSertifikatPeserta = ({ page, event }) => {
             options={events}
             handleChangeSelect={handleChangeSelect}
             name="event"
+            value={formData?.event}
           />
         </div>
       </div>
@@ -122,8 +154,8 @@ const DaftarSertifikatPeserta = ({ page, event }) => {
                 style={{ height: "42px", width: "100%" }}
                 id="exampleFormControlInput1"
                 placeholder="Cari"
-                //   value={searchTransaksi}
-                //   onChange={(e) => setSearchTransaksi(e.target.value)}
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
               />
             </div>
           </div>
