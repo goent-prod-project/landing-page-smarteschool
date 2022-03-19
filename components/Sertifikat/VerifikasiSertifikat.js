@@ -8,8 +8,8 @@ import {
   FaSearch,
   FaTimesCircle,
 } from "react-icons/fa";
-import { showNomor } from "../../../client/ResourceCertClient";
-import { getCertDate } from "../../../utilities/AppUtils";
+import { showNomor } from "client/ResourceCertClient";
+import { getCertDate } from "utilities/AppUtils";
 
 const VerifikasiSertifikat = () => {
   const [certShow, setCertShow] = useState({});

@@ -1,6 +1,6 @@
 import React from "react";
-import { momentPackage } from "../../../../utilities/HelperUtils";
-import CardRekamanWebinar from "../CardRekamanWebinar";
+import CardRekamanWebinar from "components/Event/CardRekamanWebinar";
+import { momentPackage } from "utilities/HelperUtils";
 
 const RekamanWebinarPage = ({
   data,

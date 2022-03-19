@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import toast from "react-hot-toast";
 import { FaWhatsapp } from "react-icons/fa";
 import TextareaAutosize from "react-textarea-autosize";
-import NewModal from "../Shared/NewModal/NewModal";
+import NewModal from "components/Shared/NewModal/NewModal";
 
 const ModalUjiCobaAkun = ({}) => {
   const initialState = {

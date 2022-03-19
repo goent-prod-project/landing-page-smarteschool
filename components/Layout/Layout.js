@@ -3,8 +3,8 @@ import { useRouter } from "next/router";
 import { FaEnvelope, FaFax, FaPhone } from "react-icons/fa";
 import Header from "../Header/Header";
 import Link from "next/link";
-import BottomNavigation from "../BottomNavigation/BottomNavigation";
-import ModalUjiCobaAkun from "../ModalUjiCobaAkun/ModalUjiCobaAkun";
+import BottomNavigation from "components/BottomNavigation/BottomNavigation";
+import ModalUjiCobaAkun from "components/ModalUjiCobaAkun/ModalUjiCobaAkun";
 
 const Layout = ({
   children,

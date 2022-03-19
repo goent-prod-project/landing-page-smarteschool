@@ -1,12 +1,13 @@
 import React from "react";
-import InformasiUmumGpdsMandiri from "../../components/Event/GpdsMandiri/InformasiUmumGpdsMandiri";
-import MateriPelatihan from "../../components/Event/GpdsMandiri/MateriPelatihan";
-import PesertaPageGpdsMandiri from "../../components/Event/GpdsMandiri/PesertaPageGpdsMandiri";
-import PesertaPage from "../../components/Event/PesertaPage";
-import RekamanWebinarPage from "../../components/Event/RekamanWebinarPage";
-import Layout from "../../components/Layout/Layout";
-import Navbar from "../../components/Navbar/Navbar";
-import AnimatePage from "../../components/Shared/AnimatePage/AnimatePage";
+import InformasiUmumGpdsMandiri from "components/Event/GpdsMandiri/InformasiUmumGpdsMandiri";
+import MateriPelatihan from "components/Event/GpdsMandiri/MateriPelatihan";
+import PesertaPageGpdsMandiri from "components/Event/GpdsMandiri/PesertaPageGpdsMandiri";
+import PesertaPage from "components/Event/PesertaPage";
+import RekamanWebinarPage from "components/Event/RekamanWebinarPage";
+import Layout from "components/Layout/Layout";
+
+import Navbar from "components/Navbar/Navbar";
+import AnimatePage from "components/Shared/AnimatePage/AnimatePage";
 
 const index = ({ nav }) => {
   const gpdsSMASMKDKI = [

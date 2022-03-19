@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Tooltip } from "antd";
-import { getDateTime, getImageUrl } from "../../../utilities/AppUtils";
+import { getDateTime, getImageUrl } from "utilities/AppUtils";
 
 const CardSideBerita = ({ data }) => {
   return (

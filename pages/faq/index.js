@@ -1,9 +1,8 @@
 import { Tooltip } from "antd";
 import React, { useState } from "react";
-import CardEvent from "../components/Event/CardEvent";
-import SliderNavFaq from "../components/Faq/SliderNavFaq";
-import Layout from "../components/Layout/Layout";
-import AnimatePage from "../components/Shared/AnimatePage/AnimatePage";
+import SliderNavFaq from "components/Faq/SliderNavFaq";
+import Layout from "components/Layout/Layout";
+import AnimatePage from "components/Shared/AnimatePage/AnimatePage";
 
 const index = ({ nav }) => {
   const [type, setType] = useState("");

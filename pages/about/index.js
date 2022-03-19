@@ -1,14 +1,9 @@
 import { useRouter } from "next/dist/client/router";
-import Head from "next/head";
 import { useEffect, useState } from "react";
-import Link from "next/link";
-import SelectShared from "../components/Shared/SelectShared/SelectShared";
-import SearchCariSekolah from "../components/SearchCariSekolah/SearchCariSekolah";
-import { FaFilter } from "react-icons/fa";
-import Layout from "../components/Layout/Layout";
-import AnimatePage from "../components/Shared/AnimatePage/AnimatePage";
-import Slider from "../components/Slider/Slider";
-import SliderContent from "../components/Slider/SliderContent";
+import Layout from "components/Layout/Layout";
+import AnimatePage from "components/Shared/AnimatePage/AnimatePage";
+import Slider from "components/Slider/Slider";
+import SliderContent from "components/Slider/SliderContent";
 
 export default function Home({ nav, search }) {
   const router = useRouter();

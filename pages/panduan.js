@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
-import { getFaq } from "../client/FaqClient";
-import CardEvent from "./components/Event/CardEvent";
-import Layout from "./components/Layout/Layout";
-import CardPanduan from "./components/Panduan/CardPanduan";
-import AnimatePage from "./components/Shared/AnimatePage/AnimatePage";
+import { getFaq } from "client/FaqClient";
+import CardEvent from "components/Event/CardEvent";
+import Layout from "components/Layout/Layout";
+import CardPanduan from "components/Panduan/CardPanduan";
+import AnimatePage from "components/Shared/AnimatePage/AnimatePage";
 
 const panduan = ({ faq }) => {
   const [collapseOpen, setcollapseOpen] = useState({});

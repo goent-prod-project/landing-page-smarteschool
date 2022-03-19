@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import TabelGuru from "../TabelGuru";
+import Tabs from "components/Tabs/Tabs";
 import TabelSekolah from "../TabelSekolah";
-import Tabs from "../../Tabs/Tabs";
+import TabelGuru from "../TabelGuru";
 
 const PesertaPageGpdsMandiri = () => {
   const initialState = {

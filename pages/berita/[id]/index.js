@@ -1,16 +1,16 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 import { FaChevronLeft } from "react-icons/fa";
-import AnimatePage from "../../components/Shared/AnimatePage/AnimatePage";
-import Layout from "../../components/Layout/Layout";
-import CardBerita from "../../components/Berita/CardBerita";
-import CardSideBerita from "../../components/Berita/CardSideBerita";
-import { getBerita } from "../../../client/BeritaClient";
-import { getDateTime, getImageUrl } from "../../../utilities/AppUtils";
+import AnimatePage from "components/Shared/AnimatePage/AnimatePage";
+import CardBerita from "components/Berita/CardBerita";
+import CardSideBerita from "components/Berita/CardSideBerita";
+import { getBerita } from "client/BeritaClient";
+import { getDateTime, getImageUrl } from "utilities/AppUtils";
 import ReactMarkdown from "react-markdown";
-import { getImageContent } from "../../../utilities/BeritaUtils";
+import { getImageContent } from "utilities/BeritaUtils";
 import { useRouter } from "next/router";
-import SocialMediaShared from "../../components/Shared/SocialMediaShare/SocialMediaShared";
+import SocialMediaShared from "components/Shared/SocialMediaShare/SocialMediaShared";
+import Layout from "components/Layout/Layout";
 
 const index = ({ berita, beritaTerbaru, apakahBerita }) => {
   const router = useRouter();

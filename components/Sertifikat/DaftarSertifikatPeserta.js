@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SelectShared from "../Shared/SelectShared/SelectShared";
 import Link from "next/link";
-import { getCertGDS, getEventGDS } from "../../../client/ResourceCertClient";
+import { getCertGDS, getEventGDS } from "client/ResourceCertClient";
 import { Pagination } from "antd";
 import { useRouter } from "next/router";
 import { useDebounce } from "use-debounce";

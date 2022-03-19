@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import { FaCloudDownloadAlt, FaWhatsapp } from "react-icons/fa";
-import TextareaAutosize from "react-textarea-autosize";
+import React from "react";
+import { FaCloudDownloadAlt } from "react-icons/fa";
 import ReactiveButton from "reactive-button";
-import NewModal from "../Shared/NewModal/NewModal";
-import SelectShared from "../Shared/SelectShared/SelectShared";
+import NewModal from "components/Shared/NewModal/NewModal";
 
 const ModalGabungSmarteschool = ({
   formData,

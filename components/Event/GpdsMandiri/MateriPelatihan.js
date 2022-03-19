@@ -1,5 +1,5 @@
 import React from "react";
-import CardRekamanWebinar from ".././CardRekamanWebinar";
+import CardRekamanWebinar from "../CardRekamanWebinar";
 
 const MateriPelatihan = ({ data, gpdsSDSMPDKI, gpdsNasional, gpdsKalsel }) => {
   return (

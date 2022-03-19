@@ -1,6 +1,6 @@
 import React from "react";
 import { FaLink, FaPaperclip, FaPaperPlane, FaTrashAlt } from "react-icons/fa";
-import { hideModal } from "../../../../utilities/ModalUtils";
+import { hideModal } from "utilities/ModalUtils";
 
 const NewModal = ({
   button,

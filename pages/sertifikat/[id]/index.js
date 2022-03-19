@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import { useEffect, useState } from "react";
 import QRCode from "react-qr-code";
-import { showCertGDS } from "../../../client/ResourceCertClient";
+import { showCertGDS } from "client/ResourceCertClient";
 
 const index = ({ id }) => {
   const router = useRouter();

@@ -1,4 +1,4 @@
-import { API_HOST } from "../client/ApiClient";
+import { API_HOST } from "client/ApiClient";
 
 import { DateTime } from "luxon";
 // import dateFormat from "dateformat";

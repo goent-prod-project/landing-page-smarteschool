@@ -1,22 +1,15 @@
-import { useRouter } from "next/dist/client/router";
-import Head from "next/head";
 import { useEffect, useState } from "react";
-import Link from "next/link";
-import SelectShared from "./components/Shared/SelectShared/SelectShared";
-import SearchCariSekolah from "./components/SearchCariSekolah/SearchCariSekolah";
-import { FaFilter } from "react-icons/fa";
-import Layout from "./components/Layout/Layout";
-import AnimatePage from "./components/Shared/AnimatePage/AnimatePage";
-import Slider from "./components/Slider/Slider";
-import SectionMenuDesktop from "./components/SectionMenu/SectionMenuDesktop";
-import SectionMenuMobile from "./components/SectionMenu/SectionMenuMobile";
-import { getBanner } from "../client/BannerClient";
-import { getFaq } from "../client/FaqClient";
 import ReactMarkdown from "react-markdown";
-import { getImageUrl } from "../utilities/AppUtils";
-import SectionPanduanProposalDesktop from "./components/SectionPanduanProposal/SectionPanduanProposalDesktop";
-import SectionPanduanProposalMobile from "./components/SectionPanduanProposal/SectionPanduanProposalMobile";
-import SectionPanduanPengguna from "./components/SectionPanduanPengguna/SectionPanduanPengguna";
+import { getBanner } from "client/BannerClient";
+import { getFaq } from "client/FaqClient";
+import { getImageUrl } from "utilities/AppUtils";
+import Layout from "components/Layout/Layout";
+import SectionMenuDesktop from "components/SectionMenu/SectionMenuDesktop";
+import SectionMenuMobile from "components/SectionMenu/SectionMenuMobile";
+import SectionPanduanProposalDesktop from "components/SectionPanduanProposal/SectionPanduanProposalDesktop";
+import SectionPanduanProposalMobile from "components/SectionPanduanProposal/SectionPanduanProposalMobile";
+import AnimatePage from "components/Shared/AnimatePage/AnimatePage";
+import Slider from "components/Slider/Slider";
 
 export default function Home({ banner, faq }) {
   const [sliderWidth, setsliderWidth] = useState(0);

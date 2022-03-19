@@ -1,12 +1,12 @@
 import React from "react";
-import InformasiUmum from "../components/Event/InformasiUmum";
-import PesertaPage from "../components/Event/PesertaPage";
-import RekamanWebinarPage from "../components/Event/RekamanWebinarPage";
-import Layout from "../components/Layout/Layout";
-import Navbar from "../components/Navbar/Navbar";
-import DaftarSertifikatPeserta from "../components/Sertifikat/DaftarSertifikatPeserta";
-import VerifikasiSertifikat from "../components/Sertifikat/VerifikasiSertifikat";
-import AnimatePage from "../components/Shared/AnimatePage/AnimatePage";
+import InformasiUmum from "components/Event/InformasiUmum";
+import PesertaPage from "components/Event/PesertaPage";
+import RekamanWebinarPage from "components/Event/RekamanWebinarPage";
+import Layout from "components/Layout/Layout";
+import Navbar from "components/Navbar/Navbar";
+import DaftarSertifikatPeserta from "components/Sertifikat/DaftarSertifikatPeserta";
+import VerifikasiSertifikat from "components/Sertifikat/VerifikasiSertifikat";
+import AnimatePage from "components/Shared/AnimatePage/AnimatePage";
 
 const index = ({ page, nav, event, search }) => {
   const navItems = [

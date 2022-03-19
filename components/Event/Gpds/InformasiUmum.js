@@ -1,5 +1,5 @@
+import ModalGabungSmarteschool from "components/ModalGabungSmarteschool/ModalGabungSmarteschool";
 import React, { useRef, useState } from "react";
-import ModalGabungSmarteschool from "../../ModalGabungSmarteschool/ModalGabungSmarteschool";
 
 const InformasiUmum = ({ data }) => {
   const initial = {

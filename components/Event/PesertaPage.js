@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TabelGuru from "./TabelGuru";
 import TabelSekolah from "./TabelSekolah";
-import Tabs from "../Tabs/Tabs";
+import Tabs from "components/Tabs/Tabs";
 
 const PesertaPage = () => {
   const initialState = {
@@ -164,7 +164,9 @@ const PesertaPage = () => {
         <div className="card-body p-0">
           <div className="row px-4 mb-4">
             <div className="col-md-9 d-flex align-items-center">
-              <h4 className="fw-extrabold color-dark mb-md-0 mb-4">Daftar Peserta</h4>
+              <h4 className="fw-extrabold color-dark mb-md-0 mb-4">
+                Daftar Peserta
+              </h4>
             </div>
             <div className="col-md-3 mb-md-0 mb-4">
               <input
