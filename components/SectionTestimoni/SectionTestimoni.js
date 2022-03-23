@@ -42,7 +42,7 @@ const SectionTestimoni = ({}) => {
     ],
   };
 
-  const data = [{}, {}, {}, {}, {}, {}];
+  const data = [{}];
 
   return (
     <>
@@ -97,13 +97,11 @@ const SectionTestimoni = ({}) => {
                         />
                         <div className="">
                           <h6 className="fw-extrabold color-dark mt-1 mb-1">
-                            Armando Salazar
+                            Nur Evi
                           </h6>
-                          <h6 className="fs-14-ss fw-semibold mb-2">
-                            Kepala Sekolah
-                          </h6>
+                          <h6 className="fs-14-ss fw-semibold mb-2">Guru</h6>
                           <i className="color-primary fw-semibold fs-12-ss mb-0">
-                            SMK NEGERI 26 JAKARTA
+                            SMAN 96 Jakarta
                           </i>
                         </div>
                       </div>
