@@ -11,10 +11,12 @@ import SectionPanduanProposalMobile from "components/SectionPanduanProposal/Sect
 import AnimatePage from "components/Shared/AnimatePage/AnimatePage";
 import Slider from "components/Slider/Slider";
 import SectionTestimoni from "components/SectionTestimoni/SectionTestimoni";
+import { getTestimoni } from "client/TestimoniClient";
 
-export default function Home({ banner, faq }) {
+export default function Home({ banner, faq, testimoni }) {
   const [sliderWidth, setsliderWidth] = useState(0);
   const [collapseOpen, setcollapseOpen] = useState({});
+  console.log(testimoni);
 
   useEffect(() => {
     setsliderWidth(window.innerWidth);
@@ -150,7 +152,7 @@ export default function Home({ banner, faq }) {
         {/* Section FaQ End */}
 
         {/* Section Testimoni Start */}
-        <SectionTestimoni />
+        <SectionTestimoni data={testimoni} />
         {/* Section Testimoni End */}
       </AnimatePage>
     </Layout>
@@ -160,11 +162,13 @@ export default function Home({ banner, faq }) {
 export async function getServerSideProps() {
   const { data: banner } = await getBanner(`?_sort=id:DESC`);
   const { data: faq } = await getFaq(`?_sort=id:ASC`);
+  const { data: testimoni } = await getTestimoni(`?_sort=id:ASC`);
 
   return {
     props: {
       banner: banner || null,
       faq: faq || null,
+      testimoni: testimoni || null,
     },
   };
 }

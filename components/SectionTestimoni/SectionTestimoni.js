@@ -3,8 +3,9 @@ import { useRouter } from "next/router";
 import { FaEnvelope, FaFax, FaPhone, FaQuoteLeft } from "react-icons/fa";
 import Link from "next/link";
 import Slider from "react-slick";
+import { getImageUrl } from "utilities/AppUtils";
 
-const SectionTestimoni = ({}) => {
+const SectionTestimoni = ({ data = [] }) => {
   const router = useRouter();
 
   var settings = {
@@ -42,8 +43,6 @@ const SectionTestimoni = ({}) => {
     ],
   };
 
-  const data = [{}];
-
   return (
     <>
       <div className="section py-md-5 py-4 section-testimoni">
@@ -68,7 +67,7 @@ const SectionTestimoni = ({}) => {
                     <div className="">
                       <div className="text-center mb-4">
                         <img
-                          src="https://ojankenshinblog.files.wordpress.com/2018/03/kd_20171205222301_42040_logo20smkn202620jkt.png"
+                          src={getImageUrl(d.logo?.url)}
                           alt=""
                           width={60}
                           height={60}
@@ -78,18 +77,13 @@ const SectionTestimoni = ({}) => {
                       <h4 className="color-primary">
                         <FaQuoteLeft />
                       </h4>
-                      <i className="color-dark fw-semibold">
-                        Assalamualaikum wr.wb, selamat siang Tim SS, terimakasih
-                        yah atas kerjasamanya sehingga Ujian sekolah SMAN 96
-                        berjalan lancar sukses selalu untuk Rohim dan Tim
-                        Smartschool 👍👍
-                      </i>
+                      <i className="color-dark fw-semibold">{d?.testimoni}</i>
                     </div>
                     <div className="mt-auto">
                       <hr className="my-4" />
                       <div className="d-flex">
                         <img
-                          src="https://www.slashfilm.com/img/gallery/iron-man-3-almost-killed-off-jon-favreaus-happy-hogan/l-intro-1640048928.jpg"
+                          src={getImageUrl(d.avatar?.url)}
                           alt=""
                           className="img-fit-cover rounded-circle me-4"
                           width={50}
@@ -97,11 +91,13 @@ const SectionTestimoni = ({}) => {
                         />
                         <div className="">
                           <h6 className="fw-extrabold color-dark mt-1 mb-1">
-                            Nur Evi
+                            {d?.nama}
                           </h6>
-                          <h6 className="fs-14-ss fw-semibold mb-2">Guru</h6>
+                          <h6 className="fs-14-ss fw-semibold mb-2">
+                            {d?.jabatan}
+                          </h6>
                           <i className="color-primary fw-semibold fs-12-ss mb-0">
-                            SMAN 96 Jakarta
+                            {d?.asalSekolah}
                           </i>
                         </div>
                       </div>
