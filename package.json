@@ -28,9 +28,11 @@
     "react-qr-code": "^2.0.3",
     "react-select": "^4.3.1",
     "react-share": "^4.4.0",
+    "react-slick": "^0.28.1",
     "react-textarea-autosize": "^8.3.3",
     "reactive-button": "^1.3.7",
     "sass": "^1.38.0",
+    "slick-carousel": "^1.8.1",
     "use-debounce": "^7.0.1"
   },
   "devDependencies": {

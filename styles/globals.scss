@@ -2205,6 +2205,78 @@ input[type="number"] {
   background-position: center !important;
 }
 
+// Slick Slider
+.slick-slider.slick-initialized {
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 60px !important;
+    height: 60px !important;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: center !important;
+    border-radius: 50% !important;
+    box-shadow: 0 10px 30px rgba(58, 65, 102, 0.075);
+    z-index: 2;
+  }
+  .slick-prev::before {
+    display: none !important;
+    opacity: 0 !important;
+  }
+  .slick-next::before {
+    display: none !important;
+    opacity: 0 !important;
+  }
+  .slick-prev {
+    background: url("/img/arrow-left.svg") !important;
+  }
+
+  .slick-next {
+    background: url("/img/arrow-right.svg") !important;
+  }
+
+  .slick-prev.slick-disabled {
+    display: none !important;
+  }
+
+  .slick-next.slick-disabled {
+    display: none !important;
+  }
+
+  .slick-dots {
+    // display: none !important;
+    .slick-dots li button:before {
+      font-family: "slick";
+      font-size: 16px !important;
+      line-height: 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      content: "•";
+      text-align: center;
+      opacity: 0.25;
+      color: var(--blue);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .slick-dots li.slick-active button:before {
+      opacity: 0.75;
+      color: var(--blue);
+    }
+  }
+}
+
 /* ============== Utility End ==============  */
 
 main.main-ppdb {
@@ -4150,6 +4222,17 @@ main.main-ppdb {
     height: 91px !important;
   }
 }
+
+// Section Testiomoni Start
+.section-testimoni {
+  min-height: calc(100vh - 82px);
+  background: url("/img/bg-section-testimoni.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+
+// Section Testiomoni End
 
 // ====================== End Landing Page Smarteschool=========================
 

@@ -10,6 +10,7 @@ import SectionPanduanProposalDesktop from "components/SectionPanduanProposal/Sec
 import SectionPanduanProposalMobile from "components/SectionPanduanProposal/SectionPanduanProposalMobile";
 import AnimatePage from "components/Shared/AnimatePage/AnimatePage";
 import Slider from "components/Slider/Slider";
+import SectionTestimoni from "components/SectionTestimoni/SectionTestimoni";
 
 export default function Home({ banner, faq }) {
   const [sliderWidth, setsliderWidth] = useState(0);
@@ -147,6 +148,10 @@ export default function Home({ banner, faq }) {
         </div>
 
         {/* Section FaQ End */}
+
+        {/* Section Testimoni Start */}
+        <SectionTestimoni />
+        {/* Section Testimoni End */}
       </AnimatePage>
     </Layout>
   );

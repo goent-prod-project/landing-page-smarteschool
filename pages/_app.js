@@ -5,6 +5,8 @@ import NextNProgress from "nextjs-progressbar";
 import { AnimatePresence } from "framer-motion";
 import "react-awesome-slider/dist/styles.css";
 import { Toaster } from "react-hot-toast";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -48,7 +50,6 @@ function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
           rel="stylesheet"
         />
-        
       </Head>
       <AnimatePresence
         exitBeforeEnter
