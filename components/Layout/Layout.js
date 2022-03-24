@@ -110,7 +110,15 @@ const Layout = ({
                       target="_blank"
                       className="fs-14-ss fw-bold color-dark text-decoration-none mb-0"
                     >
-                      +62 857 7853 7382
+                      +62 857 7853 7382 (Yesica)
+                    </a>
+                    <br />
+                    <a
+                      href={`https://api.whatsapp.com/send?phone=6287889192581&text=Halo, CS Smarteschool`}
+                      target="_blank"
+                      className="fs-14-ss fw-bold color-dark text-decoration-none mb-0"
+                    >
+                      +62 878 8919 2581 (Boy)
                     </a>
                   </div>
                 </div>
