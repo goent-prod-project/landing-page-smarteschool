@@ -16,28 +16,25 @@ const SectionTestimoni = ({ data = [] }) => {
     slidesToScroll: 3,
     initialSlide: 0,
     responsive: [
-      // {
-      //   breakpoint: 992,
-      //   settings: {
-      //     slidesToShow: 3,
-      //     slidesToScroll: 3,
-      //     infinite: true,
-      //     dots: true,
-      //   },
-      // },
       {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          initialSlide: 3,
-        },
-      },
-      {
-        breakpoint: 480,
+        breakpoint: 992,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
     ],
@@ -90,13 +87,13 @@ const SectionTestimoni = ({ data = [] }) => {
                           height={50}
                         />
                         <div className="">
-                          <h6 className="fw-extrabold color-dark mt-1 mb-1">
+                          <h6 className="fw-extrabold color-dark mt-1 mb-1 clamp-1">
                             {d?.nama}
                           </h6>
-                          <h6 className="fs-14-ss fw-semibold mb-2">
+                          <h6 className="fs-14-ss fw-semibold mb-2 clamp-1">
                             {d?.jabatan}
                           </h6>
-                          <i className="color-primary fw-semibold fs-12-ss mb-0">
+                          <i className="color-primary fw-semibold fs-12-ss mb-0 clamp-1">
                             {d?.asalSekolah}
                           </i>
                         </div>
