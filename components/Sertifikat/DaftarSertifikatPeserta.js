@@ -10,16 +10,6 @@ const DaftarSertifikatPeserta = ({ page, event, search }) => {
   const [searchInput, setSearchInput] = useState("");
   const [searchDebounce] = useDebounce(searchInput, 1000);
 
-  useEffect(() => {
-    router.push(`${router.pathname}`, {
-      query: {
-        page,
-        event: event,
-        search: searchDebounce,
-      },
-    });
-  }, [searchDebounce]);
-
   const [events, setEvents] = useState([]);
 
   const _getEventGDS = async () => {
@@ -38,8 +28,8 @@ const DaftarSertifikatPeserta = ({ page, event, search }) => {
   const _getCertGDS = async () => {
     const params = {
       page: page,
-      event: event,
-      search: search,
+      event: formData?.event,
+      search: searchDebounce,
     };
 
     const { data } = await getCertGDS(params);
@@ -60,33 +50,40 @@ const DaftarSertifikatPeserta = ({ page, event, search }) => {
     router.push(`${router.pathname}?page=${page}`);
   };
 
-  useEffect(() => {
-    _getEventGDS();
-  }, []);
-
-  useEffect(() => {
-    _getCertGDS();
-  }, [page, event]);
-
-  useEffect(() => {
-    _getCertGDS();
-  }, [search]);
-
-  const [formData, setFormData] = useState({ event });
+  const [formData, setFormData] = useState();
 
   const handleChangeSelect = (e, name) => {
     setFormData({
       ...formData,
       [name]: e.value,
     });
+  };
 
+  useEffect(() => {
+    setFormData({ ...formData, event: event });
+  }, [event]);
+
+  useEffect(() => {
+    _getEventGDS();
+  }, []);
+
+  useEffect(() => {
+    _getCertGDS();
+  }, [page, formData?.event]);
+
+  useEffect(() => {
+    _getCertGDS();
+  }, [searchDebounce]);
+
+  useEffect(() => {
     router.push(`${router.pathname}`, {
       query: {
         page,
-        event: e.value,
+        event: formData?.event,
+        search: searchDebounce,
       },
     });
-  };
+  }, [searchDebounce, formData?.event]);
 
   return (
     <div
