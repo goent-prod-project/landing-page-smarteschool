@@ -69,7 +69,7 @@ const index = ({ id }) => {
           }}
         >
           <h1
-            className="color-primary ff-great-vibes d-inline"
+            className="color-primary ff-great-vibes d-inline text-capitalize"
             style={{
               fontSize: "60px",
             }}
