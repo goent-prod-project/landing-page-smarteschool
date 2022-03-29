@@ -74,7 +74,7 @@ const index = ({ id }) => {
               fontSize: "60px",
             }}
           >
-            {cert?.name}
+            {cert?.name?.toLowerCase()}
           </h1>
 
           <hr
