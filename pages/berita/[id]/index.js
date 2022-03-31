@@ -14,9 +14,6 @@ import Layout from "components/Layout/Layout";
 
 const index = ({ berita, beritaTerbaru, apakahBerita }) => {
   const router = useRouter();
-  useEffect(() => {
-    console.log(router.asPath);
-  }, [router]);
   return (
     <Layout>
       <AnimatePage>

@@ -16,7 +16,6 @@ import { getTestimoni } from "client/TestimoniClient";
 export default function Home({ banner, faq, testimoni }) {
   const [sliderWidth, setsliderWidth] = useState(0);
   const [collapseOpen, setcollapseOpen] = useState({});
-  console.log(testimoni);
 
   useEffect(() => {
     setsliderWidth(window.innerWidth);

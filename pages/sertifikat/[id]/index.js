@@ -6,7 +6,6 @@ import { showCertGDS } from "client/ResourceCertClient";
 
 const index = ({ id }) => {
   const router = useRouter();
-  console.log(router);
 
   const [cert, setCert] = useState({});
 
