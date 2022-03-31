@@ -51,7 +51,7 @@ const index = ({ id }) => {
         className="bg-cover bg-center w-100 sertifikat-gpds text-center position-relative"
         style={{
           minHeight: "100vh",
-          background: `url("/img/sertifikat-gpds.png")`,
+          background: `url("${cert?.event?.certBg}")`,
         }}
       >
         <h6
