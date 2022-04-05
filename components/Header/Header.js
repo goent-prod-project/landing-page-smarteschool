@@ -35,6 +35,11 @@ const Header = ({ isFrontPage }) => {
       text: "Berita",
       url: `/berita`,
     },
+    {
+      isDropdown: false,
+      text: "E - Commerce",
+      url: `/e-commerce`,
+    },
     // {
     //   isDropdown: false,
     //   text: "Sertifikat",
