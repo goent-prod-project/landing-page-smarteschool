@@ -179,7 +179,7 @@ export async function getServerSideProps({ query: { nav } }) {
   if (nav == "akan-datang") {
     query = `tanggal_awal_gt=${moment().format("YYYY-MM-DD 00:00:00")}`;
   }
-  if (nav == "berlangsung") {
+  if (nav == "berlangsung" || !nav) {
     query = `tanggal_awal_lt=${moment().format(
       "YYYY-MM-DD 00:00:00"
     )}&tanggal_akhir_gt=${moment().format("YYYY-MM-DD 00:00:00")}`;
