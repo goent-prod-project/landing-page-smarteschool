@@ -8,7 +8,7 @@ const CardECommerce = ({ data }) => {
     <div className="card-event card card-ss">
       <img
         class="card-img-top img-fit-cover"
-        src={`https://api.goent26.com${data?.coverPhoto?.url}`}
+        src={`http://139.180.139.229:1113${data?.coverPhoto?.url}`}
         alt="Card image cap"
         style={{ height: "250px", borderRadius: "15px 15px 0 0" }}
       />
