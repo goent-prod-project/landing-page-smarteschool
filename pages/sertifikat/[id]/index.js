@@ -97,50 +97,8 @@ const index = ({ id }) => {
             minHeight: "100vh",
             background: `url("${cert?.event?.certBgBelakang}")`,
           }}
-        >
-          <h6
-            className="fs-18-ss fw-bold position-relative"
-            style={{
-              top: "215px",
-            }}
-          >
-            {cert?.nomor}
-          </h6>
-          <div
-            className="position-relative d-inline"
-            style={{
-              top: "255px",
-            }}
-          >
-            <h1
-              className="color-primary ff-great-vibes d-inline"
-              style={{
-                fontSize: "60px",
-              }}
-            >
-              {cert?.name?.toLowerCase()}
-            </h1>
-            <hr
-              className="bg-primary w-100 position-absolute"
-              style={{
-                bottom: "0",
-                bottom: "-10px",
-                left: "50%",
-                transform: "translateX(-50%)",
-                opacity: "1",
-              }}
-            />
-          </div>
-        </div>
+        ></div>
       ) : null}
-
-      <div
-        className="bg-cover bg-center w-100 sertifikat-gpds text-center position-relative"
-        style={{
-          minHeight: "100vh",
-          background: `url("${cert?.event?.certBgBelakang}")`,
-        }}
-      ></div>
 
       {/* If Sertifikat 32 Jam End */}
       <div
