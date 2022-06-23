@@ -90,47 +90,49 @@ const index = ({ id }) => {
       </div>
 
       {/* If Sertifikat 32 Jam Start */}
-      <div
-        className="bg-cover bg-center w-100 sertifikat-gpds text-center position-relative"
-        style={{
-          minHeight: "100vh",
-          background: `url("${cert?.event?.certBgBelakang}")`,
-        }}
-      >
-        <h6
-          className="fs-18-ss fw-bold position-relative"
-          style={{
-            top: "215px",
-          }}
-        >
-          {cert?.nomor}
-        </h6>
+      {cert?.event?.certBgBelakang ? (
         <div
-          className="position-relative d-inline"
+          className="bg-cover bg-center w-100 sertifikat-gpds text-center position-relative"
           style={{
-            top: "255px",
+            minHeight: "100vh",
+            background: `url("${cert?.event?.certBgBelakang}")`,
           }}
         >
-          <h1
-            className="color-primary ff-great-vibes d-inline"
+          <h6
+            className="fs-18-ss fw-bold position-relative"
             style={{
-              fontSize: "60px",
+              top: "215px",
             }}
           >
-            {cert?.name?.toLowerCase()}
-          </h1>
-          <hr
-            className="bg-primary w-100 position-absolute"
+            {cert?.nomor}
+          </h6>
+          <div
+            className="position-relative d-inline"
             style={{
-              bottom: "0",
-              bottom: "-10px",
-              left: "50%",
-              transform: "translateX(-50%)",
-              opacity: "1",
+              top: "255px",
             }}
-          />
+          >
+            <h1
+              className="color-primary ff-great-vibes d-inline"
+              style={{
+                fontSize: "60px",
+              }}
+            >
+              {cert?.name?.toLowerCase()}
+            </h1>
+            <hr
+              className="bg-primary w-100 position-absolute"
+              style={{
+                bottom: "0",
+                bottom: "-10px",
+                left: "50%",
+                transform: "translateX(-50%)",
+                opacity: "1",
+              }}
+            />
+          </div>
         </div>
-      </div>
+      ) : null}
 
       <div
         className="bg-cover bg-center w-100 sertifikat-gpds text-center position-relative"
