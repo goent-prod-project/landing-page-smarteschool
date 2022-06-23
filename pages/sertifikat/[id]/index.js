@@ -90,11 +90,11 @@ const index = ({ id }) => {
       </div>
 
       {/* If Sertifikat 32 Jam Start */}
-      {/* <div
+      <div
         className="bg-cover bg-center w-100 sertifikat-gpds text-center position-relative"
         style={{
           minHeight: "100vh",
-          background: `url("/img/sertifikat-gpds-32-jam-1.png")`,
+          background: `url("${cert?.event?.certBgBelakang}")`,
         }}
       >
         <h6
@@ -103,7 +103,7 @@ const index = ({ id }) => {
             top: "215px",
           }}
         >
-          Nomor. 1001/SES/SEM.1/V/2021
+          {cert?.nomor}
         </h6>
         <div
           className="position-relative d-inline"
@@ -117,7 +117,7 @@ const index = ({ id }) => {
               fontSize: "60px",
             }}
           >
-            Boy Andarsen Wicaksono
+            {cert?.name?.toLowerCase()}
           </h1>
           <hr
             className="bg-primary w-100 position-absolute"
@@ -136,9 +136,9 @@ const index = ({ id }) => {
         className="bg-cover bg-center w-100 sertifikat-gpds text-center position-relative"
         style={{
           minHeight: "100vh",
-          background: `url("/img/sertifikat-gpds-32-jam-2.jpeg")`,
+          background: `url("${cert?.event?.certBgBelakang}")`,
         }}
-      ></div> */}
+      ></div>
 
       {/* If Sertifikat 32 Jam End */}
       <div

@@ -121,7 +121,6 @@ const DaftarSertifikatPeserta = ({ page, event, search }) => {
           }}
         >
           <SelectShared
-            name="selectProgram"
             placeholder="Pilih program GPDS..."
             options={events}
             handleChangeSelect={handleChangeSelect}

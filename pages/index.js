@@ -86,6 +86,7 @@ export default function Home({ banner, faq, testimoni }) {
                 </h1>
               </div>
             </div>
+
             <div className="row justify-content-center gy-4 mb-4">
               {faq?.map((d, idx) => (
                 <div className="col-md-10">
