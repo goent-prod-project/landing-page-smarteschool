@@ -27,6 +27,8 @@ const index = ({ id }) => {
     }, 1000);
   }, [loading]);
 
+  console.log(cert);
+
   return (
     <div
       className="sertifikat-gpds-print"
@@ -56,7 +58,9 @@ const index = ({ id }) => {
         <h6
           className="fs-18-ss fw-bold position-relative"
           style={{
-            top: "210px",
+            top: `${
+              cert?.eventId == 19 || cert?.eventId == 20 ? "180px" : "210px"
+            }`,
           }}
         >
           {cert?.nomor}
