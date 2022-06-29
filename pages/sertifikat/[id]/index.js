@@ -56,7 +56,7 @@ const index = ({ id }) => {
         <h6
           className="fs-18-ss fw-bold position-relative"
           style={{
-            top: "240px",
+            top: "210px",
           }}
         >
           {cert?.nomor}
