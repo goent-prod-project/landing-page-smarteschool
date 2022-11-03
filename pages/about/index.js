@@ -128,7 +128,7 @@ export default function Home({ nav, search }) {
                         style={{ width: "175px", height: "125px" }}
                       >
                         <h1 className="fs-1 md-fs-4 fw-extrabold color-primary mb-1">
-                          2.897
+                          4.246
                         </h1>
                         <h5 className="fw-bold md-fs-6 color-dark mb-0">
                           Sekolah
@@ -139,7 +139,7 @@ export default function Home({ nav, search }) {
                         style={{ width: "175px", height: "125px" }}
                       >
                         <h1 className="fs-1 md-fs-4 fw-extrabold color-primary mb-1">
-                          20.934
+                          31.313
                         </h1>
                         <h5 className="fw-bold md-fs-6 color-dark mb-0">
                           Guru
@@ -150,7 +150,7 @@ export default function Home({ nav, search }) {
                         style={{ width: "175px", height: "125px" }}
                       >
                         <h1 className="fs-1 md-fs-4 fw-extrabold color-primary mb-1">
-                          53.431
+                          97.365
                         </h1>
                         <h5 className="fw-bold md-fs-6 color-dark mb-0">
                           Siswa
