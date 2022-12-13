@@ -134,7 +134,7 @@ export default function Home({ nav, search }) {
                           Sekolah
                         </h5>
                       </div>
-                      <div
+                      {/* <div
                         className="bg-soft-primary rounded-ss p-3 d-flex align-items-center justify-content-center flex-column md-w-auto mb-md-0 mb-3"
                         style={{ width: "175px", height: "125px" }}
                       >
@@ -155,7 +155,7 @@ export default function Home({ nav, search }) {
                         <h5 className="fw-bold md-fs-6 color-dark mb-0">
                           Siswa
                         </h5>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
