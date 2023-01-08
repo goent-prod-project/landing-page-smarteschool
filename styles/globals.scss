@@ -857,7 +857,9 @@ h6 {
   padding: 12px 48px !important;
 }
 
-.reactive-btn.btn-save-admin:not(.no-animation):hover:not(:disabled):not(.disabled) {
+.reactive-btn.btn-save-admin:not(.no-animation):hover:not(:disabled):not(
+    .disabled
+  ) {
   box-shadow: none !important;
   margin: 0 !important;
   padding: 12px 48px !important;
@@ -1339,7 +1341,9 @@ h6 {
   }
 }
 
-.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(
+    .ant-select-customize-input
+  )
   .ant-select-selector {
   border-color: var(--blue) !important;
   border-right-width: 1px !important;
@@ -2277,7 +2281,6 @@ input[type="number"] {
   }
 }
 
-
 // Clamp
 .clamp-1 {
   display: -webkit-box;
@@ -2321,6 +2324,17 @@ main.main-ppdb {
   box-shadow: 0 10px 30px rgba(58, 65, 102, 0.075) !important;
   border: none;
   border-radius: 15px !important;
+}
+.card-paket {
+  box-shadow: 0 10px 30px rgba(58, 65, 102, 0.075) !important;
+  border: none;
+  border-radius: 15px 15px 0 0 !important;
+}
+
+.card-paket-pro {
+  box-shadow: 0 10px 30px rgba(58, 65, 102, 0.075) !important;
+  border: none;
+  border-radius: 0 0 15px 15px !important;
 }
 
 .navbar-ss {

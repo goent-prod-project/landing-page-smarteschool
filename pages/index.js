@@ -12,6 +12,7 @@ import AnimatePage from "components/Shared/AnimatePage/AnimatePage";
 import Slider from "components/Slider/Slider";
 import SectionTestimoni from "components/SectionTestimoni/SectionTestimoni";
 import { getTestimoni } from "client/TestimoniClient";
+import SectionLihatPaket from "components/SectionLihatPaket/SectionLihatPaket";
 
 export default function Home({ banner, faq, testimoni }) {
   const [sliderWidth, setsliderWidth] = useState(0);
@@ -70,6 +71,12 @@ export default function Home({ banner, faq, testimoni }) {
         </div>
 
         {/* Section Menu End */}
+
+        {/* Section Lihat Paket Start*/}
+        <div className="">
+          <SectionLihatPaket />
+        </div>
+        {/* Section Lihat Paket End*/}
 
         {/* Section Panduan Pengguna Start */}
         {/* <SectionPanduanPengguna /> */}
