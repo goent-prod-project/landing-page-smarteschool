@@ -25,13 +25,10 @@ const SectionLihatPaket = ({}) => {
                 <div className="card card-ss rounded-ss p-sm-4 p-3 h-100 d-flex flex-column justify-content-between">
                   <div>
                     <h4 className="fw-extrabold color-dark">Free Trial</h4>
-                    <div className="fs-14-ss fw-bold color-dark">
-                      {/* Up to 1 Years */}
-                    </div>
-                    <div className="fs-14-ss fw-bold color-dark">
+                    <div className="fs-14-ss fw-bold color-dark mb-2">
                       Sampai 1 tahun untuk sekolah 3T
                     </div>
-                    <div className="mt-4">
+                    <div className="mt-5">
                       <h2 className="fw-black mb-0">Gratis</h2>
                       <div className="fs-16 fw-bold color-secondary">
                         per user per tahun
