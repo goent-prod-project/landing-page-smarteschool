@@ -26,7 +26,10 @@ const SectionLihatPaket = ({}) => {
                   <div>
                     <h4 className="fw-extrabold color-dark">Free Trial</h4>
                     <div className="fs-14-ss fw-bold color-dark">
-                      Gratis untuk sekolah tertentu dan sekolah 3T
+                      {/* Up to 1 Years */}
+                    </div>
+                    <div className="fs-14-ss fw-bold color-dark">
+                      Sampai 1 tahun untuk sekolah 3T
                     </div>
                     <div className="mt-4">
                       <h2 className="fw-black mb-0">Gratis</h2>
@@ -62,7 +65,7 @@ const SectionLihatPaket = ({}) => {
                           className="color-primary"
                           style={{ marginRight: "7.9px" }}
                         />
-                        <span>Domain gratis</span>
+                        <span>Subdomain Smart E School</span>
                       </div>
                       <div className="d-flex align-items-center mb-2">
                         <FaCheck
@@ -77,13 +80,6 @@ const SectionLihatPaket = ({}) => {
                           style={{ marginRight: "7.9px" }}
                         />
                         <span>Virtual tour sekolah</span>
-                      </div>
-                      <div className="d-flex align-items-center mb-2">
-                        <FaCheck
-                          className="color-primary"
-                          style={{ marginRight: "7.9px" }}
-                        />
-                        <span>Customer service 24/7</span>
                       </div>
                     </div>
                   </div>
@@ -163,14 +159,14 @@ const SectionLihatPaket = ({}) => {
                           className="color-primary"
                           style={{ marginRight: "7.9px" }}
                         />
-                        <span>Ujian sepuasnya</span>
+                        <span>Ujian bersama ( UTS / UAS )</span>
                       </div>
                       <div className="d-flex align-items-center mb-2">
                         <FaCheck
                           className="color-primary"
                           style={{ marginRight: "7.9px" }}
                         />
-                        <span>Domain gratis</span>
+                        <span>Subdomain Smart E School</span>
                       </div>
                       <div className="d-flex align-items-center mb-2">
                         <FaCheck
@@ -246,14 +242,21 @@ const SectionLihatPaket = ({}) => {
                           className="color-primary"
                           style={{ marginRight: "7.9px" }}
                         />
-                        <span>Ujian sepuasnya</span>
+                        <span>Ujian bersama ( UTS / UAS )</span>
                       </div>
                       <div className="d-flex align-items-center mb-2">
                         <FaCheck
                           className="color-primary"
                           style={{ marginRight: "7.9px" }}
                         />
-                        <span>Domain gratis</span>
+                        <span>Dedicated server</span>
+                      </div>
+                      <div className="d-flex align-items-center mb-2">
+                        <FaCheck
+                          className="color-primary"
+                          style={{ marginRight: "7.9px" }}
+                        />
+                        <span>Personal domain</span>
                       </div>
                       <div className="d-flex align-items-center mb-2">
                         <FaCheck
@@ -274,14 +277,14 @@ const SectionLihatPaket = ({}) => {
                           className="color-primary"
                           style={{ marginRight: "7.9px" }}
                         />
-                        <span>Customer service 24/7</span>
+                        <span>Dedicated customer service 24/7</span>
                       </div>
                       <div className="d-flex align-items-center mb-2">
                         <FaCheck
                           className="color-primary"
                           style={{ marginRight: "7.9px" }}
                         />
-                        <span>Request fitur sesuai kebutuhan</span>
+                        <span>Modifikasi fitur</span>
                       </div>
                     </div>
                   </div>
@@ -332,14 +335,21 @@ const SectionLihatPaket = ({}) => {
                           className="color-primary"
                           style={{ marginRight: "7.9px" }}
                         />
-                        <span>Ujian sepuasnya</span>
+                        <span>Ujian bersama ( UTS / UAS )</span>
                       </div>
                       <div className="d-flex align-items-center mb-2">
                         <FaCheck
                           className="color-primary"
                           style={{ marginRight: "7.9px" }}
                         />
-                        <span>Domain gratis</span>
+                        <span>Personal dedicated server</span>
+                      </div>
+                      <div className="d-flex align-items-center mb-2">
+                        <FaCheck
+                          className="color-primary"
+                          style={{ marginRight: "7.9px" }}
+                        />
+                        <span>Personal domain</span>
                       </div>
                       <div className="d-flex align-items-center mb-2">
                         <FaCheck
@@ -360,21 +370,28 @@ const SectionLihatPaket = ({}) => {
                           className="color-primary"
                           style={{ marginRight: "7.9px" }}
                         />
-                        <span>Customer service 24/7</span>
+                        <span>Personal dedicated customer service 24/7</span>
                       </div>
                       <div className="d-flex align-items-center mb-2">
                         <FaCheck
                           className="color-primary"
                           style={{ marginRight: "7.9px" }}
                         />
-                        <span>Request fitur sesuai kebutuhan</span>
+                        <span>Modifikasi fitur</span>
+                      </div>{" "}
+                      <div className="d-flex align-items-center mb-2">
+                        <FaCheck
+                          className="color-primary"
+                          style={{ marginRight: "7.9px" }}
+                        />
+                        <span>Request tambahan fitur</span>
                       </div>
                       <div className="d-flex align-items-center mb-2">
                         <FaCheck
                           className="color-primary"
                           style={{ marginRight: "7.9px" }}
                         />
-                        <span>Costumize aplikasi sesuai sekolah</span>
+                        <span>Costumize aplikasi</span>
                       </div>
                     </div>
                   </div>
