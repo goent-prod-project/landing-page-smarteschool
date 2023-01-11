@@ -82,7 +82,7 @@ const SectionLihatPaket = ({}) => {
                   </div>
                   <div className="d-flex justify-content-center">
                     <a
-                      href={`https://api.whatsapp.com/send?phone=6285778537382&text=Halo, CS Smarteschool sekolah saya ingin menjadi anggota sekolah Smarteschool`}
+                      href={`https://api.whatsapp.com/send?phone=6285778537382&text=Halo, CS Smarteschool sekolah saya ingin mencoba menggunkan Smartschool Free`}
                       target="_blank"
                       className="w-100 btn btn-ss btn-primary btn-primary-ss bg-gradient-primary shadow-primary-ss fw-bold rounded-pill d-flex align-items-center justify-content-center mb-sm-0 mb-4 fs-18-ss"
                     >
@@ -131,7 +131,7 @@ const SectionLihatPaket = ({}) => {
                       Cocok untuk sekolah kecil dan menengah
                     </div>
                     <div className="mt-4">
-                      <h2 className="fw-black mb-0">Rp50.000</h2>
+                      x<h2 className="fw-black mb-0">Rp50.000</h2>
                       <div className="fs-16 fw-bold color-secondary">
                         per user per tahun
                       </div>
@@ -190,7 +190,7 @@ const SectionLihatPaket = ({}) => {
                   </div>
                   <div className="d-flex justify-content-center sticky-bottom">
                     <a
-                      href={`https://api.whatsapp.com/send?phone=6285778537382&text=Halo, CS Smarteschool sekolah saya ingin menjadi anggota sekolah Smarteschool`}
+                      href={`https://api.whatsapp.com/send?phone=6285778537382&text=Halo, CS Smarteschool sekolah saya ingin menjadi anggota sekolah Smarteschool Pro`}
                       target="_blank"
                       className="w-100 btn btn-ss btn-warning btn-warning-ss bg-gradient-warning shadow-warning-ss fw-bold rounded-pill d-flex align-items-center justify-content-center mb-sm-0 mb-4 fs-18-ss"
                     >
@@ -287,7 +287,7 @@ const SectionLihatPaket = ({}) => {
                   </div>
                   <div className="d-flex justify-content-center">
                     <a
-                      href={`https://api.whatsapp.com/send?phone=6285778537382&text=Halo, CS Smarteschool sekolah saya ingin menjadi anggota sekolah Smarteschool`}
+                      href={`https://api.whatsapp.com/send?phone=6285778537382&text=Halo, CS Smarteschool sekolah saya ingin menjadi anggota sekolah Smarteschool Premium`}
                       target="_blank"
                       className="w-100 btn btn-ss btn-primary btn-primary-ss bg-gradient-primary shadow-primary-ss fw-bold rounded-pill d-flex align-items-center justify-content-center mb-sm-0 mb-4 fs-18-ss"
                     >
@@ -394,7 +394,7 @@ const SectionLihatPaket = ({}) => {
                   </div>
                   <div className="d-flex justify-content-center">
                     <a
-                      href={`https://api.whatsapp.com/send?phone=6285778537382&text=Halo, CS Smarteschool sekolah saya ingin menjadi anggota sekolah Smarteschool`}
+                      href={`https://api.whatsapp.com/send?phone=6285778537382&text=Halo, CS Smarteschool sekolah saya ingin menjadi anggota sekolah Smarteschool Platinum`}
                       target="_blank"
                       className="w-100 btn btn-ss btn-primary btn-primary-ss bg-gradient-primary shadow-primary-ss fw-bold rounded-pill d-flex align-items-center justify-content-center mb-sm-0 mb-4 fs-18-ss"
                     >
