@@ -131,7 +131,7 @@ const SectionLihatPaket = ({}) => {
                       Cocok untuk sekolah kecil dan menengah
                     </div>
                     <div className="mt-4">
-                      x<h2 className="fw-black mb-0">Rp50.000</h2>
+                      <h2 className="fw-black mb-0">Rp50.000</h2>
                       <div className="fs-16 fw-bold color-secondary">
                         per user per tahun
                       </div>
