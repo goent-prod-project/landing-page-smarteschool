@@ -62,7 +62,7 @@ export default function Home({ nav, search }) {
             <div className="row justify-content-center align-items-center text-center flex-column">
               <div className="col-lg-3 col-md-4 col-sm-6 col-8">
                 <img
-                  src="/img/logo-smarteschool.png"
+                  src="/img/logo-ss-new.png"
                   alt=""
                   className="img-fluid mb-4"
                 />

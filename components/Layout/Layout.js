@@ -166,7 +166,7 @@ const Layout = ({
                   <div className="row">
                     <div className="col-lg-10 col-md-12 col-8">
                       <img
-                        src="/img/logo-smarteschool-putih.png"
+                        src="/img/logo-ss-new-putih.png"
                         alt="logo-smarteschool"
                         className="mb-4 img-fluid"
                       />
