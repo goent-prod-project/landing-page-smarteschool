@@ -11,23 +11,26 @@ import SkeletonBerita from "components/Skeleton/SkeletonBerita";
 const index = ({ beritaTerbaru }) => {
   const [searchInput, setSearchInput] = useState("");
   const [searchDebounce] = useDebounce(searchInput, 1000);
+  const [sort, setSort] = useState("");
   const [beritaUpdate, setBeritaUpdate] = useState(beritaTerbaru);
   const [loading, setLoading] = useState(false);
   const listDropdownValue = [
     {
       label: "Terbaru",
-      value: "terbaru",
+      value: "DESC"
     },
     {
       label: "Terlama",
-      value: "terlama",
-    },
+      value: "ASC"
+    }
   ];
 
   const _get = async () => {
     setLoading(true);
     const { data } = await getBerita(
-      `?_sort=id:DESC&apakah_berita=true&_limit=99&judul_contains=${searchDebounce}`
+      `?_sort=id:${
+        sort ? sort : "DESC"
+      }&apakah_berita=true&_limit=99&judul_contains=${searchDebounce}`
     );
 
     if (data) {
@@ -41,6 +44,14 @@ const index = ({ beritaTerbaru }) => {
       _get();
     }
   }, [searchDebounce]);
+
+  useEffect(() => {
+    if (sort) {
+      _get();
+    }
+  }, [sort]);
+
+  // console.log(sort);
 
   return (
     <Layout isIndex>
@@ -67,9 +78,14 @@ const index = ({ beritaTerbaru }) => {
                     </div>
                     <Dropdown
                       listValue={listDropdownValue}
-                      defaultValue={listDropdownValue?.[0]?.label}
-                      value={searchInput}
-                      onChange={(e) => setSearchInput(e.target.value)}
+                      defaultValue={
+                        sort == "ASC"
+                          ? listDropdownValue?.[1]?.label
+                          : listDropdownValue?.[0]?.label
+                      }
+                      value={sort}
+                      onChange={(e) => setSort(e.value)}
+                      // onChange={(e) => console.log(e)}
                       className="w-100"
                     />
                   </div>
@@ -99,8 +115,8 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      beritaTerbaru: beritaTerbaru || null,
-    },
+      beritaTerbaru: beritaTerbaru || null
+    }
   };
 }
 
