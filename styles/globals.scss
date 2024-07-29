@@ -350,6 +350,12 @@ h6 {
   padding: 4px 16px;
 }
 
+.label-light-danger-ss {
+  background-color: var(--soft-red) !important;
+  color: var(--red) !important;
+  border-color: var(--red) !important;
+}
+
 .label-light-primary-ss {
   background-color: var(--light-blue) !important;
   color: var(--blue) !important;
@@ -4231,6 +4237,32 @@ main.main-ppdb {
       }
     }
   }
+}
+
+// SMK Grade Page
+.card-select-smk-grade {
+  .css-yk16xz-control {
+    // cursor: pointer !important;
+  }
+
+  .css-yk16xz-control,
+  .css-1pahdxg-control {
+    // padding: 24px !important;
+    // border: none !important;
+    // box-shadow: 0 10px 30px rgba(58, 65, 102, 0.075) !important;
+    // border-radius: 50px !important;
+  }
+
+  // .css-b8ldur-Input {
+  //   input {
+  //     font-size: 20px !important;
+  //   }
+  // }
+
+  // .css-1wa3eu0-placeholder {
+  //   font-size: 20px !important;
+  //   font-weight: 700 !important;
+  // }
 }
 
 // Sertifikat Page

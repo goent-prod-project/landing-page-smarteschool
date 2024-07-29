@@ -2,6 +2,7 @@ import axios from "axios";
 import { camelizeKeys, decamelizeKeys } from "humps";
 
 export const API_HOST = "https://apidev.smarteschool.net/";
+export const API_HOST2 = "https://januari-juni.smarteschool.net/";
 export const API_CERT = "https://cert.smarteschool.net/";
 
 const client = (endpoint, { body, method, headers, params } = {}) => {

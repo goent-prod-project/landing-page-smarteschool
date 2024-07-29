@@ -9,6 +9,7 @@ const SelectShared = ({
   isDisabled = false,
   placeholder = "Pilih",
   isImg = false,
+  className,
 }) => {
   const Option = (props) => {
     return isImg ? (
@@ -43,6 +44,7 @@ const SelectShared = ({
       value={options?.filter((d) => d.value === value)}
       isDisabled={isDisabled}
       name={name}
+      className={className}
     />
   );
 };

@@ -27,6 +27,11 @@ const Header = ({ isFrontPage }) => {
     },
     {
       isDropdown: false,
+      text: "SMK Grade",
+      url: `/smk-grade`,
+    },
+    {
+      isDropdown: false,
       text: "Event",
       url: `/event`,
     },
